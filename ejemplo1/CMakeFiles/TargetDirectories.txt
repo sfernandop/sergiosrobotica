@@ -1,0 +1,7 @@
+/home/sergio/projects/ejemplo1/CMakeFiles/install.dir
+/home/sergio/projects/ejemplo1/CMakeFiles/list_install_components.dir
+/home/sergio/projects/ejemplo1/CMakeFiles/rebuild_cache.dir
+/home/sergio/projects/ejemplo1/CMakeFiles/ejemplo1.dir
+/home/sergio/projects/ejemplo1/CMakeFiles/install/local.dir
+/home/sergio/projects/ejemplo1/CMakeFiles/install/strip.dir
+/home/sergio/projects/ejemplo1/CMakeFiles/edit_cache.dir
