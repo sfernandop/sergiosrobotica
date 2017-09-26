@@ -1,0 +1,15 @@
+import "/robocomp/interfaces/IDSLs/Laser.idsl";
+import "/robocomp/interfaces/IDSLs/DifferentialRobot.idsl";
+
+Component chocon
+{
+	Communications
+	{
+	
+		requires otherName;
+		
+	};
+	language Cpp;
+	//gui Qt(QWidget);
+};
+
