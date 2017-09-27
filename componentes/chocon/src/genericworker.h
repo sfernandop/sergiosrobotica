@@ -58,7 +58,8 @@ public:
 	QMutex *mutex;
 	
 
-	otherNamePrx othername_proxy;
+	LaserPrx laser_proxy;
+	DifferentialRobotPrx differentialrobot_proxy;
 
 
 

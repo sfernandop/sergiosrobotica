@@ -17,6 +17,8 @@
  *    along with RoboComp.  If not, see <http://www.gnu.org/licenses/>.
  */
 #include "specificworker.h"
+#include <stdlib.h>
+#include <time.h>
 
 /**
 * \brief Default constructor
@@ -46,8 +48,46 @@ bool SpecificWorker::setParams(RoboCompCommonBehavior::ParameterList params)
 	return true;
 }
 
+
 void SpecificWorker::compute()
 {
+ // qDebug()<<"Hola";
+  TLaserData data = laser_proxy->getLaserData();
+  //differentialrobot_proxy->setSpeedBase(90,0.1);
+  srand(time(NULL));
+  
+  static float orientacion=1;
+  std::sort(data.begin()+20, data.end()-20,[](auto a, auto b){return a.dist< b.dist;});
+  
+ /* for(auto d:data){
+    qDebug()<<d.dist + d.angle;
+  } */
+   if(data[20].dist<310)
+   {
+       float d= rand()%1000000+100000;
+	differentialrobot_proxy->setSpeedBase(0,orientacion*0.75);
+	usleep(d);
+   }
+  else
+  {
+      orientacion=0;
+       while(orientacion==0)
+       {
+	orientacion=rand()%3-1;
+       }
+   differentialrobot_proxy->setSpeedBase(350,0);
+   qDebug()<<orientacion;
+  }
+   //   qDebug()<<data.front().dist;
+
+     
+   
+   
+    
+
+  }
+  
+  
 // 	try
 // 	{
 // 		camera_proxy->getYImage(0,img, cState, bState);
@@ -58,7 +98,7 @@ void SpecificWorker::compute()
 // 	{
 // 		std::cout << "Error reading from Camera" << e << std::endl;
 // 	}
-}
+
 
 
 

@@ -6,10 +6,10 @@ Component chocon
 	Communications
 	{
 	
-		requires otherName;
+		requires Laser,DifferentialRobot;
 		
 	};
 	language Cpp;
-	//gui Qt(QWidget);
+	gui Qt(QWidget);
 };
 
