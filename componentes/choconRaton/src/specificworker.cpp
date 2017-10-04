@@ -21,9 +21,11 @@
 /**
 * \brief Default constructor
 */
-SpecificWorker::SpecificWorker(MapPrx& mprx) : GenericWorker(mprx)
+SpecificWorker::SpecificWorker ( MapPrx& mprx ) : GenericWorker ( mprx )
 {
-
+ target.x = 0;
+ target.y = 0;
+ target.z = 0;
 }
 
 /**
@@ -31,66 +33,62 @@ SpecificWorker::SpecificWorker(MapPrx& mprx) : GenericWorker(mprx)
 */
 SpecificWorker::~SpecificWorker()
 {
-	
+
 }
 
-bool SpecificWorker::setParams(RoboCompCommonBehavior::ParameterList params)
+bool SpecificWorker::setParams ( RoboCompCommonBehavior::ParameterList params )
 {
-
-
-
-	
-	timer.start(Period);
-	
-
-	return true;
+    inner = new InnerModel ( "/home/salabeta/robocomp/files/innermodel/simpleworld.xml" );
+    timer.start ( Period );
+    target.empty = true;
+   
+    return true;
 }
 
 void SpecificWorker::compute()
 {
- // qDebug()<<"Hola";
- /* TLaserData data = laser_proxy->getLaserData();
-  
-  //differentialrobot_proxy->setSpeedBase(90,0.1);
-  srand(time(NULL));
-  
-  static float orientacion=1;
-  std::sort(data.begin()+20, data.end()-20,[](auto a, auto b){return a.dist< b.dist;});*/
-  
- /* for(auto d:data){
-    qDebug()<<d.dist + d.angle;
-  } */
-  /* if(data[20].dist<310)
-   {
-       float d= rand()%1000000+100000;
-	differentialrobot_proxy->setSpeedBase(0,orientacion*0.75);
-	usleep(d);
-   }
-  else
-  {
-      orientacion=0;
-       while(orientacion==0)
-       {
-	orientacion=rand()%3-1;
-       }
-   differentialrobot_proxy->setSpeedBase(350,0);
-   qDebug()<<orientacion;
-  }
-   //   qDebug()<<data.front().dist;
-*/
-RoboCompDifferentialRobot::TBaseState bState;
-differentialrobot_proxy->getBaseState( bState);
-
-}
-
-
-void SpecificWorker::setPick(const Pick &myPick)
-{
+    RoboCompDifferentialRobot::TBaseState bState;
+    differentialrobot_proxy->getBaseState ( bState );
+   
+    inner->updateTransformValues ( "base",bState.x,0,bState.z,0,bState.alpha,0 );
  
+    if ( target.isEmpty() == false )
+    {
+        std::pair<float, float> parxz = target.get(); 
+        QVec tR = inner->transform ( "base" ,QVec::vec3 ( parxz.first, 0, parxz.second ),"world" ); //tR- Posicion del robot desde el pv del mundo 
+	float d = tR.norm2(); // distancia del robot al punto marcado 
+	
+	if( d > 50 )//Si no ha llegado
+	{
+	  float velAvance = d;
+	  if (velAvance > MAX_ADV)
+	    velAvance = MAX_ADV;
+	  float velRot = atan2(tR.x(),tR.z()); //devuelve radianes del angulo q forma donde apunta el robot con el punto destino.
+	  if( velRot > MAX_ROT)
+	    velRot = MAX_ROT;
+ 	   differentialrobot_proxy->setSpeedBase(velAvance,velRot);
+        }
+	else
+	{ //Si ha llegado al sitio
+	  differentialrobot_proxy->setSpeedBase(0,0);//Se ParameterList
+	  target.setEmpty(); 
+	}
+
+    }
+ // mtx.unlock();
+
 
 }
 
 
+void SpecificWorker::setPick ( const Pick &myPick )
+{
+   
+    qDebug() <<  "x:" <<myPick.x;
+    qDebug() <<  "y:" <<myPick.y;
+    qDebug() <<  "z:" <<myPick.z;
+    target.set(myPick.x, myPick.z);
+  }
 
 
 

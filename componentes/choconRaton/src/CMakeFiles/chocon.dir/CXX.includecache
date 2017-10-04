@@ -259,6 +259,8 @@ genericworker.h
 -
 innermodel/innermodel.h
 -
+mutex
+-
 
 /opt/robocomp/include/innermodel/innermodel.h
 stdexcept
