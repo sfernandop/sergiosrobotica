@@ -53,6 +53,7 @@ void SpecificWorker::compute()
 {
  // qDebug()<<"Hola";
   TLaserData data = laser_proxy->getLaserData();
+  
   //differentialrobot_proxy->setSpeedBase(90,0.1);
   srand(time(NULL));
   

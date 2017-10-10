@@ -59,28 +59,35 @@ include src/CMakeFiles/chocon.dir/flags.make
 
 src/CommonBehavior.cpp: /opt/robocomp/interfaces/CommonBehavior.ice
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating CommonBehavior.cpp and CommonBehavior.h from CommonBehavior.ice"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src && slice2cpp -I/opt/robocomp///interfaces/ -I/opt/robocomp/interfaces -I. /opt/robocomp/interfaces/CommonBehavior.ice --output-dir .
+	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src && slice2cpp -I/home/salabeta/robocomp//interfaces/ -I/opt/robocomp/interfaces -I. /opt/robocomp/interfaces/CommonBehavior.ice --output-dir .
 
 src/CommonBehavior.h: src/CommonBehavior.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate src/CommonBehavior.h
 
 src/Laser.cpp: /opt/robocomp/interfaces/Laser.ice
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Laser.cpp and Laser.h from Laser.ice"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src && slice2cpp -I/opt/robocomp///interfaces/ -I/opt/robocomp/interfaces -I. /opt/robocomp/interfaces/Laser.ice --output-dir .
+	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src && slice2cpp -I/home/salabeta/robocomp//interfaces/ -I/opt/robocomp/interfaces -I. /opt/robocomp/interfaces/Laser.ice --output-dir .
 
 src/Laser.h: src/Laser.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate src/Laser.h
 
 src/DifferentialRobot.cpp: /opt/robocomp/interfaces/DifferentialRobot.ice
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating DifferentialRobot.cpp and DifferentialRobot.h from DifferentialRobot.ice"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src && slice2cpp -I/opt/robocomp///interfaces/ -I/opt/robocomp/interfaces -I. /opt/robocomp/interfaces/DifferentialRobot.ice --output-dir .
+	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src && slice2cpp -I/home/salabeta/robocomp//interfaces/ -I/opt/robocomp/interfaces -I. /opt/robocomp/interfaces/DifferentialRobot.ice --output-dir .
 
 src/DifferentialRobot.h: src/DifferentialRobot.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate src/DifferentialRobot.h
 
+src/RCISMousePicker.cpp: /opt/robocomp/interfaces/RCISMousePicker.ice
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating RCISMousePicker.cpp and RCISMousePicker.h from RCISMousePicker.ice"
+	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src && slice2cpp -I/home/salabeta/robocomp//interfaces/ -I/opt/robocomp/interfaces -I. /opt/robocomp/interfaces/RCISMousePicker.ice --output-dir .
+
+src/RCISMousePicker.h: src/RCISMousePicker.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate src/RCISMousePicker.h
+
 src/CMakeFiles/chocon.dir/specificworker.cpp.o: src/CMakeFiles/chocon.dir/flags.make
 src/CMakeFiles/chocon.dir/specificworker.cpp.o: src/specificworker.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/chocon.dir/specificworker.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/chocon.dir/specificworker.cpp.o"
 	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chocon.dir/specificworker.cpp.o -c /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/specificworker.cpp
 
 src/CMakeFiles/chocon.dir/specificworker.cpp.i: cmake_force
@@ -104,7 +111,7 @@ src/CMakeFiles/chocon.dir/specificworker.cpp.o.provides.build: src/CMakeFiles/ch
 
 src/CMakeFiles/chocon.dir/specificmonitor.cpp.o: src/CMakeFiles/chocon.dir/flags.make
 src/CMakeFiles/chocon.dir/specificmonitor.cpp.o: src/specificmonitor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/chocon.dir/specificmonitor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/chocon.dir/specificmonitor.cpp.o"
 	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chocon.dir/specificmonitor.cpp.o -c /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/specificmonitor.cpp
 
 src/CMakeFiles/chocon.dir/specificmonitor.cpp.i: cmake_force
@@ -126,57 +133,57 @@ src/CMakeFiles/chocon.dir/specificmonitor.cpp.o.provides: src/CMakeFiles/chocon.
 src/CMakeFiles/chocon.dir/specificmonitor.cpp.o.provides.build: src/CMakeFiles/chocon.dir/specificmonitor.cpp.o
 
 
-src/CMakeFiles/chocon.dir/opt/robocomp/classes/rapplication/rapplication.cpp.o: src/CMakeFiles/chocon.dir/flags.make
-src/CMakeFiles/chocon.dir/opt/robocomp/classes/rapplication/rapplication.cpp.o: /opt/robocomp/classes/rapplication/rapplication.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/chocon.dir/opt/robocomp/classes/rapplication/rapplication.cpp.o"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chocon.dir/opt/robocomp/classes/rapplication/rapplication.cpp.o -c /opt/robocomp/classes/rapplication/rapplication.cpp
+src/CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o: src/CMakeFiles/chocon.dir/flags.make
+src/CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o: /home/salabeta/robocomp/classes/rapplication/rapplication.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o"
+	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o -c /home/salabeta/robocomp/classes/rapplication/rapplication.cpp
 
-src/CMakeFiles/chocon.dir/opt/robocomp/classes/rapplication/rapplication.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/chocon.dir/opt/robocomp/classes/rapplication/rapplication.cpp.i"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/robocomp/classes/rapplication/rapplication.cpp > CMakeFiles/chocon.dir/opt/robocomp/classes/rapplication/rapplication.cpp.i
+src/CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.i"
+	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/salabeta/robocomp/classes/rapplication/rapplication.cpp > CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.i
 
-src/CMakeFiles/chocon.dir/opt/robocomp/classes/rapplication/rapplication.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/chocon.dir/opt/robocomp/classes/rapplication/rapplication.cpp.s"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/robocomp/classes/rapplication/rapplication.cpp -o CMakeFiles/chocon.dir/opt/robocomp/classes/rapplication/rapplication.cpp.s
+src/CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.s"
+	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/salabeta/robocomp/classes/rapplication/rapplication.cpp -o CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.s
 
-src/CMakeFiles/chocon.dir/opt/robocomp/classes/rapplication/rapplication.cpp.o.requires:
+src/CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o.requires:
 
-.PHONY : src/CMakeFiles/chocon.dir/opt/robocomp/classes/rapplication/rapplication.cpp.o.requires
+.PHONY : src/CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o.requires
 
-src/CMakeFiles/chocon.dir/opt/robocomp/classes/rapplication/rapplication.cpp.o.provides: src/CMakeFiles/chocon.dir/opt/robocomp/classes/rapplication/rapplication.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/chocon.dir/build.make src/CMakeFiles/chocon.dir/opt/robocomp/classes/rapplication/rapplication.cpp.o.provides.build
-.PHONY : src/CMakeFiles/chocon.dir/opt/robocomp/classes/rapplication/rapplication.cpp.o.provides
+src/CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o.provides: src/CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/chocon.dir/build.make src/CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o.provides.build
+.PHONY : src/CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o.provides
 
-src/CMakeFiles/chocon.dir/opt/robocomp/classes/rapplication/rapplication.cpp.o.provides.build: src/CMakeFiles/chocon.dir/opt/robocomp/classes/rapplication/rapplication.cpp.o
+src/CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o.provides.build: src/CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o
 
 
-src/CMakeFiles/chocon.dir/opt/robocomp/classes/qlog/qlog.cpp.o: src/CMakeFiles/chocon.dir/flags.make
-src/CMakeFiles/chocon.dir/opt/robocomp/classes/qlog/qlog.cpp.o: /opt/robocomp/classes/qlog/qlog.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/chocon.dir/opt/robocomp/classes/qlog/qlog.cpp.o"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chocon.dir/opt/robocomp/classes/qlog/qlog.cpp.o -c /opt/robocomp/classes/qlog/qlog.cpp
+src/CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.o: src/CMakeFiles/chocon.dir/flags.make
+src/CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.o: /home/salabeta/robocomp/classes/qlog/qlog.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.o"
+	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.o -c /home/salabeta/robocomp/classes/qlog/qlog.cpp
 
-src/CMakeFiles/chocon.dir/opt/robocomp/classes/qlog/qlog.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/chocon.dir/opt/robocomp/classes/qlog/qlog.cpp.i"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/robocomp/classes/qlog/qlog.cpp > CMakeFiles/chocon.dir/opt/robocomp/classes/qlog/qlog.cpp.i
+src/CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.i"
+	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/salabeta/robocomp/classes/qlog/qlog.cpp > CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.i
 
-src/CMakeFiles/chocon.dir/opt/robocomp/classes/qlog/qlog.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/chocon.dir/opt/robocomp/classes/qlog/qlog.cpp.s"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/robocomp/classes/qlog/qlog.cpp -o CMakeFiles/chocon.dir/opt/robocomp/classes/qlog/qlog.cpp.s
+src/CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.s"
+	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/salabeta/robocomp/classes/qlog/qlog.cpp -o CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.s
 
-src/CMakeFiles/chocon.dir/opt/robocomp/classes/qlog/qlog.cpp.o.requires:
+src/CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.o.requires:
 
-.PHONY : src/CMakeFiles/chocon.dir/opt/robocomp/classes/qlog/qlog.cpp.o.requires
+.PHONY : src/CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.o.requires
 
-src/CMakeFiles/chocon.dir/opt/robocomp/classes/qlog/qlog.cpp.o.provides: src/CMakeFiles/chocon.dir/opt/robocomp/classes/qlog/qlog.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/chocon.dir/build.make src/CMakeFiles/chocon.dir/opt/robocomp/classes/qlog/qlog.cpp.o.provides.build
-.PHONY : src/CMakeFiles/chocon.dir/opt/robocomp/classes/qlog/qlog.cpp.o.provides
+src/CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.o.provides: src/CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/chocon.dir/build.make src/CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.o.provides.build
+.PHONY : src/CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.o.provides
 
-src/CMakeFiles/chocon.dir/opt/robocomp/classes/qlog/qlog.cpp.o.provides.build: src/CMakeFiles/chocon.dir/opt/robocomp/classes/qlog/qlog.cpp.o
+src/CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.o.provides.build: src/CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.o
 
 
 src/CMakeFiles/chocon.dir/main.cpp.o: src/CMakeFiles/chocon.dir/flags.make
 src/CMakeFiles/chocon.dir/main.cpp.o: src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/chocon.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/CMakeFiles/chocon.dir/main.cpp.o"
 	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chocon.dir/main.cpp.o -c /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/main.cpp
 
 src/CMakeFiles/chocon.dir/main.cpp.i: cmake_force
@@ -200,7 +207,7 @@ src/CMakeFiles/chocon.dir/main.cpp.o.provides.build: src/CMakeFiles/chocon.dir/m
 
 src/CMakeFiles/chocon.dir/genericmonitor.cpp.o: src/CMakeFiles/chocon.dir/flags.make
 src/CMakeFiles/chocon.dir/genericmonitor.cpp.o: src/genericmonitor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/CMakeFiles/chocon.dir/genericmonitor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/CMakeFiles/chocon.dir/genericmonitor.cpp.o"
 	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chocon.dir/genericmonitor.cpp.o -c /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/genericmonitor.cpp
 
 src/CMakeFiles/chocon.dir/genericmonitor.cpp.i: cmake_force
@@ -224,7 +231,7 @@ src/CMakeFiles/chocon.dir/genericmonitor.cpp.o.provides.build: src/CMakeFiles/ch
 
 src/CMakeFiles/chocon.dir/commonbehaviorI.cpp.o: src/CMakeFiles/chocon.dir/flags.make
 src/CMakeFiles/chocon.dir/commonbehaviorI.cpp.o: src/commonbehaviorI.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/CMakeFiles/chocon.dir/commonbehaviorI.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/CMakeFiles/chocon.dir/commonbehaviorI.cpp.o"
 	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chocon.dir/commonbehaviorI.cpp.o -c /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/commonbehaviorI.cpp
 
 src/CMakeFiles/chocon.dir/commonbehaviorI.cpp.i: cmake_force
@@ -248,7 +255,7 @@ src/CMakeFiles/chocon.dir/commonbehaviorI.cpp.o.provides.build: src/CMakeFiles/c
 
 src/CMakeFiles/chocon.dir/genericworker.cpp.o: src/CMakeFiles/chocon.dir/flags.make
 src/CMakeFiles/chocon.dir/genericworker.cpp.o: src/genericworker.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/CMakeFiles/chocon.dir/genericworker.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/CMakeFiles/chocon.dir/genericworker.cpp.o"
 	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chocon.dir/genericworker.cpp.o -c /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/genericworker.cpp
 
 src/CMakeFiles/chocon.dir/genericworker.cpp.i: cmake_force
@@ -270,9 +277,33 @@ src/CMakeFiles/chocon.dir/genericworker.cpp.o.provides: src/CMakeFiles/chocon.di
 src/CMakeFiles/chocon.dir/genericworker.cpp.o.provides.build: src/CMakeFiles/chocon.dir/genericworker.cpp.o
 
 
+src/CMakeFiles/chocon.dir/rcismousepickerI.cpp.o: src/CMakeFiles/chocon.dir/flags.make
+src/CMakeFiles/chocon.dir/rcismousepickerI.cpp.o: src/rcismousepickerI.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/CMakeFiles/chocon.dir/rcismousepickerI.cpp.o"
+	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chocon.dir/rcismousepickerI.cpp.o -c /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/rcismousepickerI.cpp
+
+src/CMakeFiles/chocon.dir/rcismousepickerI.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/chocon.dir/rcismousepickerI.cpp.i"
+	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/rcismousepickerI.cpp > CMakeFiles/chocon.dir/rcismousepickerI.cpp.i
+
+src/CMakeFiles/chocon.dir/rcismousepickerI.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/chocon.dir/rcismousepickerI.cpp.s"
+	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/rcismousepickerI.cpp -o CMakeFiles/chocon.dir/rcismousepickerI.cpp.s
+
+src/CMakeFiles/chocon.dir/rcismousepickerI.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/chocon.dir/rcismousepickerI.cpp.o.requires
+
+src/CMakeFiles/chocon.dir/rcismousepickerI.cpp.o.provides: src/CMakeFiles/chocon.dir/rcismousepickerI.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/chocon.dir/build.make src/CMakeFiles/chocon.dir/rcismousepickerI.cpp.o.provides.build
+.PHONY : src/CMakeFiles/chocon.dir/rcismousepickerI.cpp.o.provides
+
+src/CMakeFiles/chocon.dir/rcismousepickerI.cpp.o.provides.build: src/CMakeFiles/chocon.dir/rcismousepickerI.cpp.o
+
+
 src/CMakeFiles/chocon.dir/CommonBehavior.cpp.o: src/CMakeFiles/chocon.dir/flags.make
 src/CMakeFiles/chocon.dir/CommonBehavior.cpp.o: src/CommonBehavior.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/CMakeFiles/chocon.dir/CommonBehavior.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/CMakeFiles/chocon.dir/CommonBehavior.cpp.o"
 	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chocon.dir/CommonBehavior.cpp.o -c /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/CommonBehavior.cpp
 
 src/CMakeFiles/chocon.dir/CommonBehavior.cpp.i: cmake_force
@@ -296,7 +327,7 @@ src/CMakeFiles/chocon.dir/CommonBehavior.cpp.o.provides.build: src/CMakeFiles/ch
 
 src/CMakeFiles/chocon.dir/Laser.cpp.o: src/CMakeFiles/chocon.dir/flags.make
 src/CMakeFiles/chocon.dir/Laser.cpp.o: src/Laser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/CMakeFiles/chocon.dir/Laser.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object src/CMakeFiles/chocon.dir/Laser.cpp.o"
 	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chocon.dir/Laser.cpp.o -c /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/Laser.cpp
 
 src/CMakeFiles/chocon.dir/Laser.cpp.i: cmake_force
@@ -320,7 +351,7 @@ src/CMakeFiles/chocon.dir/Laser.cpp.o.provides.build: src/CMakeFiles/chocon.dir/
 
 src/CMakeFiles/chocon.dir/DifferentialRobot.cpp.o: src/CMakeFiles/chocon.dir/flags.make
 src/CMakeFiles/chocon.dir/DifferentialRobot.cpp.o: src/DifferentialRobot.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/CMakeFiles/chocon.dir/DifferentialRobot.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object src/CMakeFiles/chocon.dir/DifferentialRobot.cpp.o"
 	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chocon.dir/DifferentialRobot.cpp.o -c /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/DifferentialRobot.cpp
 
 src/CMakeFiles/chocon.dir/DifferentialRobot.cpp.i: cmake_force
@@ -342,9 +373,33 @@ src/CMakeFiles/chocon.dir/DifferentialRobot.cpp.o.provides: src/CMakeFiles/choco
 src/CMakeFiles/chocon.dir/DifferentialRobot.cpp.o.provides.build: src/CMakeFiles/chocon.dir/DifferentialRobot.cpp.o
 
 
+src/CMakeFiles/chocon.dir/RCISMousePicker.cpp.o: src/CMakeFiles/chocon.dir/flags.make
+src/CMakeFiles/chocon.dir/RCISMousePicker.cpp.o: src/RCISMousePicker.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object src/CMakeFiles/chocon.dir/RCISMousePicker.cpp.o"
+	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chocon.dir/RCISMousePicker.cpp.o -c /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/RCISMousePicker.cpp
+
+src/CMakeFiles/chocon.dir/RCISMousePicker.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/chocon.dir/RCISMousePicker.cpp.i"
+	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/RCISMousePicker.cpp > CMakeFiles/chocon.dir/RCISMousePicker.cpp.i
+
+src/CMakeFiles/chocon.dir/RCISMousePicker.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/chocon.dir/RCISMousePicker.cpp.s"
+	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/RCISMousePicker.cpp -o CMakeFiles/chocon.dir/RCISMousePicker.cpp.s
+
+src/CMakeFiles/chocon.dir/RCISMousePicker.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/chocon.dir/RCISMousePicker.cpp.o.requires
+
+src/CMakeFiles/chocon.dir/RCISMousePicker.cpp.o.provides: src/CMakeFiles/chocon.dir/RCISMousePicker.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/chocon.dir/build.make src/CMakeFiles/chocon.dir/RCISMousePicker.cpp.o.provides.build
+.PHONY : src/CMakeFiles/chocon.dir/RCISMousePicker.cpp.o.provides
+
+src/CMakeFiles/chocon.dir/RCISMousePicker.cpp.o.provides.build: src/CMakeFiles/chocon.dir/RCISMousePicker.cpp.o
+
+
 src/CMakeFiles/chocon.dir/chocon_automoc.cpp.o: src/CMakeFiles/chocon.dir/flags.make
 src/CMakeFiles/chocon.dir/chocon_automoc.cpp.o: src/chocon_automoc.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object src/CMakeFiles/chocon.dir/chocon_automoc.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object src/CMakeFiles/chocon.dir/chocon_automoc.cpp.o"
 	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chocon.dir/chocon_automoc.cpp.o -c /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/chocon_automoc.cpp
 
 src/CMakeFiles/chocon.dir/chocon_automoc.cpp.i: cmake_force
@@ -370,15 +425,17 @@ src/CMakeFiles/chocon.dir/chocon_automoc.cpp.o.provides.build: src/CMakeFiles/ch
 chocon_OBJECTS = \
 "CMakeFiles/chocon.dir/specificworker.cpp.o" \
 "CMakeFiles/chocon.dir/specificmonitor.cpp.o" \
-"CMakeFiles/chocon.dir/opt/robocomp/classes/rapplication/rapplication.cpp.o" \
-"CMakeFiles/chocon.dir/opt/robocomp/classes/qlog/qlog.cpp.o" \
+"CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o" \
+"CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.o" \
 "CMakeFiles/chocon.dir/main.cpp.o" \
 "CMakeFiles/chocon.dir/genericmonitor.cpp.o" \
 "CMakeFiles/chocon.dir/commonbehaviorI.cpp.o" \
 "CMakeFiles/chocon.dir/genericworker.cpp.o" \
+"CMakeFiles/chocon.dir/rcismousepickerI.cpp.o" \
 "CMakeFiles/chocon.dir/CommonBehavior.cpp.o" \
 "CMakeFiles/chocon.dir/Laser.cpp.o" \
 "CMakeFiles/chocon.dir/DifferentialRobot.cpp.o" \
+"CMakeFiles/chocon.dir/RCISMousePicker.cpp.o" \
 "CMakeFiles/chocon.dir/chocon_automoc.cpp.o"
 
 # External object files for target chocon
@@ -386,15 +443,17 @@ chocon_EXTERNAL_OBJECTS =
 
 bin/chocon: src/CMakeFiles/chocon.dir/specificworker.cpp.o
 bin/chocon: src/CMakeFiles/chocon.dir/specificmonitor.cpp.o
-bin/chocon: src/CMakeFiles/chocon.dir/opt/robocomp/classes/rapplication/rapplication.cpp.o
-bin/chocon: src/CMakeFiles/chocon.dir/opt/robocomp/classes/qlog/qlog.cpp.o
+bin/chocon: src/CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o
+bin/chocon: src/CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.o
 bin/chocon: src/CMakeFiles/chocon.dir/main.cpp.o
 bin/chocon: src/CMakeFiles/chocon.dir/genericmonitor.cpp.o
 bin/chocon: src/CMakeFiles/chocon.dir/commonbehaviorI.cpp.o
 bin/chocon: src/CMakeFiles/chocon.dir/genericworker.cpp.o
+bin/chocon: src/CMakeFiles/chocon.dir/rcismousepickerI.cpp.o
 bin/chocon: src/CMakeFiles/chocon.dir/CommonBehavior.cpp.o
 bin/chocon: src/CMakeFiles/chocon.dir/Laser.cpp.o
 bin/chocon: src/CMakeFiles/chocon.dir/DifferentialRobot.cpp.o
+bin/chocon: src/CMakeFiles/chocon.dir/RCISMousePicker.cpp.o
 bin/chocon: src/CMakeFiles/chocon.dir/chocon_automoc.cpp.o
 bin/chocon: src/CMakeFiles/chocon.dir/build.make
 bin/chocon: /usr/lib/x86_64-linux-gnu/libQtOpenGL.so
@@ -406,7 +465,7 @@ bin/chocon: /usr/lib/x86_64-linux-gnu/libQtGui.so
 bin/chocon: /usr/lib/x86_64-linux-gnu/libQtXml.so
 bin/chocon: /usr/lib/x86_64-linux-gnu/libQtCore.so
 bin/chocon: src/CMakeFiles/chocon.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable ../bin/chocon"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable ../bin/chocon"
 	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/chocon.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -416,15 +475,17 @@ src/CMakeFiles/chocon.dir/build: bin/chocon
 
 src/CMakeFiles/chocon.dir/requires: src/CMakeFiles/chocon.dir/specificworker.cpp.o.requires
 src/CMakeFiles/chocon.dir/requires: src/CMakeFiles/chocon.dir/specificmonitor.cpp.o.requires
-src/CMakeFiles/chocon.dir/requires: src/CMakeFiles/chocon.dir/opt/robocomp/classes/rapplication/rapplication.cpp.o.requires
-src/CMakeFiles/chocon.dir/requires: src/CMakeFiles/chocon.dir/opt/robocomp/classes/qlog/qlog.cpp.o.requires
+src/CMakeFiles/chocon.dir/requires: src/CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o.requires
+src/CMakeFiles/chocon.dir/requires: src/CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.o.requires
 src/CMakeFiles/chocon.dir/requires: src/CMakeFiles/chocon.dir/main.cpp.o.requires
 src/CMakeFiles/chocon.dir/requires: src/CMakeFiles/chocon.dir/genericmonitor.cpp.o.requires
 src/CMakeFiles/chocon.dir/requires: src/CMakeFiles/chocon.dir/commonbehaviorI.cpp.o.requires
 src/CMakeFiles/chocon.dir/requires: src/CMakeFiles/chocon.dir/genericworker.cpp.o.requires
+src/CMakeFiles/chocon.dir/requires: src/CMakeFiles/chocon.dir/rcismousepickerI.cpp.o.requires
 src/CMakeFiles/chocon.dir/requires: src/CMakeFiles/chocon.dir/CommonBehavior.cpp.o.requires
 src/CMakeFiles/chocon.dir/requires: src/CMakeFiles/chocon.dir/Laser.cpp.o.requires
 src/CMakeFiles/chocon.dir/requires: src/CMakeFiles/chocon.dir/DifferentialRobot.cpp.o.requires
+src/CMakeFiles/chocon.dir/requires: src/CMakeFiles/chocon.dir/RCISMousePicker.cpp.o.requires
 src/CMakeFiles/chocon.dir/requires: src/CMakeFiles/chocon.dir/chocon_automoc.cpp.o.requires
 
 .PHONY : src/CMakeFiles/chocon.dir/requires
@@ -439,6 +500,8 @@ src/CMakeFiles/chocon.dir/depend: src/Laser.cpp
 src/CMakeFiles/chocon.dir/depend: src/Laser.h
 src/CMakeFiles/chocon.dir/depend: src/DifferentialRobot.cpp
 src/CMakeFiles/chocon.dir/depend: src/DifferentialRobot.h
+src/CMakeFiles/chocon.dir/depend: src/RCISMousePicker.cpp
+src/CMakeFiles/chocon.dir/depend: src/RCISMousePicker.h
 	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/CMakeFiles/chocon.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/CMakeFiles/chocon.dir/depend
 

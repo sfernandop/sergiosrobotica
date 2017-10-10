@@ -1,5 +1,7 @@
 import "/robocomp/interfaces/IDSLs/Laser.idsl";
 import "/robocomp/interfaces/IDSLs/DifferentialRobot.idsl";
+import "/robocomp/interfaces/IDSLs/RCISMousePicker.idsl";
+
 
 Component chocon
 {
@@ -7,6 +9,7 @@ Component chocon
 	{
 	
 		requires Laser,DifferentialRobot;
+		subscribesTo RCISMousePicker;
 		
 	};
 	language Cpp;

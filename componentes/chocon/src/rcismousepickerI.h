@@ -1,6 +1,5 @@
-
 /*
- *    Copyright (C) 2010 by RoboLab - University of Extremadura
+ *    Copyright (C) 2017 by YOUR NAME HERE
  *
  *    This file is part of RoboComp
  *
@@ -17,31 +16,37 @@
  *    You should have received a copy of the GNU General Public License
  *    along with RoboComp.  If not, see <http://www.gnu.org/licenses/>.
  */
-#ifndef SPECIFICMONITOR_H
-#define SPECIFICMONITOR_H
+#ifndef RCISMOUSEPICKER_H
+#define RCISMOUSEPICKER_H
 
-#include "genericmonitor.h"
+// QT includes
+#include <QtCore/QObject>
 
-/**
-       \brief
-       @author authorname
-*/
-class SpecificMonitor : public GenericMonitor
+// Ice includes
+#include <Ice/Ice.h>
+#include <RCISMousePicker.h>
+
+#include <config.h>
+#include "genericworker.h"
+
+using namespace RoboCompRCISMousePicker;
+
+class RCISMousePickerI : public QObject , public virtual RoboCompRCISMousePicker::RCISMousePicker
 {
-  Q_OBJECT
-  
-  public:
-	SpecificMonitor(GenericWorker *_worker, Ice::CommunicatorPtr _communicator);
-	~SpecificMonitor();
+Q_OBJECT
+public:
+	RCISMousePickerI( GenericWorker *_worker, QObject *parent = 0 );
+	~RCISMousePickerI();
 	
-	void readConfig(RoboCompCommonBehavior::ParameterList &params );
-	void run();
-	void initialize();
-    
-	bool sendParamsToWorker(RoboCompCommonBehavior::ParameterList params);
-	bool checkParams(RoboCompCommonBehavior::ParameterList l);
-	
-	bool ready;
+	void setPick(const Pick  &myPick, const Ice::Current&);
+
+	QMutex *mutex;
+private:
+
+	GenericWorker *worker;
+public slots:
+
+
 };
 
-#endif // GENERICMONITOR_H
+#endif

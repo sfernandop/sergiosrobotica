@@ -265,6 +265,33 @@ Laser.cpp.s:
 	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon && $(MAKE) -f src/CMakeFiles/chocon.dir/build.make src/CMakeFiles/chocon.dir/Laser.cpp.s
 .PHONY : Laser.cpp.s
 
+RCISMousePicker.o: RCISMousePicker.cpp.o
+
+.PHONY : RCISMousePicker.o
+
+# target to build an object file
+RCISMousePicker.cpp.o:
+	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon && $(MAKE) -f src/CMakeFiles/chocon.dir/build.make src/CMakeFiles/chocon.dir/RCISMousePicker.cpp.o
+.PHONY : RCISMousePicker.cpp.o
+
+RCISMousePicker.i: RCISMousePicker.cpp.i
+
+.PHONY : RCISMousePicker.i
+
+# target to preprocess a source file
+RCISMousePicker.cpp.i:
+	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon && $(MAKE) -f src/CMakeFiles/chocon.dir/build.make src/CMakeFiles/chocon.dir/RCISMousePicker.cpp.i
+.PHONY : RCISMousePicker.cpp.i
+
+RCISMousePicker.s: RCISMousePicker.cpp.s
+
+.PHONY : RCISMousePicker.s
+
+# target to generate assembly for a file
+RCISMousePicker.cpp.s:
+	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon && $(MAKE) -f src/CMakeFiles/chocon.dir/build.make src/CMakeFiles/chocon.dir/RCISMousePicker.cpp.s
+.PHONY : RCISMousePicker.cpp.s
+
 chocon_automoc.o: chocon_automoc.cpp.o
 
 .PHONY : chocon_automoc.o
@@ -373,6 +400,60 @@ genericworker.cpp.s:
 	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon && $(MAKE) -f src/CMakeFiles/chocon.dir/build.make src/CMakeFiles/chocon.dir/genericworker.cpp.s
 .PHONY : genericworker.cpp.s
 
+home/salabeta/robocomp/classes/qlog/qlog.o: home/salabeta/robocomp/classes/qlog/qlog.cpp.o
+
+.PHONY : home/salabeta/robocomp/classes/qlog/qlog.o
+
+# target to build an object file
+home/salabeta/robocomp/classes/qlog/qlog.cpp.o:
+	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon && $(MAKE) -f src/CMakeFiles/chocon.dir/build.make src/CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.o
+.PHONY : home/salabeta/robocomp/classes/qlog/qlog.cpp.o
+
+home/salabeta/robocomp/classes/qlog/qlog.i: home/salabeta/robocomp/classes/qlog/qlog.cpp.i
+
+.PHONY : home/salabeta/robocomp/classes/qlog/qlog.i
+
+# target to preprocess a source file
+home/salabeta/robocomp/classes/qlog/qlog.cpp.i:
+	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon && $(MAKE) -f src/CMakeFiles/chocon.dir/build.make src/CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.i
+.PHONY : home/salabeta/robocomp/classes/qlog/qlog.cpp.i
+
+home/salabeta/robocomp/classes/qlog/qlog.s: home/salabeta/robocomp/classes/qlog/qlog.cpp.s
+
+.PHONY : home/salabeta/robocomp/classes/qlog/qlog.s
+
+# target to generate assembly for a file
+home/salabeta/robocomp/classes/qlog/qlog.cpp.s:
+	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon && $(MAKE) -f src/CMakeFiles/chocon.dir/build.make src/CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.s
+.PHONY : home/salabeta/robocomp/classes/qlog/qlog.cpp.s
+
+home/salabeta/robocomp/classes/rapplication/rapplication.o: home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o
+
+.PHONY : home/salabeta/robocomp/classes/rapplication/rapplication.o
+
+# target to build an object file
+home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o:
+	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon && $(MAKE) -f src/CMakeFiles/chocon.dir/build.make src/CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o
+.PHONY : home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o
+
+home/salabeta/robocomp/classes/rapplication/rapplication.i: home/salabeta/robocomp/classes/rapplication/rapplication.cpp.i
+
+.PHONY : home/salabeta/robocomp/classes/rapplication/rapplication.i
+
+# target to preprocess a source file
+home/salabeta/robocomp/classes/rapplication/rapplication.cpp.i:
+	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon && $(MAKE) -f src/CMakeFiles/chocon.dir/build.make src/CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.i
+.PHONY : home/salabeta/robocomp/classes/rapplication/rapplication.cpp.i
+
+home/salabeta/robocomp/classes/rapplication/rapplication.s: home/salabeta/robocomp/classes/rapplication/rapplication.cpp.s
+
+.PHONY : home/salabeta/robocomp/classes/rapplication/rapplication.s
+
+# target to generate assembly for a file
+home/salabeta/robocomp/classes/rapplication/rapplication.cpp.s:
+	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon && $(MAKE) -f src/CMakeFiles/chocon.dir/build.make src/CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.s
+.PHONY : home/salabeta/robocomp/classes/rapplication/rapplication.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -400,59 +481,32 @@ main.cpp.s:
 	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon && $(MAKE) -f src/CMakeFiles/chocon.dir/build.make src/CMakeFiles/chocon.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-opt/robocomp/classes/qlog/qlog.o: opt/robocomp/classes/qlog/qlog.cpp.o
+rcismousepickerI.o: rcismousepickerI.cpp.o
 
-.PHONY : opt/robocomp/classes/qlog/qlog.o
-
-# target to build an object file
-opt/robocomp/classes/qlog/qlog.cpp.o:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon && $(MAKE) -f src/CMakeFiles/chocon.dir/build.make src/CMakeFiles/chocon.dir/opt/robocomp/classes/qlog/qlog.cpp.o
-.PHONY : opt/robocomp/classes/qlog/qlog.cpp.o
-
-opt/robocomp/classes/qlog/qlog.i: opt/robocomp/classes/qlog/qlog.cpp.i
-
-.PHONY : opt/robocomp/classes/qlog/qlog.i
-
-# target to preprocess a source file
-opt/robocomp/classes/qlog/qlog.cpp.i:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon && $(MAKE) -f src/CMakeFiles/chocon.dir/build.make src/CMakeFiles/chocon.dir/opt/robocomp/classes/qlog/qlog.cpp.i
-.PHONY : opt/robocomp/classes/qlog/qlog.cpp.i
-
-opt/robocomp/classes/qlog/qlog.s: opt/robocomp/classes/qlog/qlog.cpp.s
-
-.PHONY : opt/robocomp/classes/qlog/qlog.s
-
-# target to generate assembly for a file
-opt/robocomp/classes/qlog/qlog.cpp.s:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon && $(MAKE) -f src/CMakeFiles/chocon.dir/build.make src/CMakeFiles/chocon.dir/opt/robocomp/classes/qlog/qlog.cpp.s
-.PHONY : opt/robocomp/classes/qlog/qlog.cpp.s
-
-opt/robocomp/classes/rapplication/rapplication.o: opt/robocomp/classes/rapplication/rapplication.cpp.o
-
-.PHONY : opt/robocomp/classes/rapplication/rapplication.o
+.PHONY : rcismousepickerI.o
 
 # target to build an object file
-opt/robocomp/classes/rapplication/rapplication.cpp.o:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon && $(MAKE) -f src/CMakeFiles/chocon.dir/build.make src/CMakeFiles/chocon.dir/opt/robocomp/classes/rapplication/rapplication.cpp.o
-.PHONY : opt/robocomp/classes/rapplication/rapplication.cpp.o
+rcismousepickerI.cpp.o:
+	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon && $(MAKE) -f src/CMakeFiles/chocon.dir/build.make src/CMakeFiles/chocon.dir/rcismousepickerI.cpp.o
+.PHONY : rcismousepickerI.cpp.o
 
-opt/robocomp/classes/rapplication/rapplication.i: opt/robocomp/classes/rapplication/rapplication.cpp.i
+rcismousepickerI.i: rcismousepickerI.cpp.i
 
-.PHONY : opt/robocomp/classes/rapplication/rapplication.i
+.PHONY : rcismousepickerI.i
 
 # target to preprocess a source file
-opt/robocomp/classes/rapplication/rapplication.cpp.i:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon && $(MAKE) -f src/CMakeFiles/chocon.dir/build.make src/CMakeFiles/chocon.dir/opt/robocomp/classes/rapplication/rapplication.cpp.i
-.PHONY : opt/robocomp/classes/rapplication/rapplication.cpp.i
+rcismousepickerI.cpp.i:
+	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon && $(MAKE) -f src/CMakeFiles/chocon.dir/build.make src/CMakeFiles/chocon.dir/rcismousepickerI.cpp.i
+.PHONY : rcismousepickerI.cpp.i
 
-opt/robocomp/classes/rapplication/rapplication.s: opt/robocomp/classes/rapplication/rapplication.cpp.s
+rcismousepickerI.s: rcismousepickerI.cpp.s
 
-.PHONY : opt/robocomp/classes/rapplication/rapplication.s
+.PHONY : rcismousepickerI.s
 
 # target to generate assembly for a file
-opt/robocomp/classes/rapplication/rapplication.cpp.s:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon && $(MAKE) -f src/CMakeFiles/chocon.dir/build.make src/CMakeFiles/chocon.dir/opt/robocomp/classes/rapplication/rapplication.cpp.s
-.PHONY : opt/robocomp/classes/rapplication/rapplication.cpp.s
+rcismousepickerI.cpp.s:
+	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon && $(MAKE) -f src/CMakeFiles/chocon.dir/build.make src/CMakeFiles/chocon.dir/rcismousepickerI.cpp.s
+.PHONY : rcismousepickerI.cpp.s
 
 specificmonitor.o: specificmonitor.cpp.o
 
@@ -531,6 +585,9 @@ help:
 	@echo "... Laser.o"
 	@echo "... Laser.i"
 	@echo "... Laser.s"
+	@echo "... RCISMousePicker.o"
+	@echo "... RCISMousePicker.i"
+	@echo "... RCISMousePicker.s"
 	@echo "... chocon_automoc.o"
 	@echo "... chocon_automoc.i"
 	@echo "... chocon_automoc.s"
@@ -543,15 +600,18 @@ help:
 	@echo "... genericworker.o"
 	@echo "... genericworker.i"
 	@echo "... genericworker.s"
+	@echo "... home/salabeta/robocomp/classes/qlog/qlog.o"
+	@echo "... home/salabeta/robocomp/classes/qlog/qlog.i"
+	@echo "... home/salabeta/robocomp/classes/qlog/qlog.s"
+	@echo "... home/salabeta/robocomp/classes/rapplication/rapplication.o"
+	@echo "... home/salabeta/robocomp/classes/rapplication/rapplication.i"
+	@echo "... home/salabeta/robocomp/classes/rapplication/rapplication.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... opt/robocomp/classes/qlog/qlog.o"
-	@echo "... opt/robocomp/classes/qlog/qlog.i"
-	@echo "... opt/robocomp/classes/qlog/qlog.s"
-	@echo "... opt/robocomp/classes/rapplication/rapplication.o"
-	@echo "... opt/robocomp/classes/rapplication/rapplication.i"
-	@echo "... opt/robocomp/classes/rapplication/rapplication.s"
+	@echo "... rcismousepickerI.o"
+	@echo "... rcismousepickerI.i"
+	@echo "... rcismousepickerI.s"
 	@echo "... specificmonitor.o"
 	@echo "... specificmonitor.i"
 	@echo "... specificmonitor.s"

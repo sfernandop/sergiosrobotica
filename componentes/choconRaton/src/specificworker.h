@@ -38,7 +38,7 @@
 
 #define MAX_ADV 500
 #define MAX_ROT 0.5
-
+#define E 2.71828 
 
 class SpecificWorker : public GenericWorker
 {
@@ -48,7 +48,8 @@ public:
 	~SpecificWorker();
 	bool setParams(RoboCompCommonBehavior::ParameterList params);
 	void setPick(const Pick &myPick);
-	
+	float gauss(float vr, float vx, float h );
+        float sigmoide(float dis);
 
 public slots:
 	void compute(); 	
@@ -83,9 +84,9 @@ private:
 	{
 	  QMutexLocker ml(&mutex);
 	  return std::make_pair<float,float>(x,z);
-	}
-		
+	}	
       };
+     
       
       Target target;
 };

@@ -16,50 +16,23 @@
  *    You should have received a copy of the GNU General Public License
  *    along with RoboComp.  If not, see <http://www.gnu.org/licenses/>.
  */
-#include "specificworker.h"
+#include "rcismousepickerI.h"
 
-/**
-* \brief Default constructor
-*/
-SpecificWorker::SpecificWorker(MapPrx& mprx) : GenericWorker(mprx)
+RCISMousePickerI::RCISMousePickerI(GenericWorker *_worker, QObject *parent) : QObject(parent)
 {
-
+	worker = _worker;
+	mutex = worker->mutex;       // Shared worker mutex
 }
 
-/**
-* \brief Default destructor
-*/
-SpecificWorker::~SpecificWorker()
+
+RCISMousePickerI::~RCISMousePickerI()
 {
-	
 }
 
-bool SpecificWorker::setParams(RoboCompCommonBehavior::ParameterList params)
+void RCISMousePickerI::setPick(const Pick  &myPick, const Ice::Current&)
 {
-
-
-
-	
-	timer.start(Period);
-	
-
-	return true;
+	worker->setPick(myPick);
 }
-
-void SpecificWorker::compute()
-{
-// 	try
-// 	{
-// 		camera_proxy->getYImage(0,img, cState, bState);
-// 		memcpy(image_gray.data, &img[0], m_width*m_height*sizeof(uchar));
-// 		searchTags(image_gray);
-// 	}
-// 	catch(const Ice::Exception &e)
-// 	{
-// 		std::cout << "Error reading from Camera" << e << std::endl;
-// 	}
-}
-
 
 
 

@@ -7,13 +7,15 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/CommonBehavior.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/CMakeFiles/chocon.dir/CommonBehavior.cpp.o"
   "/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/DifferentialRobot.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/CMakeFiles/chocon.dir/DifferentialRobot.cpp.o"
   "/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/Laser.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/CMakeFiles/chocon.dir/Laser.cpp.o"
+  "/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/RCISMousePicker.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/CMakeFiles/chocon.dir/RCISMousePicker.cpp.o"
   "/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/chocon_automoc.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/CMakeFiles/chocon.dir/chocon_automoc.cpp.o"
   "/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/commonbehaviorI.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/CMakeFiles/chocon.dir/commonbehaviorI.cpp.o"
   "/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/genericmonitor.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/CMakeFiles/chocon.dir/genericmonitor.cpp.o"
   "/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/genericworker.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/CMakeFiles/chocon.dir/genericworker.cpp.o"
+  "/home/salabeta/robocomp/classes/qlog/qlog.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.o"
+  "/home/salabeta/robocomp/classes/rapplication/rapplication.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/CMakeFiles/chocon.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o"
   "/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/main.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/CMakeFiles/chocon.dir/main.cpp.o"
-  "/opt/robocomp/classes/qlog/qlog.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/CMakeFiles/chocon.dir/opt/robocomp/classes/qlog/qlog.cpp.o"
-  "/opt/robocomp/classes/rapplication/rapplication.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/CMakeFiles/chocon.dir/opt/robocomp/classes/rapplication/rapplication.cpp.o"
+  "/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/rcismousepickerI.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/CMakeFiles/chocon.dir/rcismousepickerI.cpp.o"
   "/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/specificmonitor.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/CMakeFiles/chocon.dir/specificmonitor.cpp.o"
   "/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/specificworker.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/CMakeFiles/chocon.dir/specificworker.cpp.o"
   )
@@ -41,9 +43,9 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/opt/robocomp/include"
   "/classes"
   "."
-  "/opt/robocomp/classes"
-  "/opt/robocomp/libs"
-  "/opt/robocomp/interfaces"
+  "/home/salabeta/robocomp/classes"
+  "/home/salabeta/robocomp/libs"
+  "/home/salabeta/robocomp/interfaces"
   "/include"
   )
 
@@ -52,6 +54,7 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/CommonBehavior.h" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/CommonBehavior.cpp"
   "/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/DifferentialRobot.h" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/DifferentialRobot.cpp"
   "/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/Laser.h" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/Laser.cpp"
+  "/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/RCISMousePicker.h" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/RCISMousePicker.cpp"
   )
 
 

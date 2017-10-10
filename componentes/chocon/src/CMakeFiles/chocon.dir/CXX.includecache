@@ -6,6 +6,34 @@
 
 #IncludeRegexTransform: 
 
+/home/salabeta/robocomp/classes/qlog/qlog.cpp
+qlog.h
+/home/salabeta/robocomp/classes/qlog/qlog.h
+
+/home/salabeta/robocomp/classes/qlog/qlog.h
+config.h
+/home/salabeta/robocomp/classes/qlog/config.h
+QtCore
+-
+iostream
+-
+Logger.h
+-
+
+/home/salabeta/robocomp/classes/rapplication/rapplication.cpp
+rapplication.h
+/home/salabeta/robocomp/classes/rapplication/rapplication.h
+
+/home/salabeta/robocomp/classes/rapplication/rapplication.h
+Ice/Ice.h
+-
+Ice/Application.h
+-
+IceUtil/IceUtil.h
+-
+QtCore
+-
+
 /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/CommonBehavior.cpp
 CommonBehavior.h
 -
@@ -48,6 +76,20 @@ Ice/Object.h
 IceUtil/Iterator.h
 -
 
+/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/RCISMousePicker.cpp
+RCISMousePicker.h
+-
+Ice/LocalException.h
+-
+Ice/ObjectFactory.h
+-
+Ice/BasicStream.h
+-
+Ice/Object.h
+-
+IceUtil/Iterator.h
+-
+
 /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/chocon_automoc.cpp
 moc_commonbehaviorI.cpp
 /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/moc_commonbehaviorI.cpp
@@ -55,6 +97,8 @@ moc_genericmonitor.cpp
 /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/moc_genericmonitor.cpp
 moc_genericworker.cpp
 /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/moc_genericworker.cpp
+moc_rcismousepickerI.cpp
+/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/moc_rcismousepickerI.cpp
 moc_specificmonitor.cpp
 /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/moc_specificmonitor.cpp
 moc_specificworker.cpp
@@ -115,6 +159,8 @@ CommonBehavior.h
 -
 DifferentialRobot.h
 -
+RCISMousePicker.h
+-
 Laser.h
 -
 
@@ -147,9 +193,13 @@ specificmonitor.h
 /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/specificmonitor.h
 commonbehaviorI.h
 /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/commonbehaviorI.h
+rcismousepickerI.h
+-
 Laser.h
 -
 DifferentialRobot.h
+-
+RCISMousePicker.h
 -
 
 /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/moc_commonbehaviorI.cpp
@@ -164,6 +214,10 @@ genericmonitor.h
 genericworker.h
 /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/genericworker.h
 
+/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/moc_rcismousepickerI.cpp
+rcismousepickerI.h
+/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/rcismousepickerI.h
+
 /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/moc_specificmonitor.cpp
 specificmonitor.h
 /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/specificmonitor.h
@@ -171,6 +225,22 @@ specificmonitor.h
 /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/moc_specificworker.cpp
 specificworker.h
 /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/specificworker.h
+
+/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/rcismousepickerI.cpp
+rcismousepickerI.h
+/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/rcismousepickerI.h
+
+/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/rcismousepickerI.h
+QtCore/QObject
+-
+Ice/Ice.h
+-
+RCISMousePicker.h
+-
+config.h
+-
+genericworker.h
+/home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/genericworker.h
 
 /home/salabeta/robocomp/components/sergiosrobotica/componentes/chocon/src/specificmonitor.cpp
 specificmonitor.h
@@ -192,34 +262,6 @@ time.h
 genericworker.h
 -
 innermodel/innermodel.h
--
-
-/opt/robocomp/classes/qlog/qlog.cpp
-qlog.h
-/opt/robocomp/classes/qlog/qlog.h
-
-/opt/robocomp/classes/qlog/qlog.h
-config.h
-/opt/robocomp/classes/qlog/config.h
-QtCore
--
-iostream
--
-Logger.h
--
-
-/opt/robocomp/classes/rapplication/rapplication.cpp
-rapplication.h
-/opt/robocomp/classes/rapplication/rapplication.h
-
-/opt/robocomp/classes/rapplication/rapplication.h
-Ice/Ice.h
--
-Ice/Application.h
--
-IceUtil/IceUtil.h
--
-QtCore
 -
 
 /opt/robocomp/include/innermodel/innermodel.h
@@ -4266,6 +4308,38 @@ DifferentialRobot.h
 Ice/UndefSysMacros.h
 -
 
+src/RCISMousePicker.h
+Ice/ProxyF.h
+-
+Ice/ObjectF.h
+-
+Ice/Exception.h
+-
+Ice/LocalObject.h
+-
+Ice/StreamHelpers.h
+-
+Ice/Proxy.h
+-
+Ice/Object.h
+-
+Ice/Outgoing.h
+-
+Ice/OutgoingAsync.h
+-
+Ice/Incoming.h
+-
+Ice/Direct.h
+-
+IceUtil/ScopedArray.h
+-
+IceUtil/Optional.h
+-
+Ice/StreamF.h
+-
+Ice/UndefSysMacros.h
+-
+
 src/config.h
 
 src/genericworker.h
@@ -4281,6 +4355,20 @@ CommonBehavior.h
 -
 DifferentialRobot.h
 -
+RCISMousePicker.h
+-
 Laser.h
 -
+
+src/rcismousepickerI.h
+QtCore/QObject
+-
+Ice/Ice.h
+-
+RCISMousePicker.h
+-
+config.h
+-
+genericworker.h
+src/genericworker.h
 

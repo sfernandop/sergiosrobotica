@@ -60,14 +60,21 @@ void SpecificWorker::compute()
 	
 	if( d > 50 )//Si no ha llegado
 	{
-	  float velAvance = d;
-	  if (velAvance > MAX_ADV)
-	    velAvance = MAX_ADV;
-	  float velRot = atan2(tR.x(),tR.z()); //devuelve radianes del angulo q forma donde apunta el robot con el punto destino.
-	  if( velRot > MAX_ROT)
-	    velRot = MAX_ROT;
- 	   differentialrobot_proxy->setSpeedBase(velAvance,velRot);
-        }
+	  float velAvance = d;// version antigua
+	  float vRot = atan2(tR.x(),tR.z()); //devuelve radianes del angulo q forma donde apunta el robot con el punto destino.
+	/*  if (velAvance > MAX_ADV){
+	    velAvance = MAX_ADV; 
+	  }*/
+	 
+	  if( vRot > MAX_ROT){
+	    vRot = MAX_ROT;
+	  }
+	 
+	  velAvance=MAX_ADV*sigmoide(d)*gauss(vRot,0.3,0.5);
+
+	  
+	  differentialrobot_proxy->setSpeedBase(velAvance,vRot);
+	  }
 	else
 	{ //Si ha llegado al sitio
 	  differentialrobot_proxy->setSpeedBase(0,0);//Se ParameterList
@@ -89,7 +96,17 @@ void SpecificWorker::setPick ( const Pick &myPick )
     qDebug() <<  "z:" <<myPick.z;
     target.set(myPick.x, myPick.z);
   }
+  
+float SpecificWorker::gauss ( float vr, float vx, float h )
+{
+  float lambda=1.0;
+   lambda= (pow(vx,2.0))/log(h);
+   return pow(E,(pow(vr,2))/lambda);
+}
 
+float SpecificWorker::sigmoide(float dis){
+  return (1/(1+pow(E,-dis)))-0.5;
+}
 
 
 
