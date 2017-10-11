@@ -34,12 +34,15 @@
 #include <genericworker.h>
 #include <innermodel/innermodel.h>
 #include <mutex>
+#include <stdlib.h>
+#include <time.h>
 
 
-#define MAX_ADV 500
+#define MAX_ADV 700
 #define MAX_ROT 0.5
 #define E 2.71828 
 
+enum class Estado{PARADO,AVANZANDO,GIRANDO,BORDEANDO, LLEGADO};
 class SpecificWorker : public GenericWorker
 {
 Q_OBJECT
@@ -56,6 +59,10 @@ public slots:
 
 private:
       InnerModel* inner;
+      std::pair<float, float> parxz , parIni ;//Valores (x,z) del objetivo e inicio
+      QVec tR;//tR- Posicion del robot desde el pv del mundo 
+      float d;//Distancia al objetivo
+      Estado estado = Estado::PARADO;
       //Definimos una nueva estructura con 4 campos
       struct Target
       {
