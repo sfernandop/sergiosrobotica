@@ -74,7 +74,7 @@ void SpecificWorker::compute()
         d = tR.norm2(); // distancia del robot al punto marcado
 	//Cada vez que avance, se van obteniendo los datos actualizados del laser
 	datosLaser= laser_proxy->getLaserData();//Obtenemos datos del Laser
-//	std::sort(datosLaser.begin()+20, datosLaser.end()-20,[](auto a, auto b){return a.dist< b.dist;});
+	std::sort(datosLaser.begin()+20, datosLaser.end()-20,[](auto a, auto b){return a.dist< b.dist;});
 	
         if ( d > 50 )
         {
