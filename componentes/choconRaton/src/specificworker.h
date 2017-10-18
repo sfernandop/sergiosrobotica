@@ -41,6 +41,7 @@
 #define MAX_ADV 700
 #define MAX_ROT 0.5
 #define E 2.71828 
+#define UMBRAL 250
 
 enum class Estado{PARADO,AVANZANDO,GIRANDO,BORDEANDO, LLEGADO};
 class SpecificWorker : public GenericWorker

@@ -253,6 +253,8 @@ genericmonitor.h
 /home/salabeta/robocomp/components/sergiosrobotica/componentes/choconRaton/src/specificworker.cpp
 specificworker.h
 /home/salabeta/robocomp/components/sergiosrobotica/componentes/choconRaton/src/specificworker.h
+time.h
+/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconRaton/src/time.h
 
 /home/salabeta/robocomp/components/sergiosrobotica/componentes/choconRaton/src/specificworker.h
 genericworker.h
