@@ -38,7 +38,7 @@ SpecificWorker::~SpecificWorker()
 
 bool SpecificWorker::setParams ( RoboCompCommonBehavior::ParameterList params )
 {
-    inner = new InnerModel ( "/home/salabeta/robocomp/files/innermodel/simpleworld.xml" );
+    inner = new InnerModel ( "/home/salabeta/robocomp/files/innermodel/simpleworldomni.xml" );
     timer.start ( Period );
     target.empty = true;
 
@@ -51,10 +51,10 @@ void SpecificWorker::compute()
     differentialrobot_proxy->getBaseState ( bState );
     RoboCompLaser::TLaserData datosLaser;
     datosLaser= laser_proxy->getLaserData();//Obtenemos datos del Laser
-    inner->updateTransformValues ( "base",bState.x,0,bState.z,0,bState.alpha,0 );
+    inner->updateTransformValues ( "robot",bState.x,0,bState.z,0,bState.alpha,0 );
    // datosLaser= laser_proxy->getLaserData();//Obtenemos datos del Laser
     std::sort(datosLaser.begin()+20, datosLaser.end()-20,[](auto a, auto b){return a.dist< b.dist;});//Ordenamos las distancias del frente
-    tR = inner->transform ( "base" ,QVec::vec3 ( parxz.first, 0, parxz.second ),"world" );
+    tR = inner->transform ( "robot" ,QVec::vec3 ( parxz.first, 0, parxz.second ),"world" );
     d = tR.norm2(); // distancia del robot al punto marcado
     float vRot = atan2 ( tR.x(),tR.z() ); //devuelve radianes del angulo q forma donde apunta el robot con el punto destino.
 
@@ -66,16 +66,26 @@ void SpecificWorker::compute()
             //Calcular punto inicial,punto final,y trayectoria entre ellos
             // parIni = //Falta el punto inicial
             parxz = target.get();//Punto final
-            tR = inner->transform ( "base" ,QVec::vec3 ( parxz.first, 0, parxz.second ),"world" );
+            tR = inner->transform ( "robot" ,QVec::vec3 ( parxz.first, 0, parxz.second ),"world" );
             d = tR.norm2(); // distancia del robot al punto marcado
             estado= Estado::AVANZANDO;
-
+	    //Definir la recta - Solo se calcula al principio
+	    //Coordenadas (x,y) del robot->Iniciales :bState.x,bState.z
+	    //Coordenadas del Target ->Finales : parxz.first,parxz.second
+	    A = parxz.second - bState.z ; 
+	    B = parxz.first - bState.x;
+	    C = -A * bState.x - B*bState.z;
+	    
+	    
+	    
+	    
         }
         break;
 	
     case Estado::AVANZANDO:
       //Se recalcula la distancia segun avanza 
-	
+	 // qDebug() << "Distancia con la recta: " << disRecta ;
+
 	//Cada vez que avance, se van obteniendo los datos actualizados del laser
 // 	datosLaser= laser_proxy->getLaserData();//Obtenemos datos del Laser
 // 	std::sort(datosLaser.begin()+20, datosLaser.end()-20,[](auto a, auto b){return a.dist< b.dist;});
@@ -105,9 +115,7 @@ void SpecificWorker::compute()
         }
         else
         {
-            //Si ha llegado al sitio
-            differentialrobot_proxy->setSpeedBase ( 0,0 ); //Se ParameterList
-            
+            //Si ha llegado al sitio            
 	    estado = Estado::LLEGADO;
         }
 	
@@ -132,10 +140,22 @@ case Estado::GIRANDO:
     break;
 
 case Estado::BORDEANDO:
- if (datosLaser[20].dist>UMBRAL && (vRot<0.02 && vRot > -0.02))
+   qDebug() << "Distancia con target: " << d;
+   qDebug() << "Distancia con pared: " << datosLaser[20].dist;
+ if (datosLaser[20].dist>UMBRAL && (vRot<0.03 && vRot > -0.03))//Que no haya obstaculos en el frente y vaya hacia el objetivo
     {
 	estado=Estado::AVANZANDO;
     }
+    if(datosLaser[20].dist<UMBRAL) //Si hay dos obstaculos en L, debe volver a girar para no tener obstaculo en frente
+    {
+      	estado=Estado::GIRANDO;
+    }
+  if ( d < 280)
+  {
+    estado=Estado::LLEGADO;
+  }
+//Condicion 2 para llegar al objetivo
+ //if ( 
    //Ordenar los 20 primeros
    std::sort(datosLaser.end()-19, datosLaser.end()-10,[](auto a, auto b){return a.dist< b.dist;});//Valores de la izda
    
@@ -149,10 +169,12 @@ case Estado::BORDEANDO:
    differentialrobot_proxy->setSpeedBase(0,-0.75);
      
   }
-  
+  disRecta = abs(A*bState.x + B*bState.z + C)/ sqrt(pow(A,2) + pow(B,2));
+  //qDebug() << "Distancia con la recta: " << disRecta ;
      break;
      
 case Estado::LLEGADO:
+    differentialrobot_proxy->setSpeedBase(0,0);
     target.setEmpty();
     estado=Estado::PARADO;
   
@@ -164,7 +186,7 @@ case Estado::LLEGADO:
 //     {
 //
 //         std::pair<float, float> parxz = target.get();
-//         QVec tR = inner->transform ( "base" ,QVec::vec3 ( parxz.first, 0, parxz.second ),"world" );
+//         QVec tR = inner->transform ( "robot" ,QVec::vec3 ( parxz.first, 0, parxz.second ),"world" );
 // 	float d = tR.norm2(); // distancia del robot al punto marcado
 //
 // 	if( d > 50 )//Si no ha llegado

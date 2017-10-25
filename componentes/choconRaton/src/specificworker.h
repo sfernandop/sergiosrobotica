@@ -36,7 +36,7 @@
 #include <mutex>
 #include <stdlib.h>
 #include <time.h>
-
+#include <math.h>
 
 #define MAX_ADV 700
 #define MAX_ROT 0.5
@@ -62,7 +62,8 @@ private:
       InnerModel* inner;
       std::pair<float, float> parxz , parIni ;//Valores (x,z) del objetivo e inicio
       QVec tR;//tR- Posicion del robot desde el pv del mundo 
-      float d;//Distancia al objetivo
+      float d,A,B,C;//Distancia al objetivo/Para la recta: Ax+By+C=0
+      float disRecta = 0.0;//Distancia del punto donde esta el robot a la recta
       Estado estado = Estado::PARADO;
       //Definimos una nueva estructura con 4 campos
       struct Target
@@ -70,7 +71,6 @@ private:
 	QMutex mutex;
 	bool empty =true;
 	int x,y,z;
-	
 	bool isEmpty()
 	{
 	  QMutexLocker ml(&mutex);
