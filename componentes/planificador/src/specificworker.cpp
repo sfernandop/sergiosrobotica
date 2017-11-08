@@ -23,7 +23,9 @@
 */
 SpecificWorker::SpecificWorker(MapPrx& mprx) : GenericWorker(mprx)
 {
-
+  tag.setId(-1);
+  tag.set(0,0);
+  tag.setTiempo(0);
 }
 
 /**
@@ -36,51 +38,57 @@ SpecificWorker::~SpecificWorker()
 
 bool SpecificWorker::setParams(RoboCompCommonBehavior::ParameterList params)
 {
-	
-
-
-	
+		
 	timer.start(Period);
-	
+	innermodel = new InnerModel("/home/robocomp/robocomp/files/innermodel/simpleworld.xml");
 
 	return true;
 }
 
 void SpecificWorker::compute()
 {
-  /**
-  switch(){
-    case 0:
-    irobjetivo_proxy->turn(900);
-
+  RoboCompDifferentialRobot::TBaseState bState;
+  differentialrobot_proxy->getBaseState(bState);
+  innermodel->updateTransformValues("base",bState.x,0,bState.z,0,bState.alpha,0);
+  
+  tag.setTiempo(tag.getTiempo() + 1);//Cada ejecucion se incrementa
+  switch(estado)
+  {
+    case 0 : //Empieza girando hasta que encuentre una AprilTag
+      if (tag.getId() == 0 && tag.getTiempo()< TIEMPO_MAX)
+      {//Si encuentra etiqueta 0 y lleva menos de 100 iteraciones sin verla 
+	estado = 1;
+	//Calcular posicion absoluta del tag 0
+	tagInWorld = innermodel->transform("world", QVec::vec3(tag.x,0,tag.z),"base");//Cambiamos a SRef del mundo
+	irobjetivo_proxy->go(tagInWorld.x(),tagInWorld.z());
+      }
+      else irobjetivo_proxy->turn(0.5);
       break;
-      case 1:
+    case 1 : //Direccion a la tag 0
+      if ( irobjetivo_proxy->getState() < DIST_MIN )//Llegando a la etiqueta 0
+      {
+	tagInWorld = innermodel->transform("world", QVec::vec3(tag.x,0,tag.z),"base");//Cambiamos a SRef del mundo
+	irobjetivo_proxy->go(tagInWorld.x(),tagInWorld.z());
+	estado = 2;
+      }
+      else irobjetivo_proxy->go(tagInWorld.x(),tagInWorld.z());//Sigue yendo a la tag 0
       break;
-      case 2:
+    case 2 : 
       break;
-      case 3:
+    case 3:
       break;
-      case 4:
+    case 4 : 
       break;
-      case 5:
-      break;}*/
       
-// 	try
-// 	{
-// 		camera_proxy->getYImage(0,img, cState, bState);
-// 		memcpy(image_gray.data, &img[0], m_width*m_height*sizeof(uchar));
-// 		searchTags(image_gray);
-// 	}
-// 	catch(const Ice::Exception &e)
-// 	{
-// 		std::cout << "Error reading from Camera" << e << std::endl;
-// 	}
+  }
 }
 
 
 void SpecificWorker::newAprilTag(const tagsList &tags)
 {
-
+  tag.set(tags.data()->tx,tags.data()->tz);
+  tag.setId(tags.data()-> id);
+  tag.setTiempo(0);
 }
 
 
