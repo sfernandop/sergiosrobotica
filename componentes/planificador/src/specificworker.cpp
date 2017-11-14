@@ -40,7 +40,7 @@ bool SpecificWorker::setParams(RoboCompCommonBehavior::ParameterList params)
 {
 		
 	timer.start(Period);
-	innermodel = new InnerModel("/home/robocomp/robocomp/files/innermodel/simpleworld.xml");
+	innermodel = new InnerModel("/home/robocomp/robocomp/files/innermodel/sincajas.xml");
 
 	return true;
 }
@@ -55,31 +55,71 @@ void SpecificWorker::compute()
   switch(estado)
   {
     case 0 : //Empieza girando hasta que encuentre una AprilTag
-      if (tag.getId() == 0 && tag.getTiempo()< TIEMPO_MAX)
+      if (tag.getId() == 0) //&& tag.getTiempo()< TIEMPO_MAX)
       {//Si encuentra etiqueta 0 y lleva menos de 100 iteraciones sin verla 
 	estado = 1;
-	//Calcular posicion absoluta del tag 0
-	tagInWorld = innermodel->transform("world", QVec::vec3(tag.x,0,tag.z),"base");//Cambiamos a SRef del mundo
-	irobjetivo_proxy->go(tagInWorld.x(),tagInWorld.z());
+       irobjetivo_proxy->go(tagInWorld.x(),tagInWorld.z());
       }
       else irobjetivo_proxy->turn(0.5);
       break;
+      
     case 1 : //Direccion a la tag 0
+      irobjetivo_proxy->go(tagInWorld.x(),tagInWorld.z());
       if ( irobjetivo_proxy->getState() < DIST_MIN )//Llegando a la etiqueta 0
       {
-	tagInWorld = innermodel->transform("world", QVec::vec3(tag.x,0,tag.z),"base");//Cambiamos a SRef del mundo
-	irobjetivo_proxy->go(tagInWorld.x(),tagInWorld.z());
 	estado = 2;
       }
-      else irobjetivo_proxy->go(tagInWorld.x(),tagInWorld.z());//Sigue yendo a la tag 0
-      break;
-    case 2 : 
-      break;
-    case 3:
-      break;
-    case 4 : 
+      else{ //Calcular posicion absoluta del tag 0
+	//tagInWorld = innermodel->transform("world", QVec::vec3(tag.x,0,tag.z),"base");//Cambiamos a SRef del mundo
+	
+	irobjetivo_proxy->go(tagInWorld.x(),tagInWorld.z());
+      }
       break;
       
+      
+      
+    case 2 : 
+      if (tag.getId() == 1) //&& tag.getTiempo()< TIEMPO_MAX)
+      {//Si encuentra etiqueta 0 y lleva menos de 100 iteraciones sin verla 
+        qDebug()<<"LA HE VEIDO   ";
+	tagInWorld = innermodel->transform("world", QVec::vec3(tag.x,0,tag.z),"base");//Cambiamos a SRef del mundo
+        irobjetivo_proxy->go(tagInWorld.x(),tagInWorld.z());
+
+	estado = 3;
+      }
+      else irobjetivo_proxy->turn(0.5);
+      break;
+    case 3:
+       irobjetivo_proxy->go(tagInWorld.x(),tagInWorld.z());
+	//wait(1);
+       if ( irobjetivo_proxy->getState() < DIST_MIN )//Llegando a la etiqueta 0
+      {
+	estado = 4;
+      }
+      else{ //Calcular posicion absoluta del tag 0
+	//tagInWorld = innermodel->transform("world", QVec::vec3(tag.x,0,tag.z),"base");//Cambiamos a SRef del mundo
+	
+	irobjetivo_proxy->go(tagInWorld.x(),tagInWorld.z());
+      }
+      break;
+    case 4 : 
+       if (tag.getId() == 3) //&& tag.getTiempo()< TIEMPO_MAX)
+      {//Si encuentra etiqueta 0 y lleva menos de 100 iteraciones sin verla 
+	estado = 5;
+      }
+      else irobjetivo_proxy->turn(0.5);
+      break;
+        case 5:
+	irobjetivo_proxy->go(tagInWorld.x(),tagInWorld.z());
+
+       if ( irobjetivo_proxy->getState() < DIST_MIN )//Llegando a la etiqueta 0
+      {
+	irobjetivo_proxy->stop();
+      }
+      else{ //Calcular posicion absoluta del tag 
+	irobjetivo_proxy->go(tagInWorld.x(),tagInWorld.z());
+      }
+      break;
   }
 }
 
@@ -89,6 +129,8 @@ void SpecificWorker::newAprilTag(const tagsList &tags)
   tag.set(tags.data()->tx,tags.data()->tz);
   tag.setId(tags.data()-> id);
   tag.setTiempo(0);
+  tagInWorld = innermodel->transform("world", QVec::vec3(tag.x,0,tag.z),"base");//Cambiamos a SRef del mundo
+  qDebug()<<"COORDENADAS DE LA TAG: " << tagInWorld.x() << " , " << tagInWorld.z();
 }
 
 
