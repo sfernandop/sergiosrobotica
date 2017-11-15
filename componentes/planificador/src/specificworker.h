@@ -36,7 +36,7 @@
 #include <stdlib.h>
 #include <mutex>
 #define TIEMPO_MAX 100
-#define DIST_MIN 400
+#define DIST_MIN 375
 
 class SpecificWorker : public GenericWorker
 {
@@ -54,10 +54,14 @@ public slots:
 	void compute(); 	
 
 private:
+  
    int estado = 0;
    float tagX,tagZ;//Coordenadas reales de la AprilTag en la sala
   // int tiempoTotal = 0; //Cuenta el tiempo que ha estado iterando (cada iteracion se incrementa)
   QVec tagInWorld;
+  int sigTag = 0; //Controla la siguiente Tag a la que tiene que ir el robot
+  QMutex mutexGlobal;
+
   struct Tag{
     QMutex mutex;
     float x,z;//Distancia robot - tag
@@ -66,9 +70,9 @@ private:
      */
     void set(float x_, float z_)
     {
-	  QMutexLocker ml(&mutex);
-	  x = x_;
-	  z = z_;
+      QMutexLocker ml(&mutex);
+      x = x_;
+      z = z_;
     }
     void setTiempo(int tiempo_)
     {

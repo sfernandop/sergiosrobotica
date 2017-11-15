@@ -148,7 +148,7 @@ void SpecificWorker::compute()
 
     case Estado::BORDEANDO:
         qDebug() << "BORDEANDO";
-        if ( datosLaser[20].dist>UMBRAL && ( vRot<ANGULO_VISION && vRot > -(ANGULO_VISION) ) ) //Que no haya obstaculos en el frente y vaya hacia el objetivo
+        if ( datosLaser[20].dist>UMBRAL && ( vRot<ANGULO_VISION && vRot > -(ANGULO_VISION) )) //Que no haya obstaculos en el frente y vaya hacia el objetivo
         {
             estado=Estado::AVANZANDO;
         }
@@ -216,11 +216,33 @@ float SpecificWorker::sigmoide ( float dis )
 }
 
 
-
+/*
+ *Implementacion del metodo 'go' de la interfaz "IrObjetivo"
+ * Si el target estaba vacio,lo define con las coordenadas x,z que se pasan 
+ * por parametro.
+ * Si no:
+ * 	-Si ha variado la x o la z en mas de 50 (o -50)
+ * 	se refresca el valor del target
+ * 	-Si no: El target se mantiene (no hace nada)
+ * 
+ */ 
 void SpecificWorker::go ( const float x, const float z )
 {
-  target.set ( x, z );
-  target.setCambiado(true);
+  if ( target.isEmpty())
+  {
+    target.set ( x, z );
+    target.setCambiado(true);
+  }
+  else {
+  int dX = 0 , dZ = 0; //Diferencias de X y Z
+  dX = x - target.x;
+  dZ = z - target.z;
+  if ( abs(dX) > 50 || abs(dZ) > 50 ){
+    qDebug()<<"Target Actualizado!---------------------------------------------------------------------";
+    target.set ( x, z );
+    target.setCambiado(true);
+    }
+  }
 }
 
 void SpecificWorker::turn ( const float speed )
