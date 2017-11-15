@@ -59,67 +59,92 @@ void SpecificWorker::compute()
       {//Si encuentra etiqueta 0 y lleva menos de 100 iteraciones sin verla 
 	estado = 1;
        irobjetivo_proxy->go(tagInWorld.x(),tagInWorld.z());
+
       }
       else irobjetivo_proxy->turn(0.5);
       break;
       
     case 1 : //Direccion a la tag 0
-      irobjetivo_proxy->go(tagInWorld.x(),tagInWorld.z());
       if ( irobjetivo_proxy->getState() < DIST_MIN )//Llegando a la etiqueta 0
       {
 	estado = 2;
+	qDebug()<<"Estoy en la tag 0 y mi distancia es "<< irobjetivo_proxy->getState();
       }
-      else{ //Calcular posicion absoluta del tag 0
-	//tagInWorld = innermodel->transform("world", QVec::vec3(tag.x,0,tag.z),"base");//Cambiamos a SRef del mundo
-	
+      else{ //Calcular posicion absoluta del tag 0	
 	irobjetivo_proxy->go(tagInWorld.x(),tagInWorld.z());
       }
       break;
       
       
       
-    case 2 : 
+    case 2 : //Buscar
       if (tag.getId() == 1) //&& tag.getTiempo()< TIEMPO_MAX)
       {//Si encuentra etiqueta 0 y lleva menos de 100 iteraciones sin verla 
-        qDebug()<<"LA HE VEIDO   ";
-	tagInWorld = innermodel->transform("world", QVec::vec3(tag.x,0,tag.z),"base");//Cambiamos a SRef del mundo
         irobjetivo_proxy->go(tagInWorld.x(),tagInWorld.z());
-
 	estado = 3;
       }
       else irobjetivo_proxy->turn(0.5);
       break;
-    case 3:
-       irobjetivo_proxy->go(tagInWorld.x(),tagInWorld.z());
+    case 3://Ir
 	//wait(1);
        if ( irobjetivo_proxy->getState() < DIST_MIN )//Llegando a la etiqueta 0
       {
+	qDebug()<<"Estoy en la tag 1 y mi distancia es "<< irobjetivo_proxy->getState();
 	estado = 4;
       }
       else{ //Calcular posicion absoluta del tag 0
 	//tagInWorld = innermodel->transform("world", QVec::vec3(tag.x,0,tag.z),"base");//Cambiamos a SRef del mundo
-	
-	irobjetivo_proxy->go(tagInWorld.x(),tagInWorld.z());
+		irobjetivo_proxy->go(tagInWorld.x(),tagInWorld.z());
+
       }
       break;
     case 4 : 
-       if (tag.getId() == 3) //&& tag.getTiempo()< TIEMPO_MAX)
+       if (tag.getId() == 2) //&& tag.getTiempo()< TIEMPO_MAX)
       {//Si encuentra etiqueta 0 y lleva menos de 100 iteraciones sin verla 
+	irobjetivo_proxy->go(tagInWorld.x(),tagInWorld.z());
+
 	estado = 5;
       }
       else irobjetivo_proxy->turn(0.5);
       break;
-        case 5:
-	irobjetivo_proxy->go(tagInWorld.x(),tagInWorld.z());
+    
+    case 5:
 
        if ( irobjetivo_proxy->getState() < DIST_MIN )//Llegando a la etiqueta 0
       {
-	irobjetivo_proxy->stop();
+	qDebug()<<"Estoy en la tag 2 y mi distancia es "<< irobjetivo_proxy->getState();
+	estado = 6;
       }
       else{ //Calcular posicion absoluta del tag 
 	irobjetivo_proxy->go(tagInWorld.x(),tagInWorld.z());
       }
       break;
+      
+     case 6 : 
+      if (tag.getId() == 3) //&& tag.getTiempo()< TIEMPO_MAX)
+      {//Si encuentra etiqueta 0 y lleva menos de 100 iteraciones sin verla 
+        irobjetivo_proxy->go(tagInWorld.x(),tagInWorld.z());
+
+	estado = 7;
+      }
+      else irobjetivo_proxy->turn(0.5);
+      break;
+    case 7:
+	//wait(1);
+       if ( irobjetivo_proxy->getState() < DIST_MIN )//Llegando a la etiqueta 0
+      {
+	irobjetivo_proxy->stop();
+	qDebug()<<"Estoy en la tag 3 y mi distancia es "<< irobjetivo_proxy->getState();
+
+	estado = 8;
+      }
+      else{ //Calcular posicion absoluta del tag 0
+	//tagInWorld = innermodel->transform("world", QVec::vec3(tag.x,0,tag.z),"base");//Cambiamos a SRef del mundo
+	
+	irobjetivo_proxy->go(tagInWorld.x(),tagInWorld.z());
+      }
+      break;
+    case 8: break;
   }
 }
 
@@ -128,9 +153,8 @@ void SpecificWorker::newAprilTag(const tagsList &tags)
 {
   tag.set(tags.data()->tx,tags.data()->tz);
   tag.setId(tags.data()-> id);
-  tag.setTiempo(0);
+  //tag.setTiempo(0);
   tagInWorld = innermodel->transform("world", QVec::vec3(tag.x,0,tag.z),"base");//Cambiamos a SRef del mundo
-  qDebug()<<"COORDENADAS DE LA TAG: " << tagInWorld.x() << " , " << tagInWorld.z();
 }
 
 

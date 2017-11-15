@@ -36,7 +36,7 @@
 #include <stdlib.h>
 #include <mutex>
 #define TIEMPO_MAX 100
-#define DIST_MIN 200
+#define DIST_MIN 400
 
 class SpecificWorker : public GenericWorker
 {
