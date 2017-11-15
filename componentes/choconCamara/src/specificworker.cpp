@@ -38,7 +38,7 @@ SpecificWorker::~SpecificWorker()
 
 bool SpecificWorker::setParams ( RoboCompCommonBehavior::ParameterList params )
 {
-    inner = new InnerModel ( "/home/salabeta/robocomp/files/innermodel/sincajas.xml" );
+    inner = new InnerModel ( "/home/salabeta/robocomp/files/innermodel/simpleworld.xml" );
     timer.start ( Period );
     target.empty = true;
     return true;
@@ -60,10 +60,8 @@ void SpecificWorker::compute()
     d = tR.norm2(); // distancia del robot al punto marcado
     float vRot = atan2 ( tR.x(),tR.z() ); //devuelve radianes del angulo q forma donde apunta el robot con el punto destino.
 
-    switch ( estado )
-    {
-    case Estado::PARADO:
-        if ( target.isEmpty() == false )
+    //Refresca el estado
+     if ( target.isEmpty() == false && target.haCambiado())
         {
             //Calcular punto inicial,punto final,y trayectoria entre ellos
             // parIni = //Falta el punto inicial
@@ -71,17 +69,32 @@ void SpecificWorker::compute()
             tR = inner->transform ( "base" ,QVec::vec3 ( parxz.first, 0, parxz.second ),"world" );
             d = tR.norm2(); // distancia del robot al punto marcado
             estado= Estado::AVANZANDO;
-           
+            target.setCambiado(false);
+
         }
+    
+    
+    switch ( estado )
+    {
+    case Estado::PARADO:
+        qDebug() << "PARADO";
+	     if ( target.isEmpty() == false)
+        {
+            //Calcular punto inicial,punto final,y trayectoria entre ellos
+            // parIni = //Falta el punto inicial
+            parxz = target.get();//Punto final
+            tR = inner->transform ( "base" ,QVec::vec3 ( parxz.first, 0, parxz.second ),"world" );
+            d = tR.norm2(); // distancia del robot al punto marcado
+            estado= Estado::AVANZANDO;
+            target.setCambiado(false);
+
+        }
+       
         break;
 
     case Estado::AVANZANDO:
-        //Se recalcula la distancia segun avanza
-        // qDebug() << "Distancia con la recta: " << disRecta ;
+         qDebug() << "AVANZANDO";
 
-        //Cada vez que avance, se van obteniendo los datos actualizados del laser
-        // 	datosLaser= laser_proxy->getLaserData();//Obtenemos datos del Laser
-        // 	std::sort(datosLaser.begin()+20, datosLaser.end()-20,[](auto a, auto b){return a.dist< b.dist;});
         if ( datosLaser[20].dist < UMBRAL ) //Si hay obstaculo
         {
             //Pasa a estado de Giro
@@ -95,8 +108,6 @@ void SpecificWorker::compute()
 
             //Si no ha llegado
             float velAvance = d;// version antigua
-            //             float vRot = atan2 ( tR.x(),tR.z() ); //devuelve radianes del angulo q forma donde apunta el robot con el punto destino.
-
             if ( vRot > MAX_ROT )
             {
                 vRot = MAX_ROT;
@@ -118,6 +129,8 @@ void SpecificWorker::compute()
 
 
     case Estado::GIRANDO:
+	 qDebug() << "GIRANDO";
+
         if ( datosLaser[20].dist>UMBRAL )
         {
             estado=Estado::BORDEANDO;
@@ -134,9 +147,8 @@ void SpecificWorker::compute()
         break;
 
     case Estado::BORDEANDO:
-        qDebug() << "Distancia con target: " << d;
-        qDebug() << "Distancia con pared: " << datosLaser[20].dist;
-        if ( datosLaser[20].dist>UMBRAL && ( vRot<0.03 && vRot > -0.03 ) ) //Que no haya obstaculos en el frente y vaya hacia el objetivo
+        qDebug() << "BORDEANDO";
+        if ( datosLaser[20].dist>UMBRAL && ( vRot<ANGULO_VISION && vRot > -(ANGULO_VISION) ) ) //Que no haya obstaculos en el frente y vaya hacia el objetivo
         {
             estado=Estado::AVANZANDO;
         }
@@ -171,6 +183,8 @@ void SpecificWorker::compute()
         break;
 
     case Estado::LLEGADO:
+         qDebug() << "LLEGADO";
+
         differentialrobot_proxy->setSpeedBase ( 0,0 );
         target.setEmpty();
         estado=Estado::PARADO;
@@ -185,6 +199,7 @@ void SpecificWorker::setPick ( const Pick &myPick )
     qDebug() <<  "x:" <<myPick.x;
     qDebug() <<  "y:" <<myPick.y;
     qDebug() <<  "z:" <<myPick.z;
+    target.setCambiado(true);
     target.set ( myPick.x, myPick.z );
 }
 
@@ -205,6 +220,7 @@ float SpecificWorker::sigmoide ( float dis )
 void SpecificWorker::go ( const float x, const float z )
 {
   target.set ( x, z );
+  target.setCambiado(true);
 }
 
 void SpecificWorker::turn ( const float speed )

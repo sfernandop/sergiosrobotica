@@ -35,6 +35,7 @@
 
 #define MAX_ADV 700
 #define MAX_ROT 0.5
+#define ANGULO_VISION 0.03
 #define E 2.71828 
 #define UMBRAL 250
 
@@ -68,7 +69,7 @@ private:
       struct Target
       {
 	QMutex mutex;
-	bool empty =true;
+	bool empty =true , cambiado = true;//Con la variable "cambiado" controlamos que el target haya cambiado
 	int x,y,z;
 	bool isEmpty()
 	{
@@ -86,6 +87,14 @@ private:
 	  x = x_;
 	  z = z_;
 	  empty = false;
+	}
+	void setCambiado (bool cambiado_){
+	  QMutexLocker ml(&mutex);
+	  cambiado = cambiado_;
+	}
+	bool haCambiado(){
+	  QMutexLocker ml(&mutex);
+	  return cambiado;
 	}
 	std::pair<float, float> get()
 	{

@@ -40,7 +40,7 @@ bool SpecificWorker::setParams(RoboCompCommonBehavior::ParameterList params)
 {
 		
 	timer.start(Period);
-	innermodel = new InnerModel("/home/robocomp/robocomp/files/innermodel/sincajas.xml");
+	innermodel = new InnerModel("/home/robocomp/robocomp/files/innermodel/simpleworld.xml");
 
 	return true;
 }
@@ -70,9 +70,7 @@ void SpecificWorker::compute()
 	estado = 2;
 	qDebug()<<"Estoy en la tag 0 y mi distancia es "<< irobjetivo_proxy->getState();
       }
-      else{ //Calcular posicion absoluta del tag 0	
-	irobjetivo_proxy->go(tagInWorld.x(),tagInWorld.z());
-      }
+      
       break;
       
       
@@ -92,11 +90,6 @@ void SpecificWorker::compute()
 	qDebug()<<"Estoy en la tag 1 y mi distancia es "<< irobjetivo_proxy->getState();
 	estado = 4;
       }
-      else{ //Calcular posicion absoluta del tag 0
-	//tagInWorld = innermodel->transform("world", QVec::vec3(tag.x,0,tag.z),"base");//Cambiamos a SRef del mundo
-		irobjetivo_proxy->go(tagInWorld.x(),tagInWorld.z());
-
-      }
       break;
     case 4 : 
        if (tag.getId() == 2) //&& tag.getTiempo()< TIEMPO_MAX)
@@ -114,9 +107,6 @@ void SpecificWorker::compute()
       {
 	qDebug()<<"Estoy en la tag 2 y mi distancia es "<< irobjetivo_proxy->getState();
 	estado = 6;
-      }
-      else{ //Calcular posicion absoluta del tag 
-	irobjetivo_proxy->go(tagInWorld.x(),tagInWorld.z());
       }
       break;
       
@@ -137,11 +127,6 @@ void SpecificWorker::compute()
 	qDebug()<<"Estoy en la tag 3 y mi distancia es "<< irobjetivo_proxy->getState();
 
 	estado = 8;
-      }
-      else{ //Calcular posicion absoluta del tag 0
-	//tagInWorld = innermodel->transform("world", QVec::vec3(tag.x,0,tag.z),"base");//Cambiamos a SRef del mundo
-	
-	irobjetivo_proxy->go(tagInWorld.x(),tagInWorld.z());
       }
       break;
     case 8: break;
