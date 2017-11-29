@@ -34,77 +34,108 @@
 #include <genericworker.h>
 #include <innermodel/innermodel.h>
 #include <stdlib.h>
+#include <string.h>
 #include <mutex>
+#include <list>
 #define TIEMPO_MAX 100
-#define DIST_MIN 375
+#define DIST_MIN 550
 
 class SpecificWorker : public GenericWorker
 {
-  //Implementar nueva estructura con 4 campos (id,x,z y marca de tiempo q nos indique si esta a la vista o no)
-Q_OBJECT
+    //Implementar nueva estructura con 4 campos (id,x,z y marca de tiempo q nos indique si esta a la vista o no)
+    Q_OBJECT
 public:
-	
-	SpecificWorker(MapPrx& mprx);	
-	~SpecificWorker();
-	bool setParams(RoboCompCommonBehavior::ParameterList params);
 
-	void newAprilTag(const tagsList &tags);
+    SpecificWorker ( MapPrx& mprx );
+    ~SpecificWorker();
+    bool setParams ( RoboCompCommonBehavior::ParameterList params );
+
+    void newAprilTag ( const tagsList &tags );
 
 public slots:
-	void compute(); 	
+    void compute();
 
 private:
-  
-   int estado = 0;
-   float tagX,tagZ;//Coordenadas reales de la AprilTag en la sala
-  // int tiempoTotal = 0; //Cuenta el tiempo que ha estado iterando (cada iteracion se incrementa)
-  QVec tagInWorld;
-  int sigTag = 0; //Controla la siguiente Tag a la que tiene que ir el robot
-  QMutex mutexGlobal;
 
-  struct Tag{
-    QMutex mutex;
-    float x,z;//Distancia robot - tag
-    int id,tiempo;
-    /*Introducir coordenadas distancia robot - tag
-     */
-    void set(float x_, float z_)
-    {
-      QMutexLocker ml(&mutex);
-      x = x_;
-      z = z_;
-    }
-    void setTiempo(int tiempo_)
-    {
-      QMutexLocker ml(&mutex);
-      tiempo = tiempo_;
-    }
-    void setId(int id_)
-    {
-      QMutexLocker ml(&mutex);
-      id = id_;
-    }
-    float getX(){
-     QMutexLocker ml(&mutex);
-     return x;
-    }
-    float getZ(){
-     QMutexLocker ml(&mutex);
-     return z;
-    }
-    int getId(){
-     QMutexLocker ml(&mutex);
-     return id;
-    }
-    int getTiempo(){
-    QMutexLocker ml(&mutex);
-    return tiempo;
-    }
-  };
-  Tag tag;
-  
-  InnerModel *innermodel;
-  
+    int estado = 0;
+    float tagX,tagZ;//Coordenadas reales de la AprilTag en la sala
+    // int tiempoTotal = 0; //Cuenta el tiempo que ha estado iterando (cada iteracion se incrementa)
+    QVec tagInWorld;
+    int sigTag = 10; //Controla la siguiente Caja a la que tiene que ir el robot
+    QMutex mutexGlobal;
+    //Tenemos una lista con las etiquetas que no se deben tratar
+    struct Tag {
+        QMutex mutex;
+        float x,z;//Distancia robot - tag
+        int id,tiempo;
+        /*Introducir coordenadas distancia robot - tag
+         */
+        void set ( float x_, float z_ ) {
+            QMutexLocker ml ( &mutex );
+            x = x_;
+            z = z_;
+        }
+        void setTiempo ( int tiempo_ ) {
+            QMutexLocker ml ( &mutex );
+            tiempo = tiempo_;
+        }
+        void setId ( int id_ ) {
+            QMutexLocker ml ( &mutex );
+            id = id_;
+        }
+        float getX() {
+            QMutexLocker ml ( &mutex );
+            return x;
+        }
+        float getZ() {
+            QMutexLocker ml ( &mutex );
+            return z;
+        }
+        int getId() {
+            QMutexLocker ml ( &mutex );
+            return id;
+        }
+        int getTiempo() {
+            QMutexLocker ml ( &mutex );
+            return tiempo;
+        }
+    };
+    struct cajas {
+        std::vector<int> blackList = {-1, 0,1,2,3 };
+        QMutex mutex;
+        bool isEmpty() {
+            QMutexLocker ml ( &mutex );
+            return blackList.empty();
+        };
+        void setEmpty() {
+            QMutexLocker ml ( &mutex );
+            blackList.clear();
+        };
+        /**Comprueba si una tag esta o no **/
+        bool pertenece ( int tag ) {
+            QMutexLocker ml ( &mutex );
+            for ( auto t : blackList ) {
+                if ( t == tag ) {
+                    return true;
+                }
+
+            }
+
+            return false;
+        }
+        /**Insertar tag en la lista de tags no deseados**/
+        void insertarTag ( int tag ) {
+            QMutexLocker ml ( &mutex );
+            blackList.push_back ( tag );
+        }
+
+    };
+
+
+    Tag tag;
+    cajas noValidas;
+    InnerModel *innermodel;
+
 };
 
 #endif

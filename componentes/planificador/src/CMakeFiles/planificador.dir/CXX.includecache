@@ -261,7 +261,11 @@ innermodel/innermodel.h
 -
 stdlib.h
 -
+string.h
+-
 mutex
+-
+list
 -
 
 /opt/robocomp/include/innermodel/innermodel.h

@@ -91,6 +91,12 @@ typedef ::IceUtil::Handle< Callback_IrObjetivo_stop_Base> Callback_IrObjetivo_st
 class Callback_IrObjetivo_getState_Base : virtual public ::IceInternal::CallbackBase { };
 typedef ::IceUtil::Handle< Callback_IrObjetivo_getState_Base> Callback_IrObjetivo_getStatePtr;
 
+class Callback_IrObjetivo_cogerCaja_Base : virtual public ::IceInternal::CallbackBase { };
+typedef ::IceUtil::Handle< Callback_IrObjetivo_cogerCaja_Base> Callback_IrObjetivo_cogerCajaPtr;
+
+class Callback_IrObjetivo_soltarCaja_Base : virtual public ::IceInternal::CallbackBase { };
+typedef ::IceUtil::Handle< Callback_IrObjetivo_soltarCaja_Base> Callback_IrObjetivo_soltarCajaPtr;
+
 }
 
 namespace IceProxy
@@ -425,6 +431,146 @@ private:
     ::Ice::AsyncResultPtr begin_getState(const ::Ice::Context*, const ::IceInternal::CallbackBasePtr&, const ::Ice::LocalObjectPtr& __cookie = 0);
     
 public:
+
+    void cogerCaja()
+    {
+        cogerCaja(0);
+    }
+    void cogerCaja(const ::Ice::Context& __ctx)
+    {
+        cogerCaja(&__ctx);
+    }
+#ifdef ICE_CPP11
+    ::Ice::AsyncResultPtr
+    begin_cogerCaja(const ::IceInternal::Function<void ()>& __response, const ::IceInternal::Function<void (const ::Ice::Exception&)>& __exception = ::IceInternal::Function<void (const ::Ice::Exception&)>(), const ::IceInternal::Function<void (bool)>& __sent = ::IceInternal::Function<void (bool)>())
+    {
+        return begin_cogerCaja(0, new ::IceInternal::Cpp11FnOnewayCallbackNC(__response, __exception, __sent));
+    }
+    ::Ice::AsyncResultPtr
+    begin_cogerCaja(const ::IceInternal::Function<void (const ::Ice::AsyncResultPtr&)>& __completed, const ::IceInternal::Function<void (const ::Ice::AsyncResultPtr&)>& __sent = ::IceInternal::Function<void (const ::Ice::AsyncResultPtr&)>())
+    {
+        return begin_cogerCaja(0, ::Ice::newCallback(__completed, __sent), 0);
+    }
+    ::Ice::AsyncResultPtr
+    begin_cogerCaja(const ::Ice::Context& __ctx, const ::IceInternal::Function<void ()>& __response, const ::IceInternal::Function<void (const ::Ice::Exception&)>& __exception = ::IceInternal::Function<void (const ::Ice::Exception&)>(), const ::IceInternal::Function<void (bool)>& __sent = ::IceInternal::Function<void (bool)>())
+    {
+        return begin_cogerCaja(&__ctx, new ::IceInternal::Cpp11FnOnewayCallbackNC(__response, __exception, __sent), 0);
+    }
+    ::Ice::AsyncResultPtr
+    begin_cogerCaja(const ::Ice::Context& __ctx, const ::IceInternal::Function<void (const ::Ice::AsyncResultPtr&)>& __completed, const ::IceInternal::Function<void (const ::Ice::AsyncResultPtr&)>& __sent = ::IceInternal::Function<void (const ::Ice::AsyncResultPtr&)>())
+    {
+        return begin_cogerCaja(&__ctx, ::Ice::newCallback(__completed, __sent));
+    }
+#endif
+
+    ::Ice::AsyncResultPtr begin_cogerCaja()
+    {
+        return begin_cogerCaja(0, ::IceInternal::__dummyCallback, 0);
+    }
+
+    ::Ice::AsyncResultPtr begin_cogerCaja(const ::Ice::Context& __ctx)
+    {
+        return begin_cogerCaja(&__ctx, ::IceInternal::__dummyCallback, 0);
+    }
+
+    ::Ice::AsyncResultPtr begin_cogerCaja(const ::Ice::CallbackPtr& __del, const ::Ice::LocalObjectPtr& __cookie = 0)
+    {
+        return begin_cogerCaja(0, __del, __cookie);
+    }
+
+    ::Ice::AsyncResultPtr begin_cogerCaja(const ::Ice::Context& __ctx, const ::Ice::CallbackPtr& __del, const ::Ice::LocalObjectPtr& __cookie = 0)
+    {
+        return begin_cogerCaja(&__ctx, __del, __cookie);
+    }
+
+    ::Ice::AsyncResultPtr begin_cogerCaja(const ::RoboCompIrObjetivo::Callback_IrObjetivo_cogerCajaPtr& __del, const ::Ice::LocalObjectPtr& __cookie = 0)
+    {
+        return begin_cogerCaja(0, __del, __cookie);
+    }
+
+    ::Ice::AsyncResultPtr begin_cogerCaja(const ::Ice::Context& __ctx, const ::RoboCompIrObjetivo::Callback_IrObjetivo_cogerCajaPtr& __del, const ::Ice::LocalObjectPtr& __cookie = 0)
+    {
+        return begin_cogerCaja(&__ctx, __del, __cookie);
+    }
+
+    void end_cogerCaja(const ::Ice::AsyncResultPtr&);
+    
+private:
+
+    void cogerCaja(const ::Ice::Context*);
+    ::Ice::AsyncResultPtr begin_cogerCaja(const ::Ice::Context*, const ::IceInternal::CallbackBasePtr&, const ::Ice::LocalObjectPtr& __cookie = 0);
+    
+public:
+
+    void soltarCaja()
+    {
+        soltarCaja(0);
+    }
+    void soltarCaja(const ::Ice::Context& __ctx)
+    {
+        soltarCaja(&__ctx);
+    }
+#ifdef ICE_CPP11
+    ::Ice::AsyncResultPtr
+    begin_soltarCaja(const ::IceInternal::Function<void ()>& __response, const ::IceInternal::Function<void (const ::Ice::Exception&)>& __exception = ::IceInternal::Function<void (const ::Ice::Exception&)>(), const ::IceInternal::Function<void (bool)>& __sent = ::IceInternal::Function<void (bool)>())
+    {
+        return begin_soltarCaja(0, new ::IceInternal::Cpp11FnOnewayCallbackNC(__response, __exception, __sent));
+    }
+    ::Ice::AsyncResultPtr
+    begin_soltarCaja(const ::IceInternal::Function<void (const ::Ice::AsyncResultPtr&)>& __completed, const ::IceInternal::Function<void (const ::Ice::AsyncResultPtr&)>& __sent = ::IceInternal::Function<void (const ::Ice::AsyncResultPtr&)>())
+    {
+        return begin_soltarCaja(0, ::Ice::newCallback(__completed, __sent), 0);
+    }
+    ::Ice::AsyncResultPtr
+    begin_soltarCaja(const ::Ice::Context& __ctx, const ::IceInternal::Function<void ()>& __response, const ::IceInternal::Function<void (const ::Ice::Exception&)>& __exception = ::IceInternal::Function<void (const ::Ice::Exception&)>(), const ::IceInternal::Function<void (bool)>& __sent = ::IceInternal::Function<void (bool)>())
+    {
+        return begin_soltarCaja(&__ctx, new ::IceInternal::Cpp11FnOnewayCallbackNC(__response, __exception, __sent), 0);
+    }
+    ::Ice::AsyncResultPtr
+    begin_soltarCaja(const ::Ice::Context& __ctx, const ::IceInternal::Function<void (const ::Ice::AsyncResultPtr&)>& __completed, const ::IceInternal::Function<void (const ::Ice::AsyncResultPtr&)>& __sent = ::IceInternal::Function<void (const ::Ice::AsyncResultPtr&)>())
+    {
+        return begin_soltarCaja(&__ctx, ::Ice::newCallback(__completed, __sent));
+    }
+#endif
+
+    ::Ice::AsyncResultPtr begin_soltarCaja()
+    {
+        return begin_soltarCaja(0, ::IceInternal::__dummyCallback, 0);
+    }
+
+    ::Ice::AsyncResultPtr begin_soltarCaja(const ::Ice::Context& __ctx)
+    {
+        return begin_soltarCaja(&__ctx, ::IceInternal::__dummyCallback, 0);
+    }
+
+    ::Ice::AsyncResultPtr begin_soltarCaja(const ::Ice::CallbackPtr& __del, const ::Ice::LocalObjectPtr& __cookie = 0)
+    {
+        return begin_soltarCaja(0, __del, __cookie);
+    }
+
+    ::Ice::AsyncResultPtr begin_soltarCaja(const ::Ice::Context& __ctx, const ::Ice::CallbackPtr& __del, const ::Ice::LocalObjectPtr& __cookie = 0)
+    {
+        return begin_soltarCaja(&__ctx, __del, __cookie);
+    }
+
+    ::Ice::AsyncResultPtr begin_soltarCaja(const ::RoboCompIrObjetivo::Callback_IrObjetivo_soltarCajaPtr& __del, const ::Ice::LocalObjectPtr& __cookie = 0)
+    {
+        return begin_soltarCaja(0, __del, __cookie);
+    }
+
+    ::Ice::AsyncResultPtr begin_soltarCaja(const ::Ice::Context& __ctx, const ::RoboCompIrObjetivo::Callback_IrObjetivo_soltarCajaPtr& __del, const ::Ice::LocalObjectPtr& __cookie = 0)
+    {
+        return begin_soltarCaja(&__ctx, __del, __cookie);
+    }
+
+    void end_soltarCaja(const ::Ice::AsyncResultPtr&);
+    
+private:
+
+    void soltarCaja(const ::Ice::Context*);
+    ::Ice::AsyncResultPtr begin_soltarCaja(const ::Ice::Context*, const ::IceInternal::CallbackBasePtr&, const ::Ice::LocalObjectPtr& __cookie = 0);
+    
+public:
     
     ::IceInternal::ProxyHandle<IrObjetivo> ice_context(const ::Ice::Context& __context) const
     {
@@ -556,6 +702,10 @@ public:
     virtual void stop(const ::Ice::Context*, ::IceInternal::InvocationObserver&) = 0;
 
     virtual ::Ice::Float getState(const ::Ice::Context*, ::IceInternal::InvocationObserver&) = 0;
+
+    virtual void cogerCaja(const ::Ice::Context*, ::IceInternal::InvocationObserver&) = 0;
+
+    virtual void soltarCaja(const ::Ice::Context*, ::IceInternal::InvocationObserver&) = 0;
 };
 
 }
@@ -580,6 +730,10 @@ public:
     virtual void stop(const ::Ice::Context*, ::IceInternal::InvocationObserver&);
 
     virtual ::Ice::Float getState(const ::Ice::Context*, ::IceInternal::InvocationObserver&);
+
+    virtual void cogerCaja(const ::Ice::Context*, ::IceInternal::InvocationObserver&);
+
+    virtual void soltarCaja(const ::Ice::Context*, ::IceInternal::InvocationObserver&);
 };
 
 }
@@ -604,6 +758,10 @@ public:
     virtual void stop(const ::Ice::Context*, ::IceInternal::InvocationObserver&);
 
     virtual ::Ice::Float getState(const ::Ice::Context*, ::IceInternal::InvocationObserver&);
+
+    virtual void cogerCaja(const ::Ice::Context*, ::IceInternal::InvocationObserver&);
+
+    virtual void soltarCaja(const ::Ice::Context*, ::IceInternal::InvocationObserver&);
 };
 
 }
@@ -636,6 +794,12 @@ public:
 
     virtual ::Ice::Float getState(const ::Ice::Current& = ::Ice::Current()) = 0;
     ::Ice::DispatchStatus ___getState(::IceInternal::Incoming&, const ::Ice::Current&);
+
+    virtual void cogerCaja(const ::Ice::Current& = ::Ice::Current()) = 0;
+    ::Ice::DispatchStatus ___cogerCaja(::IceInternal::Incoming&, const ::Ice::Current&);
+
+    virtual void soltarCaja(const ::Ice::Current& = ::Ice::Current()) = 0;
+    ::Ice::DispatchStatus ___soltarCaja(::IceInternal::Incoming&, const ::Ice::Current&);
 
     virtual ::Ice::DispatchStatus __dispatch(::IceInternal::Incoming&, const ::Ice::Current&);
 
@@ -1007,6 +1171,170 @@ template<class T, typename CT> Callback_IrObjetivo_getStatePtr
 newCallback_IrObjetivo_getState(T* instance, void (T::*cb)(::Ice::Float, const CT&), void (T::*excb)(const ::Ice::Exception&, const CT&), void (T::*sentcb)(bool, const CT&) = 0)
 {
     return new Callback_IrObjetivo_getState<T, CT>(instance, cb, excb, sentcb);
+}
+
+template<class T>
+class CallbackNC_IrObjetivo_cogerCaja : public Callback_IrObjetivo_cogerCaja_Base, public ::IceInternal::OnewayCallbackNC<T>
+{
+public:
+
+    typedef IceUtil::Handle<T> TPtr;
+
+    typedef void (T::*Exception)(const ::Ice::Exception&);
+    typedef void (T::*Sent)(bool);
+    typedef void (T::*Response)();
+
+    CallbackNC_IrObjetivo_cogerCaja(const TPtr& obj, Response cb, Exception excb, Sent sentcb)
+        : ::IceInternal::OnewayCallbackNC<T>(obj, cb, excb, sentcb)
+    {
+    }
+};
+
+template<class T> Callback_IrObjetivo_cogerCajaPtr
+newCallback_IrObjetivo_cogerCaja(const IceUtil::Handle<T>& instance, void (T::*cb)(), void (T::*excb)(const ::Ice::Exception&), void (T::*sentcb)(bool) = 0)
+{
+    return new CallbackNC_IrObjetivo_cogerCaja<T>(instance, cb, excb, sentcb);
+}
+
+template<class T> Callback_IrObjetivo_cogerCajaPtr
+newCallback_IrObjetivo_cogerCaja(const IceUtil::Handle<T>& instance, void (T::*excb)(const ::Ice::Exception&), void (T::*sentcb)(bool) = 0)
+{
+    return new CallbackNC_IrObjetivo_cogerCaja<T>(instance, 0, excb, sentcb);
+}
+
+template<class T> Callback_IrObjetivo_cogerCajaPtr
+newCallback_IrObjetivo_cogerCaja(T* instance, void (T::*cb)(), void (T::*excb)(const ::Ice::Exception&), void (T::*sentcb)(bool) = 0)
+{
+    return new CallbackNC_IrObjetivo_cogerCaja<T>(instance, cb, excb, sentcb);
+}
+
+template<class T> Callback_IrObjetivo_cogerCajaPtr
+newCallback_IrObjetivo_cogerCaja(T* instance, void (T::*excb)(const ::Ice::Exception&), void (T::*sentcb)(bool) = 0)
+{
+    return new CallbackNC_IrObjetivo_cogerCaja<T>(instance, 0, excb, sentcb);
+}
+
+template<class T, typename CT>
+class Callback_IrObjetivo_cogerCaja : public Callback_IrObjetivo_cogerCaja_Base, public ::IceInternal::OnewayCallback<T, CT>
+{
+public:
+
+    typedef IceUtil::Handle<T> TPtr;
+
+    typedef void (T::*Exception)(const ::Ice::Exception& , const CT&);
+    typedef void (T::*Sent)(bool , const CT&);
+    typedef void (T::*Response)(const CT&);
+
+    Callback_IrObjetivo_cogerCaja(const TPtr& obj, Response cb, Exception excb, Sent sentcb)
+        : ::IceInternal::OnewayCallback<T, CT>(obj, cb, excb, sentcb)
+    {
+    }
+};
+
+template<class T, typename CT> Callback_IrObjetivo_cogerCajaPtr
+newCallback_IrObjetivo_cogerCaja(const IceUtil::Handle<T>& instance, void (T::*cb)(const CT&), void (T::*excb)(const ::Ice::Exception&, const CT&), void (T::*sentcb)(bool, const CT&) = 0)
+{
+    return new Callback_IrObjetivo_cogerCaja<T, CT>(instance, cb, excb, sentcb);
+}
+
+template<class T, typename CT> Callback_IrObjetivo_cogerCajaPtr
+newCallback_IrObjetivo_cogerCaja(const IceUtil::Handle<T>& instance, void (T::*excb)(const ::Ice::Exception&, const CT&), void (T::*sentcb)(bool, const CT&) = 0)
+{
+    return new Callback_IrObjetivo_cogerCaja<T, CT>(instance, 0, excb, sentcb);
+}
+
+template<class T, typename CT> Callback_IrObjetivo_cogerCajaPtr
+newCallback_IrObjetivo_cogerCaja(T* instance, void (T::*cb)(const CT&), void (T::*excb)(const ::Ice::Exception&, const CT&), void (T::*sentcb)(bool, const CT&) = 0)
+{
+    return new Callback_IrObjetivo_cogerCaja<T, CT>(instance, cb, excb, sentcb);
+}
+
+template<class T, typename CT> Callback_IrObjetivo_cogerCajaPtr
+newCallback_IrObjetivo_cogerCaja(T* instance, void (T::*excb)(const ::Ice::Exception&, const CT&), void (T::*sentcb)(bool, const CT&) = 0)
+{
+    return new Callback_IrObjetivo_cogerCaja<T, CT>(instance, 0, excb, sentcb);
+}
+
+template<class T>
+class CallbackNC_IrObjetivo_soltarCaja : public Callback_IrObjetivo_soltarCaja_Base, public ::IceInternal::OnewayCallbackNC<T>
+{
+public:
+
+    typedef IceUtil::Handle<T> TPtr;
+
+    typedef void (T::*Exception)(const ::Ice::Exception&);
+    typedef void (T::*Sent)(bool);
+    typedef void (T::*Response)();
+
+    CallbackNC_IrObjetivo_soltarCaja(const TPtr& obj, Response cb, Exception excb, Sent sentcb)
+        : ::IceInternal::OnewayCallbackNC<T>(obj, cb, excb, sentcb)
+    {
+    }
+};
+
+template<class T> Callback_IrObjetivo_soltarCajaPtr
+newCallback_IrObjetivo_soltarCaja(const IceUtil::Handle<T>& instance, void (T::*cb)(), void (T::*excb)(const ::Ice::Exception&), void (T::*sentcb)(bool) = 0)
+{
+    return new CallbackNC_IrObjetivo_soltarCaja<T>(instance, cb, excb, sentcb);
+}
+
+template<class T> Callback_IrObjetivo_soltarCajaPtr
+newCallback_IrObjetivo_soltarCaja(const IceUtil::Handle<T>& instance, void (T::*excb)(const ::Ice::Exception&), void (T::*sentcb)(bool) = 0)
+{
+    return new CallbackNC_IrObjetivo_soltarCaja<T>(instance, 0, excb, sentcb);
+}
+
+template<class T> Callback_IrObjetivo_soltarCajaPtr
+newCallback_IrObjetivo_soltarCaja(T* instance, void (T::*cb)(), void (T::*excb)(const ::Ice::Exception&), void (T::*sentcb)(bool) = 0)
+{
+    return new CallbackNC_IrObjetivo_soltarCaja<T>(instance, cb, excb, sentcb);
+}
+
+template<class T> Callback_IrObjetivo_soltarCajaPtr
+newCallback_IrObjetivo_soltarCaja(T* instance, void (T::*excb)(const ::Ice::Exception&), void (T::*sentcb)(bool) = 0)
+{
+    return new CallbackNC_IrObjetivo_soltarCaja<T>(instance, 0, excb, sentcb);
+}
+
+template<class T, typename CT>
+class Callback_IrObjetivo_soltarCaja : public Callback_IrObjetivo_soltarCaja_Base, public ::IceInternal::OnewayCallback<T, CT>
+{
+public:
+
+    typedef IceUtil::Handle<T> TPtr;
+
+    typedef void (T::*Exception)(const ::Ice::Exception& , const CT&);
+    typedef void (T::*Sent)(bool , const CT&);
+    typedef void (T::*Response)(const CT&);
+
+    Callback_IrObjetivo_soltarCaja(const TPtr& obj, Response cb, Exception excb, Sent sentcb)
+        : ::IceInternal::OnewayCallback<T, CT>(obj, cb, excb, sentcb)
+    {
+    }
+};
+
+template<class T, typename CT> Callback_IrObjetivo_soltarCajaPtr
+newCallback_IrObjetivo_soltarCaja(const IceUtil::Handle<T>& instance, void (T::*cb)(const CT&), void (T::*excb)(const ::Ice::Exception&, const CT&), void (T::*sentcb)(bool, const CT&) = 0)
+{
+    return new Callback_IrObjetivo_soltarCaja<T, CT>(instance, cb, excb, sentcb);
+}
+
+template<class T, typename CT> Callback_IrObjetivo_soltarCajaPtr
+newCallback_IrObjetivo_soltarCaja(const IceUtil::Handle<T>& instance, void (T::*excb)(const ::Ice::Exception&, const CT&), void (T::*sentcb)(bool, const CT&) = 0)
+{
+    return new Callback_IrObjetivo_soltarCaja<T, CT>(instance, 0, excb, sentcb);
+}
+
+template<class T, typename CT> Callback_IrObjetivo_soltarCajaPtr
+newCallback_IrObjetivo_soltarCaja(T* instance, void (T::*cb)(const CT&), void (T::*excb)(const ::Ice::Exception&, const CT&), void (T::*sentcb)(bool, const CT&) = 0)
+{
+    return new Callback_IrObjetivo_soltarCaja<T, CT>(instance, cb, excb, sentcb);
+}
+
+template<class T, typename CT> Callback_IrObjetivo_soltarCajaPtr
+newCallback_IrObjetivo_soltarCaja(T* instance, void (T::*excb)(const ::Ice::Exception&, const CT&), void (T::*sentcb)(bool, const CT&) = 0)
+{
+    return new Callback_IrObjetivo_soltarCaja<T, CT>(instance, 0, excb, sentcb);
 }
 
 }

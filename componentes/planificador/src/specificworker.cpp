@@ -40,7 +40,7 @@ bool SpecificWorker::setParams(RoboCompCommonBehavior::ParameterList params)
 {
 		
 	timer.start(Period);
-	innermodel = new InnerModel("/home/robocomp/robocomp/files/innermodel/simpleworld.xml");
+	innermodel = new InnerModel("/home/robocomp/robocomp/files/innermodel/betaWorldArm.xml");
 
 	return true;
 }
@@ -49,8 +49,27 @@ void SpecificWorker::compute()
 {
   RoboCompDifferentialRobot::TBaseState bState;
   differentialrobot_proxy->getBaseState(bState);
-  innermodel->updateTransformValues("base",bState.x,0,bState.z,0,bState.alpha,0);
-  
+  innermodel->updateTransformValues("robot",bState.x,0,bState.z,0,bState.alpha,0);
+ 
+  switch(estado)
+  {
+    case 0://Estado 1 - Girando hasta encontrar un tag valido (una caja)
+      if (!noValidas.pertenece(tag.getId()))//Si la tag es valida (no es tag de pared o caja ya soltada) 
+      {
+	qDebug()<<"Estoy yendo a la tag : "<< tag.getId();
+	estado = 1;
+	noValidas.insertarTag(tag.getId());
+       irobjetivo_proxy->go(tagInWorld.x(),tagInWorld.z());//Ir a Tag
+
+      }else irobjetivo_proxy->turn(0.3);
+      break;
+    case 1: //Encuentro primero caja
+      if ( irobjetivo_proxy->getDistancia() < DIST_MIN){
+	estado=0;
+      }
+      break;
+  }
+  /* 
   switch(estado)
   {
     case 0 : //Estado 1 - Girando hasta encontrar siguiente Tag
@@ -76,21 +95,24 @@ void SpecificWorker::compute()
       
       }else if (tag.getId() == sigTag) //Solo da la orden de ir si ve la tag que le toca
 	 {
-	   qDebug()<<"SIGUIENTERLLLLL:    "<<sigTag;
 	   irobjetivo_proxy->go(tagInWorld.x(),tagInWorld.z());//Ir a Tag
 	 }
       break;
     case 2: break;
-    }
+    }*/
+    
   }
 
 void SpecificWorker::newAprilTag(const tagsList &tags)
 {
   QMutexLocker ml(&mutexGlobal);
+  if(tags.data()-> id > 3){
+  qDebug() << "ME ha llegado la tag: " << tags.data()-> id;
   tag.set(tags.data()->tx,tags.data()->tz);
   tag.setId(tags.data()-> id);
-  tagInWorld = innermodel->transform("world", QVec::vec3(tag.x,0,tag.z),"base");//Cambiamos a SRef del mundo
-}
+  tagInWorld = innermodel->transform("world", QVec::vec3(tag.x,0,tag.z),"robot");//Cambiamos a SRef del mundo
+  } 
+  }
 
 
 

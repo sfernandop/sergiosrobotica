@@ -38,7 +38,7 @@ SpecificWorker::~SpecificWorker()
 
 bool SpecificWorker::setParams ( RoboCompCommonBehavior::ParameterList params )
 {
-    inner = new InnerModel ( "/home/salabeta/robocomp/files/innermodel/simpleworld.xml" );
+    inner = new InnerModel ( "/home/salabeta/robocomp/files/innermodel/betaWorldArm.xml" );
     timer.start ( Period );
     target.empty = true;
     return true;
@@ -50,13 +50,13 @@ void SpecificWorker::compute()
     differentialrobot_proxy->getBaseState ( bState );
     RoboCompLaser::TLaserData datosLaser;
     datosLaser= laser_proxy->getLaserData();//Obtenemos datos del Laser
-    inner->updateTransformValues ( "base",bState.x,0,bState.z,0,bState.alpha,0 );
+    inner->updateTransformValues ( "robot",bState.x,0,bState.z,0,bState.alpha,0 );
     // datosLaser= laser_proxy->getLaserData();//Obtenemos datos del Laser
     std::sort ( datosLaser.begin() +20, datosLaser.end()-20,[] ( auto a, auto b )
     {
         return a.dist< b.dist;
     } ); //Ordenamos las distancias del frente
-    tR = inner->transform ( "base" ,QVec::vec3 ( parxz.first, 0, parxz.second ),"world" );
+    tR = inner->transform ( "robot" ,QVec::vec3 ( parxz.first, 0, parxz.second ),"world" );
     d = tR.norm2(); // distancia del robot al punto marcado
     float vRot = atan2 ( tR.x(),tR.z() ); //devuelve radianes del angulo q forma donde apunta el robot con el punto destino.
 
@@ -66,7 +66,7 @@ void SpecificWorker::compute()
             //Calcular punto inicial,punto final,y trayectoria entre ellos
             // parIni = //Falta el punto inicial
             parxz = target.get();//Punto final
-            tR = inner->transform ( "base" ,QVec::vec3 ( parxz.first, 0, parxz.second ),"world" );
+            tR = inner->transform ( "robot" ,QVec::vec3 ( parxz.first, 0, parxz.second ),"world" );
             d = tR.norm2(); // distancia del robot al punto marcado
             estado= Estado::AVANZANDO;
             target.setCambiado(false);
@@ -83,7 +83,7 @@ void SpecificWorker::compute()
             //Calcular punto inicial,punto final,y trayectoria entre ellos
             // parIni = //Falta el punto inicial
             parxz = target.get();//Punto final
-            tR = inner->transform ( "base" ,QVec::vec3 ( parxz.first, 0, parxz.second ),"world" );
+            tR = inner->transform ( "robot" ,QVec::vec3 ( parxz.first, 0, parxz.second ),"world" );
             d = tR.norm2(); // distancia del robot al punto marcado
             estado= Estado::AVANZANDO;
             target.setCambiado(false);

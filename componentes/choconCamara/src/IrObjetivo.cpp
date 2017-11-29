@@ -48,6 +48,10 @@ const ::std::string __RoboCompIrObjetivo__IrObjetivo__stop_name = "stop";
 
 const ::std::string __RoboCompIrObjetivo__IrObjetivo__getState_name = "getState";
 
+const ::std::string __RoboCompIrObjetivo__IrObjetivo__cogerCaja_name = "cogerCaja";
+
+const ::std::string __RoboCompIrObjetivo__IrObjetivo__soltarCaja_name = "soltarCaja";
+
 }
 ::IceProxy::Ice::Object* ::IceProxy::RoboCompIrObjetivo::upCast(::IceProxy::RoboCompIrObjetivo::IrObjetivo* p) { return p; }
 
@@ -294,6 +298,104 @@ IceProxy::RoboCompIrObjetivo::IrObjetivo::end_getState(const ::Ice::AsyncResultP
     }
 }
 
+void
+IceProxy::RoboCompIrObjetivo::IrObjetivo::cogerCaja(const ::Ice::Context* __ctx)
+{
+    ::IceInternal::InvocationObserver __observer(this, __RoboCompIrObjetivo__IrObjetivo__cogerCaja_name, __ctx);
+    int __cnt = 0;
+    while(true)
+    {
+        ::IceInternal::Handle< ::IceDelegate::Ice::Object> __delBase;
+        try
+        {
+            __delBase = __getDelegate(false);
+            ::IceDelegate::RoboCompIrObjetivo::IrObjetivo* __del = dynamic_cast< ::IceDelegate::RoboCompIrObjetivo::IrObjetivo*>(__delBase.get());
+            __del->cogerCaja(__ctx, __observer);
+            return;
+        }
+        catch(const ::IceInternal::LocalExceptionWrapper& __ex)
+        {
+            __handleExceptionWrapper(__delBase, __ex, __observer);
+        }
+        catch(const ::Ice::LocalException& __ex)
+        {
+            __handleException(__delBase, __ex, true, __cnt, __observer);
+        }
+    }
+}
+
+::Ice::AsyncResultPtr
+IceProxy::RoboCompIrObjetivo::IrObjetivo::begin_cogerCaja(const ::Ice::Context* __ctx, const ::IceInternal::CallbackBasePtr& __del, const ::Ice::LocalObjectPtr& __cookie)
+{
+    ::IceInternal::OutgoingAsyncPtr __result = new ::IceInternal::OutgoingAsync(this, __RoboCompIrObjetivo__IrObjetivo__cogerCaja_name, __del, __cookie);
+    try
+    {
+        __result->__prepare(__RoboCompIrObjetivo__IrObjetivo__cogerCaja_name, ::Ice::Normal, __ctx);
+        __result->__writeEmptyParams();
+        __result->__send(true);
+    }
+    catch(const ::Ice::LocalException& __ex)
+    {
+        __result->__exceptionAsync(__ex);
+    }
+    return __result;
+}
+
+void
+IceProxy::RoboCompIrObjetivo::IrObjetivo::end_cogerCaja(const ::Ice::AsyncResultPtr& __result)
+{
+    __end(__result, __RoboCompIrObjetivo__IrObjetivo__cogerCaja_name);
+}
+
+void
+IceProxy::RoboCompIrObjetivo::IrObjetivo::soltarCaja(const ::Ice::Context* __ctx)
+{
+    ::IceInternal::InvocationObserver __observer(this, __RoboCompIrObjetivo__IrObjetivo__soltarCaja_name, __ctx);
+    int __cnt = 0;
+    while(true)
+    {
+        ::IceInternal::Handle< ::IceDelegate::Ice::Object> __delBase;
+        try
+        {
+            __delBase = __getDelegate(false);
+            ::IceDelegate::RoboCompIrObjetivo::IrObjetivo* __del = dynamic_cast< ::IceDelegate::RoboCompIrObjetivo::IrObjetivo*>(__delBase.get());
+            __del->soltarCaja(__ctx, __observer);
+            return;
+        }
+        catch(const ::IceInternal::LocalExceptionWrapper& __ex)
+        {
+            __handleExceptionWrapper(__delBase, __ex, __observer);
+        }
+        catch(const ::Ice::LocalException& __ex)
+        {
+            __handleException(__delBase, __ex, true, __cnt, __observer);
+        }
+    }
+}
+
+::Ice::AsyncResultPtr
+IceProxy::RoboCompIrObjetivo::IrObjetivo::begin_soltarCaja(const ::Ice::Context* __ctx, const ::IceInternal::CallbackBasePtr& __del, const ::Ice::LocalObjectPtr& __cookie)
+{
+    ::IceInternal::OutgoingAsyncPtr __result = new ::IceInternal::OutgoingAsync(this, __RoboCompIrObjetivo__IrObjetivo__soltarCaja_name, __del, __cookie);
+    try
+    {
+        __result->__prepare(__RoboCompIrObjetivo__IrObjetivo__soltarCaja_name, ::Ice::Normal, __ctx);
+        __result->__writeEmptyParams();
+        __result->__send(true);
+    }
+    catch(const ::Ice::LocalException& __ex)
+    {
+        __result->__exceptionAsync(__ex);
+    }
+    return __result;
+}
+
+void
+IceProxy::RoboCompIrObjetivo::IrObjetivo::end_soltarCaja(const ::Ice::AsyncResultPtr& __result)
+{
+    __end(__result, __RoboCompIrObjetivo__IrObjetivo__soltarCaja_name);
+}
+
 const ::std::string&
 IceProxy::RoboCompIrObjetivo::IrObjetivo::ice_staticId()
 {
@@ -459,6 +561,68 @@ IceDelegateM::RoboCompIrObjetivo::IrObjetivo::getState(const ::Ice::Context* __c
     catch(const ::Ice::LocalException& __ex)
     {
         throw ::IceInternal::LocalExceptionWrapper(__ex, false);
+    }
+}
+
+void
+IceDelegateM::RoboCompIrObjetivo::IrObjetivo::cogerCaja(const ::Ice::Context* __context, ::IceInternal::InvocationObserver& __observer)
+{
+    ::IceInternal::Outgoing __og(__handler.get(), __RoboCompIrObjetivo__IrObjetivo__cogerCaja_name, ::Ice::Normal, __context, __observer);
+    __og.writeEmptyParams();
+    bool __ok = __og.invoke();
+    if(__og.hasResponse())
+    {
+        try
+        {
+            if(!__ok)
+            {
+                try
+                {
+                    __og.throwUserException();
+                }
+                catch(const ::Ice::UserException& __ex)
+                {
+                    ::Ice::UnknownUserException __uue(__FILE__, __LINE__, __ex.ice_name());
+                    throw __uue;
+                }
+            }
+            __og.readEmptyParams();
+        }
+        catch(const ::Ice::LocalException& __ex)
+        {
+            throw ::IceInternal::LocalExceptionWrapper(__ex, false);
+        }
+    }
+}
+
+void
+IceDelegateM::RoboCompIrObjetivo::IrObjetivo::soltarCaja(const ::Ice::Context* __context, ::IceInternal::InvocationObserver& __observer)
+{
+    ::IceInternal::Outgoing __og(__handler.get(), __RoboCompIrObjetivo__IrObjetivo__soltarCaja_name, ::Ice::Normal, __context, __observer);
+    __og.writeEmptyParams();
+    bool __ok = __og.invoke();
+    if(__og.hasResponse())
+    {
+        try
+        {
+            if(!__ok)
+            {
+                try
+                {
+                    __og.throwUserException();
+                }
+                catch(const ::Ice::UserException& __ex)
+                {
+                    ::Ice::UnknownUserException __uue(__FILE__, __LINE__, __ex.ice_name());
+                    throw __uue;
+                }
+            }
+            __og.readEmptyParams();
+        }
+        catch(const ::Ice::LocalException& __ex)
+        {
+            throw ::IceInternal::LocalExceptionWrapper(__ex, false);
+        }
     }
 }
 
@@ -720,6 +884,130 @@ IceDelegateD::RoboCompIrObjetivo::IrObjetivo::getState(const ::Ice::Context* __c
     return __result;
 }
 
+void
+IceDelegateD::RoboCompIrObjetivo::IrObjetivo::cogerCaja(const ::Ice::Context* __context, ::IceInternal::InvocationObserver&)
+{
+    class _DirectI : public ::IceInternal::Direct
+    {
+    public:
+
+        _DirectI(const ::Ice::Current& __current) : 
+            ::IceInternal::Direct(__current)
+        {
+        }
+        
+        virtual ::Ice::DispatchStatus
+        run(::Ice::Object* object)
+        {
+            ::RoboCompIrObjetivo::IrObjetivo* servant = dynamic_cast< ::RoboCompIrObjetivo::IrObjetivo*>(object);
+            if(!servant)
+            {
+                throw ::Ice::OperationNotExistException(__FILE__, __LINE__, _current.id, _current.facet, _current.operation);
+            }
+            servant->cogerCaja(_current);
+            return ::Ice::DispatchOK;
+        }
+        
+    private:
+        
+    };
+    
+    ::Ice::Current __current;
+    __initCurrent(__current, __RoboCompIrObjetivo__IrObjetivo__cogerCaja_name, ::Ice::Normal, __context);
+    try
+    {
+        _DirectI __direct(__current);
+        try
+        {
+            __direct.getServant()->__collocDispatch(__direct);
+        }
+        catch(...)
+        {
+            __direct.destroy();
+            throw;
+        }
+        __direct.destroy();
+    }
+    catch(const ::Ice::SystemException&)
+    {
+        throw;
+    }
+    catch(const ::IceInternal::LocalExceptionWrapper&)
+    {
+        throw;
+    }
+    catch(const ::std::exception& __ex)
+    {
+        ::IceInternal::LocalExceptionWrapper::throwWrapper(__ex);
+    }
+    catch(...)
+    {
+        throw ::IceInternal::LocalExceptionWrapper(::Ice::UnknownException(__FILE__, __LINE__, "unknown c++ exception"), false);
+    }
+}
+
+void
+IceDelegateD::RoboCompIrObjetivo::IrObjetivo::soltarCaja(const ::Ice::Context* __context, ::IceInternal::InvocationObserver&)
+{
+    class _DirectI : public ::IceInternal::Direct
+    {
+    public:
+
+        _DirectI(const ::Ice::Current& __current) : 
+            ::IceInternal::Direct(__current)
+        {
+        }
+        
+        virtual ::Ice::DispatchStatus
+        run(::Ice::Object* object)
+        {
+            ::RoboCompIrObjetivo::IrObjetivo* servant = dynamic_cast< ::RoboCompIrObjetivo::IrObjetivo*>(object);
+            if(!servant)
+            {
+                throw ::Ice::OperationNotExistException(__FILE__, __LINE__, _current.id, _current.facet, _current.operation);
+            }
+            servant->soltarCaja(_current);
+            return ::Ice::DispatchOK;
+        }
+        
+    private:
+        
+    };
+    
+    ::Ice::Current __current;
+    __initCurrent(__current, __RoboCompIrObjetivo__IrObjetivo__soltarCaja_name, ::Ice::Normal, __context);
+    try
+    {
+        _DirectI __direct(__current);
+        try
+        {
+            __direct.getServant()->__collocDispatch(__direct);
+        }
+        catch(...)
+        {
+            __direct.destroy();
+            throw;
+        }
+        __direct.destroy();
+    }
+    catch(const ::Ice::SystemException&)
+    {
+        throw;
+    }
+    catch(const ::IceInternal::LocalExceptionWrapper&)
+    {
+        throw;
+    }
+    catch(const ::std::exception& __ex)
+    {
+        ::IceInternal::LocalExceptionWrapper::throwWrapper(__ex);
+    }
+    catch(...)
+    {
+        throw ::IceInternal::LocalExceptionWrapper(::Ice::UnknownException(__FILE__, __LINE__, "unknown c++ exception"), false);
+    }
+}
+
 ::Ice::Object* RoboCompIrObjetivo::upCast(::RoboCompIrObjetivo::IrObjetivo* p) { return p; }
 
 namespace
@@ -806,16 +1094,38 @@ RoboCompIrObjetivo::IrObjetivo::___getState(::IceInternal::Incoming& __inS, cons
     return ::Ice::DispatchOK;
 }
 
+::Ice::DispatchStatus
+RoboCompIrObjetivo::IrObjetivo::___cogerCaja(::IceInternal::Incoming& __inS, const ::Ice::Current& __current)
+{
+    __checkMode(::Ice::Normal, __current.mode);
+    __inS.readEmptyParams();
+    cogerCaja(__current);
+    __inS.__writeEmptyParams();
+    return ::Ice::DispatchOK;
+}
+
+::Ice::DispatchStatus
+RoboCompIrObjetivo::IrObjetivo::___soltarCaja(::IceInternal::Incoming& __inS, const ::Ice::Current& __current)
+{
+    __checkMode(::Ice::Normal, __current.mode);
+    __inS.readEmptyParams();
+    soltarCaja(__current);
+    __inS.__writeEmptyParams();
+    return ::Ice::DispatchOK;
+}
+
 namespace
 {
 const ::std::string __RoboCompIrObjetivo__IrObjetivo_all[] =
 {
+    "cogerCaja",
     "getState",
     "go",
     "ice_id",
     "ice_ids",
     "ice_isA",
     "ice_ping",
+    "soltarCaja",
     "stop",
     "turn"
 };
@@ -825,7 +1135,7 @@ const ::std::string __RoboCompIrObjetivo__IrObjetivo_all[] =
 ::Ice::DispatchStatus
 RoboCompIrObjetivo::IrObjetivo::__dispatch(::IceInternal::Incoming& in, const ::Ice::Current& current)
 {
-    ::std::pair< const ::std::string*, const ::std::string*> r = ::std::equal_range(__RoboCompIrObjetivo__IrObjetivo_all, __RoboCompIrObjetivo__IrObjetivo_all + 8, current.operation);
+    ::std::pair< const ::std::string*, const ::std::string*> r = ::std::equal_range(__RoboCompIrObjetivo__IrObjetivo_all, __RoboCompIrObjetivo__IrObjetivo_all + 10, current.operation);
     if(r.first == r.second)
     {
         throw ::Ice::OperationNotExistException(__FILE__, __LINE__, current.id, current.facet, current.operation);
@@ -835,33 +1145,41 @@ RoboCompIrObjetivo::IrObjetivo::__dispatch(::IceInternal::Incoming& in, const ::
     {
         case 0:
         {
-            return ___getState(in, current);
+            return ___cogerCaja(in, current);
         }
         case 1:
         {
-            return ___go(in, current);
+            return ___getState(in, current);
         }
         case 2:
         {
-            return ___ice_id(in, current);
+            return ___go(in, current);
         }
         case 3:
         {
-            return ___ice_ids(in, current);
+            return ___ice_id(in, current);
         }
         case 4:
         {
-            return ___ice_isA(in, current);
+            return ___ice_ids(in, current);
         }
         case 5:
         {
-            return ___ice_ping(in, current);
+            return ___ice_isA(in, current);
         }
         case 6:
         {
-            return ___stop(in, current);
+            return ___ice_ping(in, current);
         }
         case 7:
+        {
+            return ___soltarCaja(in, current);
+        }
+        case 8:
+        {
+            return ___stop(in, current);
+        }
+        case 9:
         {
             return ___turn(in, current);
         }
