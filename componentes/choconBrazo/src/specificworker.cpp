@@ -101,7 +101,7 @@ RoboCompDifferentialRobot::TBaseState bState;
 
         }
 
-        if ( d > 50 )
+        if ( d > 350 )
         {
 
             //Si no ha llegado
@@ -154,7 +154,7 @@ RoboCompDifferentialRobot::TBaseState bState;
         {
             estado=Estado::GIRANDO;
         }
-        if ( d < 280 )
+        if ( d < 580 )
         {
             estado=Estado::LLEGADO;
         }

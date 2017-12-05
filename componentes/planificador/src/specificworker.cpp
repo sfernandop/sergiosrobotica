@@ -50,7 +50,7 @@ void SpecificWorker::compute()
   RoboCompDifferentialRobot::TBaseState bState;
   differentialrobot_proxy->getBaseState(bState);
   innermodel->updateTransformValues("robot",bState.x,0,bState.z,0,bState.alpha,0);
- 
+
   switch(estado)
   {
     case 0://Estado 1 - Girando hasta encontrar un tag valido (una caja)
@@ -64,6 +64,25 @@ void SpecificWorker::compute()
       }else irobjetivo_proxy->turn(0.3);
       break;
     case 1: //Encuentro primero caja
+      if ( irobjetivo_proxy->getDistancia() < DIST_MIN){
+	qDebug()<<"He llegado";
+	
+	  estado=2;
+	
+      }else irobjetivo_proxy->go(tagInWorld.x(),tagInWorld.z());//Ir a Tag
+      break;
+    case 2:
+      if(tag.getId()==3){
+	  irobjetivo_proxy->go(tagInWorld.x(),tagInWorld.z());//Ir a Tag
+ 	  estado=3; 
+      }else{
+        qDebug() << "HE LLEGADOOOOOO Y GIRO SOLO 1 VEZ!!";
+      irobjetivo_proxy->turn(0.3);
+      }
+      break;
+      
+       
+    case 3: //Encuentro primero caja
       if ( irobjetivo_proxy->getDistancia() < DIST_MIN){
 	estado=0;
       }
@@ -106,7 +125,7 @@ void SpecificWorker::compute()
 void SpecificWorker::newAprilTag(const tagsList &tags)
 {
   QMutexLocker ml(&mutexGlobal);
-  if(tags.data()-> id > 3){
+  if(tags.data()-> id > 2){
   qDebug() << "ME ha llegado la tag: " << tags.data()-> id;
   tag.set(tags.data()->tx,tags.data()->tz);
   tag.setId(tags.data()-> id);
