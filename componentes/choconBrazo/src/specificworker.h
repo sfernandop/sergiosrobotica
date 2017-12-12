@@ -44,6 +44,7 @@
 #define ANGULO_VISION 0.03
 #define E 2.71828 
 #define UMBRAL 250
+#define DIST_MIN 535
 
 enum class Estado{PARADO,AVANZANDO,GIRANDO,BORDEANDO, LLEGADO};
 class SpecificWorker : public GenericWorker

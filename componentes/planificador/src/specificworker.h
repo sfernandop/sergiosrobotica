@@ -38,7 +38,7 @@
 #include <mutex>
 #include <list>
 #define TIEMPO_MAX 100
-#define DIST_MIN 620
+#define DIST_MIN 535
 
 class SpecificWorker : public GenericWorker
 {
@@ -111,6 +111,11 @@ private:
             QMutexLocker ml ( &mutex );
             blackList.clear();
         };
+	/**Devuelve tamaño de la lista**/
+	int size(){
+	   QMutexLocker ml ( &mutex );
+	   return blackList.size();
+	}
         /**Comprueba si una tag esta o no **/
         bool pertenece ( int tag ) {
             QMutexLocker ml ( &mutex );

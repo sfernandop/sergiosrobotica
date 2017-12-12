@@ -101,7 +101,7 @@ RoboCompDifferentialRobot::TBaseState bState;
 
         }
 
-        if ( d > 350 )
+        if ( d > DIST_MIN )
         {
 
             //Si no ha llegado
@@ -233,7 +233,14 @@ void SpecificWorker::go ( const float x, const float z )
 
 void SpecificWorker::cogerCaja()
 {
-
+  //Bajar muñeca
+  jointmotor_proxy->setPosition();
+  
+  
+  
+  
+  
+  
 }
 
 bool SpecificWorker::esVisible(int tag)
