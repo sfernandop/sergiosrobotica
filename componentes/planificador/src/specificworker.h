@@ -49,9 +49,8 @@ public:
     SpecificWorker ( MapPrx& mprx );
     ~SpecificWorker();
     bool setParams ( RoboCompCommonBehavior::ParameterList params );
-
-    void newAprilTag ( const tagsList &tags );
-
+    bool obtenerTags();
+    
 public slots:
     void compute();
 
@@ -61,8 +60,10 @@ private:
     float tagX,tagZ;//Coordenadas reales de la AprilTag en la sala
     // int tiempoTotal = 0; //Cuenta el tiempo que ha estado iterando (cada iteracion se incrementa)
     QVec tagInWorld;
-    int sigTag = 10; //Controla la siguiente Caja a la que tiene que ir el robot
     QMutex mutexGlobal;
+    int sigTag = 10; //Controla la siguiente Caja a la que tiene que ir el robot
+    //Estructura para almacenar etiquetas
+    RoboCompGetAprilTags::listaMarcas tagsRecibidas;
     //Tenemos una lista con las etiquetas que no se deben tratar
     struct Tag {
         QMutex mutex;

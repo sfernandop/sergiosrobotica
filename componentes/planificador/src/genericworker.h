@@ -26,8 +26,8 @@
 
 
 #include <CommonBehavior.h>
+#include <GetAprilTags.h>
 #include <DifferentialRobot.h>
-#include <AprilTags.h>
 #include <IrObjetivo.h>
 
 
@@ -39,8 +39,8 @@ typedef map <string,::IceProxy::Ice::Object*> MapPrx;
 
 using namespace std;
 
+using namespace RoboCompGetAprilTags;
 using namespace RoboCompDifferentialRobot;
-using namespace RoboCompAprilTags;
 using namespace RoboCompIrObjetivo;
 
 
@@ -60,10 +60,10 @@ public:
 	QMutex *mutex;
 	
 
-	IrObjetivoPrx irobjetivo_proxy;
+	GetAprilTagsPrx getapriltags_proxy;
 	DifferentialRobotPrx differentialrobot_proxy;
+	IrObjetivoPrx irobjetivo_proxy;
 
-	virtual void newAprilTag(const tagsList &tags) = 0;
 
 
 protected:

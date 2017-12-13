@@ -51,6 +51,8 @@ void SpecificWorker::compute()
     differentialrobot_proxy->getBaseState ( bState );
     innermodel->updateTransformValues ( "robot",bState.x,0,bState.z,0,bState.alpha,0 );
     qDebug() << "Estado: " << estado;
+    //Solicitar a GetAPrilTags la lkista de tags
+    obtenerTags();
     switch ( estado )
     {
     case 0://Estado 1 - Girando hasta encontrar un tag valido (una caja)
@@ -114,51 +116,33 @@ void SpecificWorker::compute()
 	  break;
       
     }
-    /*
-    switch(estado)
-    {
-      case 0 : //Estado 1 - Girando hasta encontrar siguiente Tag
-        if (tag.getId() == sigTag)
-        {
-    estado = 1;
-         irobjetivo_proxy->go(tagInWorld.x(),tagInWorld.z());//Ir a Tag
-
-        }
-        else irobjetivo_proxy->turn(0.5);
-        break;
-
-      case 1 : //Estado 2 - Comprobando qu eha llegado a Tag
-        if ( irobjetivo_proxy->getState() < DIST_MIN )
-        {
-    sigTag ++;
-    estado = 0;
-    if(sigTag == 4)
-    {
-      irobjetivo_proxy->stop();
-      estado = 2;
-    }
-
-        }else if (tag.getId() == sigTag) //Solo da la orden de ir si ve la tag que le toca
-     {
-       irobjetivo_proxy->go(tagInWorld.x(),tagInWorld.z());//Ir a Tag
-     }
-        break;
-      case 2: break;
-      }*/
-
+ 
 }
 
-void SpecificWorker::newAprilTag ( const tagsList &tags )
-{
-    QMutexLocker ml ( &mutexGlobal );
-    if ( tags.data()-> id > 2 )
+bool SpecificWorker::obtenerTags(){
+   QMutexLocker ml ( &mutexGlobal );
+   try{
+     tagsRecibidas.clear();
+     for( auto t : getapriltags_proxy -> checkMarcas())
+	  if ( t.id >= 3)
+	  tagsRecibidas.push_back(t);
+   }catch(const Ice::Exception &e) { std::printf("Error: Componente AprilTags no esta funcionando!\n");}
+   if ( tagsRecibidas.empty()){
+    qDebug() << "Lista Vacia";
+     return false;
+  }
+  
+  if ( tagsRecibidas.data()-> id > 2 )
     {
-        qDebug() << "ME ha llegado la tag: " << tags.data()-> id;
-        tag.set ( tags.data()->tx,tags.data()->tz );
-        tag.setId ( tags.data()-> id );
-        tagInWorld = innermodel->transform ( "world", QVec::vec3 ( tag.x,0,tag.z ),"robot" ); //Cambiamos a SRef del mundo
+        qDebug() << "ME ha llegado la tag: " << tagsRecibidas.data()-> id;
+        tag.set ( tagsRecibidas.data()->tx,tagsRecibidas.data()->tz );
+        tag.setId ( tagsRecibidas.data()-> id );
+        tagInWorld = innermodel->transform ( "world", QVec::vec3 ( tag.x,0,tag.z ),"robot" ); //Cambiamos a SRef del mundo*/
+	//qDebug() << "Estoy viendo una caja";
     }
+   return true;
 }
+
 
 
 

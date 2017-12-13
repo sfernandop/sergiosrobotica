@@ -184,33 +184,6 @@ planificador_automoc/fast:
 	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador_automoc.dir/build.make src/CMakeFiles/planificador_automoc.dir/build
 .PHONY : planificador_automoc/fast
 
-AprilTags.o: AprilTags.cpp.o
-
-.PHONY : AprilTags.o
-
-# target to build an object file
-AprilTags.cpp.o:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/AprilTags.cpp.o
-.PHONY : AprilTags.cpp.o
-
-AprilTags.i: AprilTags.cpp.i
-
-.PHONY : AprilTags.i
-
-# target to preprocess a source file
-AprilTags.cpp.i:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/AprilTags.cpp.i
-.PHONY : AprilTags.cpp.i
-
-AprilTags.s: AprilTags.cpp.s
-
-.PHONY : AprilTags.s
-
-# target to generate assembly for a file
-AprilTags.cpp.s:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/AprilTags.cpp.s
-.PHONY : AprilTags.cpp.s
-
 CommonBehavior.o: CommonBehavior.cpp.o
 
 .PHONY : CommonBehavior.o
@@ -265,6 +238,33 @@ DifferentialRobot.cpp.s:
 	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/DifferentialRobot.cpp.s
 .PHONY : DifferentialRobot.cpp.s
 
+GetAprilTags.o: GetAprilTags.cpp.o
+
+.PHONY : GetAprilTags.o
+
+# target to build an object file
+GetAprilTags.cpp.o:
+	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/GetAprilTags.cpp.o
+.PHONY : GetAprilTags.cpp.o
+
+GetAprilTags.i: GetAprilTags.cpp.i
+
+.PHONY : GetAprilTags.i
+
+# target to preprocess a source file
+GetAprilTags.cpp.i:
+	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/GetAprilTags.cpp.i
+.PHONY : GetAprilTags.cpp.i
+
+GetAprilTags.s: GetAprilTags.cpp.s
+
+.PHONY : GetAprilTags.s
+
+# target to generate assembly for a file
+GetAprilTags.cpp.s:
+	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/GetAprilTags.cpp.s
+.PHONY : GetAprilTags.cpp.s
+
 IrObjetivo.o: IrObjetivo.cpp.o
 
 .PHONY : IrObjetivo.o
@@ -291,33 +291,6 @@ IrObjetivo.s: IrObjetivo.cpp.s
 IrObjetivo.cpp.s:
 	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/IrObjetivo.cpp.s
 .PHONY : IrObjetivo.cpp.s
-
-apriltagsI.o: apriltagsI.cpp.o
-
-.PHONY : apriltagsI.o
-
-# target to build an object file
-apriltagsI.cpp.o:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/apriltagsI.cpp.o
-.PHONY : apriltagsI.cpp.o
-
-apriltagsI.i: apriltagsI.cpp.i
-
-.PHONY : apriltagsI.i
-
-# target to preprocess a source file
-apriltagsI.cpp.i:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/apriltagsI.cpp.i
-.PHONY : apriltagsI.cpp.i
-
-apriltagsI.s: apriltagsI.cpp.s
-
-.PHONY : apriltagsI.s
-
-# target to generate assembly for a file
-apriltagsI.cpp.s:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/apriltagsI.cpp.s
-.PHONY : apriltagsI.cpp.s
 
 commonbehaviorI.o: commonbehaviorI.cpp.o
 
@@ -576,21 +549,18 @@ help:
 	@echo "... install/strip"
 	@echo "... install/local"
 	@echo "... planificador_automoc"
-	@echo "... AprilTags.o"
-	@echo "... AprilTags.i"
-	@echo "... AprilTags.s"
 	@echo "... CommonBehavior.o"
 	@echo "... CommonBehavior.i"
 	@echo "... CommonBehavior.s"
 	@echo "... DifferentialRobot.o"
 	@echo "... DifferentialRobot.i"
 	@echo "... DifferentialRobot.s"
+	@echo "... GetAprilTags.o"
+	@echo "... GetAprilTags.i"
+	@echo "... GetAprilTags.s"
 	@echo "... IrObjetivo.o"
 	@echo "... IrObjetivo.i"
 	@echo "... IrObjetivo.s"
-	@echo "... apriltagsI.o"
-	@echo "... apriltagsI.i"
-	@echo "... apriltagsI.s"
 	@echo "... commonbehaviorI.o"
 	@echo "... commonbehaviorI.i"
 	@echo "... commonbehaviorI.s"

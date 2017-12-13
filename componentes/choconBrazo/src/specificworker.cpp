@@ -263,10 +263,7 @@ void SpecificWorker::setPick(const Pick &myPick)
     target.set ( myPick.x, myPick.z );
 }
 //Subscripicion a AprilTagsmano
-void SpecificWorker::newAprilTag(const tagsList &tags)
-{
-  tagsVistas.insertarTags(tags);
-}
+
 
 float SpecificWorker::gauss ( float vr, float vx, float h )
 {
@@ -292,4 +289,10 @@ void SpecificWorker::stop()
 }
 
 
+
+//Deprecated
+void SpecificWorker::newAprilTag(const tagsList &tags)
+{
+  tagsVistas.insertarTags(tags);
+}
 

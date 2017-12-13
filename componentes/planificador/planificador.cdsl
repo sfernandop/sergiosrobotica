@@ -1,12 +1,12 @@
 import "/robocomp/interfaces/IDSLs/IrObjetivo.idsl";
-import "/robocomp/interfaces/IDSLs/AprilTags.idsl";
 import "/robocomp/interfaces/IDSLs/DifferentialRobot.idsl";
+import "/robocomp/interfaces/IDSLs/GetAprilTags.idsl";
+
 Component planificador
 {
 	Communications
 	{
-		requires IrObjetivo,DifferentialRobot;
-		subscribesTo AprilTags;
+		requires IrObjetivo,DifferentialRobot,GetAprilTags;
 		
 	};
 	language Cpp;
