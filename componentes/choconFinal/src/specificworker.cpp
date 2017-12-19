@@ -36,9 +36,10 @@ SpecificWorker::~SpecificWorker()
 
 bool SpecificWorker::setParams(RoboCompCommonBehavior::ParameterList params)
 {
-  inner = new InnerModel ( "/home/salabeta/robocomp/files/innermodel/betaWorldArm.xml" );
+    inner = new InnerModel ( "/home/salabeta/robocomp/files/innermodel/betaWorldArm.xml" );
     timer.start ( Period );
     target.empty = true;
+    bajarBrazo(); 
     return true;
 }
 
@@ -233,8 +234,8 @@ void SpecificWorker::go ( const float x, const float z )
 
 void SpecificWorker::cogerCaja()
 {
-  //Bajar muñeca
- // jointmotor_proxy->setPosition();
+  
+ 
   
 }
 
@@ -305,4 +306,11 @@ bool SpecificWorker::obtenerTags(){
 	//qDebug() << "Estoy viendo una caja";
     }
    return true;
+}
+void SpecificWorker::bajarBrazo(){
+    mg.name="wrist_right_2";
+    mg.position=1.30;
+    mg.maxSpeed=0;
+    jointmotor_proxy->setPosition(mg);
+  
 }

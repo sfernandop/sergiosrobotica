@@ -44,7 +44,7 @@
 #define ANGULO_VISION 0.03
 #define E 2.71828 
 #define UMBRAL 250
-#define DIST_MIN 535
+#define DIST_MIN 530
 
 enum class Estado{PARADO,AVANZANDO,GIRANDO,BORDEANDO, LLEGADO};
 class SpecificWorker : public GenericWorker
@@ -66,6 +66,7 @@ public:
 	float getDistancia();
 	void setPick(const Pick &myPick);
 	bool obtenerTags();
+	void bajarBrazo();
 public slots:
 	void compute(); 	
 
@@ -77,6 +78,10 @@ private:
       Estado estado = Estado::PARADO;
       QVec tagInWorld;
       QMutex mutexGlobal;
+     RoboCompJointMotor::MotorGoalPosition mg; 
+   
+  //Bajar muñeca
+      
       //Estructura para almacenar etiquetas
       RoboCompGetAprilTags::listaMarcas tagsRecibidas;
       //Definimos una nueva estructura con 4 campos
