@@ -40,6 +40,7 @@ bool SpecificWorker::setParams(RoboCompCommonBehavior::ParameterList params)
     timer.start ( Period );
     target.empty = true;
     bajarBrazo(); 
+    subirBrazo(0);
     return true;
 }
 
@@ -235,14 +236,21 @@ void SpecificWorker::go ( const float x, const float z )
 void SpecificWorker::cogerCaja()
 {
   
- 
+ stop();
   
 }
 
-bool SpecificWorker::esVisible(int tag)
+bool SpecificWorker::esVisible(int tag_caja)
 {
-  
-  return tagsVistas.pertenece(tag);
+  if(obtenerTags())
+  {
+  qDebug()<<"Tag que esta viendo: "<<tag.getId();
+  if (tag.getId() == tag_caja)
+    return true;
+  }
+  else 
+    subirBrazo(0.10);
+  return false;
 }
 
 float SpecificWorker::getDistancia()
@@ -313,4 +321,12 @@ void SpecificWorker::bajarBrazo(){
     mg.maxSpeed=0;
     jointmotor_proxy->setPosition(mg);
   
+}
+
+void SpecificWorker::subirBrazo(float grados)
+{
+    mg.name="shoulder_right_2";
+    mg.position=-0.80 - grados;
+    mg.maxSpeed=0;
+    jointmotor_proxy->setPosition(mg);
 }

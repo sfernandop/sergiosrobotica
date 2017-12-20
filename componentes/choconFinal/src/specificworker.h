@@ -67,6 +67,7 @@ public:
 	void setPick(const Pick &myPick);
 	bool obtenerTags();
 	void bajarBrazo();
+	void subirBrazo(String nombre,float grados);
 public slots:
 	void compute(); 	
 

@@ -79,7 +79,7 @@ void SpecificWorker::compute()
     case 2:
         irobjetivo_proxy->stop();
 	if (irobjetivo_proxy->esVisible(tag.getId())){
-	  irobjetivo_proxy->cogerCaja();
+	  //irobjetivo_proxy->cogerCaja();
 	  sleep ( 4 );
 	  estado=3;
 	  
