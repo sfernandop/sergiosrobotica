@@ -39,6 +39,7 @@
 #include <math.h>
 #include <list>
 
+#define INCREMENT 10
 #define MAX_ADV 700
 #define MAX_ROT 0.5
 #define ANGULO_VISION 0.03
@@ -67,19 +68,32 @@ public:
 	void setPick(const Pick &myPick);
 	bool obtenerTags();
 	void bajarBrazo();
-	void subirBrazo(String nombre,float grados);
+	void bajarMano();
+	void bajarMano(float grados);
+	void subirBrazo(float grados);
+	/**Jacobian**/
+	void leftSlot();
+	void rightSlot();
+	void upSlot();
+	void downSlot();
+	void frontSlot();
+	void backSlot();
+	void goHome();
+	void changeSpeed(int);
 public slots:
 	void compute(); 	
 
 private:
+      RoboCompLaser::TLaserData datosLaser;
+      RoboCompDifferentialRobot::TBaseState bState;
       InnerModel* inner;
       std::pair<float, float> parxz , parIni ;//Valores (x,z) del objetivo e inicio
       QVec tR;//tR- Posicion del robot desde el pv del mundo 
-      float d;//Distancia al objetivo
+      float d,vRot;//Distancia al objetivo
       Estado estado = Estado::PARADO;
       QVec tagInWorld;
       QMutex mutexGlobal;
-     RoboCompJointMotor::MotorGoalPosition mg; 
+      RoboCompJointMotor::MotorGoalPosition mg; 
    
   //Bajar muñeca
       
@@ -195,6 +209,20 @@ private:
       Target target;
       Tags tagsVistas;
       Tag tag;
+      /**Jacobian**/
+      RoboCompJointMotor::MotorParamsList mList;
+      QStringList joints;
+      QVec motores;
+      QVec error;
+      bool pushedButton = false;
+      int FACTOR = 1;
+      void parado();
+      void avanzando();
+      void bordeando();
+      void girando();
+      void llegado();
+      void moveArm();
+      void cerrarMano();
 };
 
 #endif

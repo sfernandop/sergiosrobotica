@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador
+CMAKE_SOURCE_DIR = /home/sergio/sergiosrobotica/componentes/planificador
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador
+CMAKE_BINARY_DIR = /home/sergio/sergiosrobotica/componentes/planificador
 
 # Include any dependencies generated for this target.
 include src/CMakeFiles/planificador.dir/depend.make
@@ -58,45 +58,45 @@ include src/CMakeFiles/planificador.dir/progress.make
 include src/CMakeFiles/planificador.dir/flags.make
 
 src/CommonBehavior.cpp: /opt/robocomp/interfaces/CommonBehavior.ice
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating CommonBehavior.cpp and CommonBehavior.h from CommonBehavior.ice"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && slice2cpp -I/home/salabeta/robocomp//interfaces/ -I/opt/robocomp/interfaces -I. /opt/robocomp/interfaces/CommonBehavior.ice --output-dir .
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sergio/sergiosrobotica/componentes/planificador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating CommonBehavior.cpp and CommonBehavior.h from CommonBehavior.ice"
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && slice2cpp -I/home/sergio/robocomp//interfaces/ -I/opt/robocomp/interfaces -I. /opt/robocomp/interfaces/CommonBehavior.ice --output-dir .
 
 src/CommonBehavior.h: src/CommonBehavior.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate src/CommonBehavior.h
 
-src/IrObjetivo.cpp: /home/salabeta/robocomp/interfaces/IrObjetivo.ice
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating IrObjetivo.cpp and IrObjetivo.h from IrObjetivo.ice"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && slice2cpp -I/home/salabeta/robocomp//interfaces/ -I/opt/robocomp/interfaces -I. /home/salabeta/robocomp//interfaces//IrObjetivo.ice --output-dir .
+src/IrObjetivo.cpp: /home/sergio/robocomp/interfaces/IrObjetivo.ice
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sergio/sergiosrobotica/componentes/planificador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating IrObjetivo.cpp and IrObjetivo.h from IrObjetivo.ice"
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && slice2cpp -I/home/sergio/robocomp//interfaces/ -I/opt/robocomp/interfaces -I. /home/sergio/robocomp//interfaces//IrObjetivo.ice --output-dir .
 
 src/IrObjetivo.h: src/IrObjetivo.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate src/IrObjetivo.h
 
 src/DifferentialRobot.cpp: /opt/robocomp/interfaces/DifferentialRobot.ice
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating DifferentialRobot.cpp and DifferentialRobot.h from DifferentialRobot.ice"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && slice2cpp -I/home/salabeta/robocomp//interfaces/ -I/opt/robocomp/interfaces -I. /opt/robocomp/interfaces/DifferentialRobot.ice --output-dir .
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sergio/sergiosrobotica/componentes/planificador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating DifferentialRobot.cpp and DifferentialRobot.h from DifferentialRobot.ice"
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && slice2cpp -I/home/sergio/robocomp//interfaces/ -I/opt/robocomp/interfaces -I. /opt/robocomp/interfaces/DifferentialRobot.ice --output-dir .
 
 src/DifferentialRobot.h: src/DifferentialRobot.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate src/DifferentialRobot.h
 
 src/GetAprilTags.cpp: /opt/robocomp/interfaces/GetAprilTags.ice
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating GetAprilTags.cpp and GetAprilTags.h from GetAprilTags.ice"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && slice2cpp -I/home/salabeta/robocomp//interfaces/ -I/opt/robocomp/interfaces -I. /opt/robocomp/interfaces/GetAprilTags.ice --output-dir .
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sergio/sergiosrobotica/componentes/planificador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating GetAprilTags.cpp and GetAprilTags.h from GetAprilTags.ice"
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && slice2cpp -I/home/sergio/robocomp//interfaces/ -I/opt/robocomp/interfaces -I. /opt/robocomp/interfaces/GetAprilTags.ice --output-dir .
 
 src/GetAprilTags.h: src/GetAprilTags.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate src/GetAprilTags.h
 
 src/CMakeFiles/planificador.dir/specificworker.cpp.o: src/CMakeFiles/planificador.dir/flags.make
 src/CMakeFiles/planificador.dir/specificworker.cpp.o: src/specificworker.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/planificador.dir/specificworker.cpp.o"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/planificador.dir/specificworker.cpp.o -c /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/specificworker.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sergio/sergiosrobotica/componentes/planificador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/planificador.dir/specificworker.cpp.o"
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/planificador.dir/specificworker.cpp.o -c /home/sergio/sergiosrobotica/componentes/planificador/src/specificworker.cpp
 
 src/CMakeFiles/planificador.dir/specificworker.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/planificador.dir/specificworker.cpp.i"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/specificworker.cpp > CMakeFiles/planificador.dir/specificworker.cpp.i
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sergio/sergiosrobotica/componentes/planificador/src/specificworker.cpp > CMakeFiles/planificador.dir/specificworker.cpp.i
 
 src/CMakeFiles/planificador.dir/specificworker.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/planificador.dir/specificworker.cpp.s"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/specificworker.cpp -o CMakeFiles/planificador.dir/specificworker.cpp.s
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sergio/sergiosrobotica/componentes/planificador/src/specificworker.cpp -o CMakeFiles/planificador.dir/specificworker.cpp.s
 
 src/CMakeFiles/planificador.dir/specificworker.cpp.o.requires:
 
@@ -111,16 +111,16 @@ src/CMakeFiles/planificador.dir/specificworker.cpp.o.provides.build: src/CMakeFi
 
 src/CMakeFiles/planificador.dir/specificmonitor.cpp.o: src/CMakeFiles/planificador.dir/flags.make
 src/CMakeFiles/planificador.dir/specificmonitor.cpp.o: src/specificmonitor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/planificador.dir/specificmonitor.cpp.o"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/planificador.dir/specificmonitor.cpp.o -c /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/specificmonitor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sergio/sergiosrobotica/componentes/planificador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/planificador.dir/specificmonitor.cpp.o"
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/planificador.dir/specificmonitor.cpp.o -c /home/sergio/sergiosrobotica/componentes/planificador/src/specificmonitor.cpp
 
 src/CMakeFiles/planificador.dir/specificmonitor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/planificador.dir/specificmonitor.cpp.i"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/specificmonitor.cpp > CMakeFiles/planificador.dir/specificmonitor.cpp.i
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sergio/sergiosrobotica/componentes/planificador/src/specificmonitor.cpp > CMakeFiles/planificador.dir/specificmonitor.cpp.i
 
 src/CMakeFiles/planificador.dir/specificmonitor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/planificador.dir/specificmonitor.cpp.s"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/specificmonitor.cpp -o CMakeFiles/planificador.dir/specificmonitor.cpp.s
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sergio/sergiosrobotica/componentes/planificador/src/specificmonitor.cpp -o CMakeFiles/planificador.dir/specificmonitor.cpp.s
 
 src/CMakeFiles/planificador.dir/specificmonitor.cpp.o.requires:
 
@@ -133,66 +133,66 @@ src/CMakeFiles/planificador.dir/specificmonitor.cpp.o.provides: src/CMakeFiles/p
 src/CMakeFiles/planificador.dir/specificmonitor.cpp.o.provides.build: src/CMakeFiles/planificador.dir/specificmonitor.cpp.o
 
 
-src/CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o: src/CMakeFiles/planificador.dir/flags.make
-src/CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o: /home/salabeta/robocomp/classes/rapplication/rapplication.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o -c /home/salabeta/robocomp/classes/rapplication/rapplication.cpp
+src/CMakeFiles/planificador.dir/home/sergio/robocomp/classes/rapplication/rapplication.cpp.o: src/CMakeFiles/planificador.dir/flags.make
+src/CMakeFiles/planificador.dir/home/sergio/robocomp/classes/rapplication/rapplication.cpp.o: /home/sergio/robocomp/classes/rapplication/rapplication.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sergio/sergiosrobotica/componentes/planificador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/planificador.dir/home/sergio/robocomp/classes/rapplication/rapplication.cpp.o"
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/planificador.dir/home/sergio/robocomp/classes/rapplication/rapplication.cpp.o -c /home/sergio/robocomp/classes/rapplication/rapplication.cpp
 
-src/CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.i"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/salabeta/robocomp/classes/rapplication/rapplication.cpp > CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.i
+src/CMakeFiles/planificador.dir/home/sergio/robocomp/classes/rapplication/rapplication.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/planificador.dir/home/sergio/robocomp/classes/rapplication/rapplication.cpp.i"
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sergio/robocomp/classes/rapplication/rapplication.cpp > CMakeFiles/planificador.dir/home/sergio/robocomp/classes/rapplication/rapplication.cpp.i
 
-src/CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.s"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/salabeta/robocomp/classes/rapplication/rapplication.cpp -o CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.s
+src/CMakeFiles/planificador.dir/home/sergio/robocomp/classes/rapplication/rapplication.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/planificador.dir/home/sergio/robocomp/classes/rapplication/rapplication.cpp.s"
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sergio/robocomp/classes/rapplication/rapplication.cpp -o CMakeFiles/planificador.dir/home/sergio/robocomp/classes/rapplication/rapplication.cpp.s
 
-src/CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o.requires:
+src/CMakeFiles/planificador.dir/home/sergio/robocomp/classes/rapplication/rapplication.cpp.o.requires:
 
-.PHONY : src/CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o.requires
+.PHONY : src/CMakeFiles/planificador.dir/home/sergio/robocomp/classes/rapplication/rapplication.cpp.o.requires
 
-src/CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o.provides: src/CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o.provides.build
-.PHONY : src/CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o.provides
+src/CMakeFiles/planificador.dir/home/sergio/robocomp/classes/rapplication/rapplication.cpp.o.provides: src/CMakeFiles/planificador.dir/home/sergio/robocomp/classes/rapplication/rapplication.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/home/sergio/robocomp/classes/rapplication/rapplication.cpp.o.provides.build
+.PHONY : src/CMakeFiles/planificador.dir/home/sergio/robocomp/classes/rapplication/rapplication.cpp.o.provides
 
-src/CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o.provides.build: src/CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o
+src/CMakeFiles/planificador.dir/home/sergio/robocomp/classes/rapplication/rapplication.cpp.o.provides.build: src/CMakeFiles/planificador.dir/home/sergio/robocomp/classes/rapplication/rapplication.cpp.o
 
 
-src/CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.o: src/CMakeFiles/planificador.dir/flags.make
-src/CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.o: /home/salabeta/robocomp/classes/qlog/qlog.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.o"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.o -c /home/salabeta/robocomp/classes/qlog/qlog.cpp
+src/CMakeFiles/planificador.dir/home/sergio/robocomp/classes/qlog/qlog.cpp.o: src/CMakeFiles/planificador.dir/flags.make
+src/CMakeFiles/planificador.dir/home/sergio/robocomp/classes/qlog/qlog.cpp.o: /home/sergio/robocomp/classes/qlog/qlog.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sergio/sergiosrobotica/componentes/planificador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/planificador.dir/home/sergio/robocomp/classes/qlog/qlog.cpp.o"
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/planificador.dir/home/sergio/robocomp/classes/qlog/qlog.cpp.o -c /home/sergio/robocomp/classes/qlog/qlog.cpp
 
-src/CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.i"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/salabeta/robocomp/classes/qlog/qlog.cpp > CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.i
+src/CMakeFiles/planificador.dir/home/sergio/robocomp/classes/qlog/qlog.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/planificador.dir/home/sergio/robocomp/classes/qlog/qlog.cpp.i"
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sergio/robocomp/classes/qlog/qlog.cpp > CMakeFiles/planificador.dir/home/sergio/robocomp/classes/qlog/qlog.cpp.i
 
-src/CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.s"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/salabeta/robocomp/classes/qlog/qlog.cpp -o CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.s
+src/CMakeFiles/planificador.dir/home/sergio/robocomp/classes/qlog/qlog.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/planificador.dir/home/sergio/robocomp/classes/qlog/qlog.cpp.s"
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sergio/robocomp/classes/qlog/qlog.cpp -o CMakeFiles/planificador.dir/home/sergio/robocomp/classes/qlog/qlog.cpp.s
 
-src/CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.o.requires:
+src/CMakeFiles/planificador.dir/home/sergio/robocomp/classes/qlog/qlog.cpp.o.requires:
 
-.PHONY : src/CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.o.requires
+.PHONY : src/CMakeFiles/planificador.dir/home/sergio/robocomp/classes/qlog/qlog.cpp.o.requires
 
-src/CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.o.provides: src/CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.o.provides.build
-.PHONY : src/CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.o.provides
+src/CMakeFiles/planificador.dir/home/sergio/robocomp/classes/qlog/qlog.cpp.o.provides: src/CMakeFiles/planificador.dir/home/sergio/robocomp/classes/qlog/qlog.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/home/sergio/robocomp/classes/qlog/qlog.cpp.o.provides.build
+.PHONY : src/CMakeFiles/planificador.dir/home/sergio/robocomp/classes/qlog/qlog.cpp.o.provides
 
-src/CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.o.provides.build: src/CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.o
+src/CMakeFiles/planificador.dir/home/sergio/robocomp/classes/qlog/qlog.cpp.o.provides.build: src/CMakeFiles/planificador.dir/home/sergio/robocomp/classes/qlog/qlog.cpp.o
 
 
 src/CMakeFiles/planificador.dir/main.cpp.o: src/CMakeFiles/planificador.dir/flags.make
 src/CMakeFiles/planificador.dir/main.cpp.o: src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/CMakeFiles/planificador.dir/main.cpp.o"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/planificador.dir/main.cpp.o -c /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sergio/sergiosrobotica/componentes/planificador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/CMakeFiles/planificador.dir/main.cpp.o"
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/planificador.dir/main.cpp.o -c /home/sergio/sergiosrobotica/componentes/planificador/src/main.cpp
 
 src/CMakeFiles/planificador.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/planificador.dir/main.cpp.i"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/main.cpp > CMakeFiles/planificador.dir/main.cpp.i
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sergio/sergiosrobotica/componentes/planificador/src/main.cpp > CMakeFiles/planificador.dir/main.cpp.i
 
 src/CMakeFiles/planificador.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/planificador.dir/main.cpp.s"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/main.cpp -o CMakeFiles/planificador.dir/main.cpp.s
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sergio/sergiosrobotica/componentes/planificador/src/main.cpp -o CMakeFiles/planificador.dir/main.cpp.s
 
 src/CMakeFiles/planificador.dir/main.cpp.o.requires:
 
@@ -207,16 +207,16 @@ src/CMakeFiles/planificador.dir/main.cpp.o.provides.build: src/CMakeFiles/planif
 
 src/CMakeFiles/planificador.dir/genericmonitor.cpp.o: src/CMakeFiles/planificador.dir/flags.make
 src/CMakeFiles/planificador.dir/genericmonitor.cpp.o: src/genericmonitor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/CMakeFiles/planificador.dir/genericmonitor.cpp.o"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/planificador.dir/genericmonitor.cpp.o -c /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/genericmonitor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sergio/sergiosrobotica/componentes/planificador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/CMakeFiles/planificador.dir/genericmonitor.cpp.o"
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/planificador.dir/genericmonitor.cpp.o -c /home/sergio/sergiosrobotica/componentes/planificador/src/genericmonitor.cpp
 
 src/CMakeFiles/planificador.dir/genericmonitor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/planificador.dir/genericmonitor.cpp.i"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/genericmonitor.cpp > CMakeFiles/planificador.dir/genericmonitor.cpp.i
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sergio/sergiosrobotica/componentes/planificador/src/genericmonitor.cpp > CMakeFiles/planificador.dir/genericmonitor.cpp.i
 
 src/CMakeFiles/planificador.dir/genericmonitor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/planificador.dir/genericmonitor.cpp.s"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/genericmonitor.cpp -o CMakeFiles/planificador.dir/genericmonitor.cpp.s
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sergio/sergiosrobotica/componentes/planificador/src/genericmonitor.cpp -o CMakeFiles/planificador.dir/genericmonitor.cpp.s
 
 src/CMakeFiles/planificador.dir/genericmonitor.cpp.o.requires:
 
@@ -231,16 +231,16 @@ src/CMakeFiles/planificador.dir/genericmonitor.cpp.o.provides.build: src/CMakeFi
 
 src/CMakeFiles/planificador.dir/commonbehaviorI.cpp.o: src/CMakeFiles/planificador.dir/flags.make
 src/CMakeFiles/planificador.dir/commonbehaviorI.cpp.o: src/commonbehaviorI.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/CMakeFiles/planificador.dir/commonbehaviorI.cpp.o"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/planificador.dir/commonbehaviorI.cpp.o -c /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/commonbehaviorI.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sergio/sergiosrobotica/componentes/planificador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/CMakeFiles/planificador.dir/commonbehaviorI.cpp.o"
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/planificador.dir/commonbehaviorI.cpp.o -c /home/sergio/sergiosrobotica/componentes/planificador/src/commonbehaviorI.cpp
 
 src/CMakeFiles/planificador.dir/commonbehaviorI.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/planificador.dir/commonbehaviorI.cpp.i"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/commonbehaviorI.cpp > CMakeFiles/planificador.dir/commonbehaviorI.cpp.i
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sergio/sergiosrobotica/componentes/planificador/src/commonbehaviorI.cpp > CMakeFiles/planificador.dir/commonbehaviorI.cpp.i
 
 src/CMakeFiles/planificador.dir/commonbehaviorI.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/planificador.dir/commonbehaviorI.cpp.s"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/commonbehaviorI.cpp -o CMakeFiles/planificador.dir/commonbehaviorI.cpp.s
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sergio/sergiosrobotica/componentes/planificador/src/commonbehaviorI.cpp -o CMakeFiles/planificador.dir/commonbehaviorI.cpp.s
 
 src/CMakeFiles/planificador.dir/commonbehaviorI.cpp.o.requires:
 
@@ -255,16 +255,16 @@ src/CMakeFiles/planificador.dir/commonbehaviorI.cpp.o.provides.build: src/CMakeF
 
 src/CMakeFiles/planificador.dir/genericworker.cpp.o: src/CMakeFiles/planificador.dir/flags.make
 src/CMakeFiles/planificador.dir/genericworker.cpp.o: src/genericworker.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/CMakeFiles/planificador.dir/genericworker.cpp.o"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/planificador.dir/genericworker.cpp.o -c /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/genericworker.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sergio/sergiosrobotica/componentes/planificador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/CMakeFiles/planificador.dir/genericworker.cpp.o"
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/planificador.dir/genericworker.cpp.o -c /home/sergio/sergiosrobotica/componentes/planificador/src/genericworker.cpp
 
 src/CMakeFiles/planificador.dir/genericworker.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/planificador.dir/genericworker.cpp.i"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/genericworker.cpp > CMakeFiles/planificador.dir/genericworker.cpp.i
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sergio/sergiosrobotica/componentes/planificador/src/genericworker.cpp > CMakeFiles/planificador.dir/genericworker.cpp.i
 
 src/CMakeFiles/planificador.dir/genericworker.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/planificador.dir/genericworker.cpp.s"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/genericworker.cpp -o CMakeFiles/planificador.dir/genericworker.cpp.s
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sergio/sergiosrobotica/componentes/planificador/src/genericworker.cpp -o CMakeFiles/planificador.dir/genericworker.cpp.s
 
 src/CMakeFiles/planificador.dir/genericworker.cpp.o.requires:
 
@@ -279,16 +279,16 @@ src/CMakeFiles/planificador.dir/genericworker.cpp.o.provides.build: src/CMakeFil
 
 src/CMakeFiles/planificador.dir/CommonBehavior.cpp.o: src/CMakeFiles/planificador.dir/flags.make
 src/CMakeFiles/planificador.dir/CommonBehavior.cpp.o: src/CommonBehavior.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/CMakeFiles/planificador.dir/CommonBehavior.cpp.o"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/planificador.dir/CommonBehavior.cpp.o -c /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/CommonBehavior.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sergio/sergiosrobotica/componentes/planificador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/CMakeFiles/planificador.dir/CommonBehavior.cpp.o"
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/planificador.dir/CommonBehavior.cpp.o -c /home/sergio/sergiosrobotica/componentes/planificador/src/CommonBehavior.cpp
 
 src/CMakeFiles/planificador.dir/CommonBehavior.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/planificador.dir/CommonBehavior.cpp.i"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/CommonBehavior.cpp > CMakeFiles/planificador.dir/CommonBehavior.cpp.i
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sergio/sergiosrobotica/componentes/planificador/src/CommonBehavior.cpp > CMakeFiles/planificador.dir/CommonBehavior.cpp.i
 
 src/CMakeFiles/planificador.dir/CommonBehavior.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/planificador.dir/CommonBehavior.cpp.s"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/CommonBehavior.cpp -o CMakeFiles/planificador.dir/CommonBehavior.cpp.s
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sergio/sergiosrobotica/componentes/planificador/src/CommonBehavior.cpp -o CMakeFiles/planificador.dir/CommonBehavior.cpp.s
 
 src/CMakeFiles/planificador.dir/CommonBehavior.cpp.o.requires:
 
@@ -303,16 +303,16 @@ src/CMakeFiles/planificador.dir/CommonBehavior.cpp.o.provides.build: src/CMakeFi
 
 src/CMakeFiles/planificador.dir/IrObjetivo.cpp.o: src/CMakeFiles/planificador.dir/flags.make
 src/CMakeFiles/planificador.dir/IrObjetivo.cpp.o: src/IrObjetivo.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/CMakeFiles/planificador.dir/IrObjetivo.cpp.o"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/planificador.dir/IrObjetivo.cpp.o -c /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/IrObjetivo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sergio/sergiosrobotica/componentes/planificador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/CMakeFiles/planificador.dir/IrObjetivo.cpp.o"
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/planificador.dir/IrObjetivo.cpp.o -c /home/sergio/sergiosrobotica/componentes/planificador/src/IrObjetivo.cpp
 
 src/CMakeFiles/planificador.dir/IrObjetivo.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/planificador.dir/IrObjetivo.cpp.i"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/IrObjetivo.cpp > CMakeFiles/planificador.dir/IrObjetivo.cpp.i
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sergio/sergiosrobotica/componentes/planificador/src/IrObjetivo.cpp > CMakeFiles/planificador.dir/IrObjetivo.cpp.i
 
 src/CMakeFiles/planificador.dir/IrObjetivo.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/planificador.dir/IrObjetivo.cpp.s"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/IrObjetivo.cpp -o CMakeFiles/planificador.dir/IrObjetivo.cpp.s
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sergio/sergiosrobotica/componentes/planificador/src/IrObjetivo.cpp -o CMakeFiles/planificador.dir/IrObjetivo.cpp.s
 
 src/CMakeFiles/planificador.dir/IrObjetivo.cpp.o.requires:
 
@@ -327,16 +327,16 @@ src/CMakeFiles/planificador.dir/IrObjetivo.cpp.o.provides.build: src/CMakeFiles/
 
 src/CMakeFiles/planificador.dir/DifferentialRobot.cpp.o: src/CMakeFiles/planificador.dir/flags.make
 src/CMakeFiles/planificador.dir/DifferentialRobot.cpp.o: src/DifferentialRobot.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object src/CMakeFiles/planificador.dir/DifferentialRobot.cpp.o"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/planificador.dir/DifferentialRobot.cpp.o -c /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/DifferentialRobot.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sergio/sergiosrobotica/componentes/planificador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object src/CMakeFiles/planificador.dir/DifferentialRobot.cpp.o"
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/planificador.dir/DifferentialRobot.cpp.o -c /home/sergio/sergiosrobotica/componentes/planificador/src/DifferentialRobot.cpp
 
 src/CMakeFiles/planificador.dir/DifferentialRobot.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/planificador.dir/DifferentialRobot.cpp.i"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/DifferentialRobot.cpp > CMakeFiles/planificador.dir/DifferentialRobot.cpp.i
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sergio/sergiosrobotica/componentes/planificador/src/DifferentialRobot.cpp > CMakeFiles/planificador.dir/DifferentialRobot.cpp.i
 
 src/CMakeFiles/planificador.dir/DifferentialRobot.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/planificador.dir/DifferentialRobot.cpp.s"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/DifferentialRobot.cpp -o CMakeFiles/planificador.dir/DifferentialRobot.cpp.s
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sergio/sergiosrobotica/componentes/planificador/src/DifferentialRobot.cpp -o CMakeFiles/planificador.dir/DifferentialRobot.cpp.s
 
 src/CMakeFiles/planificador.dir/DifferentialRobot.cpp.o.requires:
 
@@ -351,16 +351,16 @@ src/CMakeFiles/planificador.dir/DifferentialRobot.cpp.o.provides.build: src/CMak
 
 src/CMakeFiles/planificador.dir/GetAprilTags.cpp.o: src/CMakeFiles/planificador.dir/flags.make
 src/CMakeFiles/planificador.dir/GetAprilTags.cpp.o: src/GetAprilTags.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object src/CMakeFiles/planificador.dir/GetAprilTags.cpp.o"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/planificador.dir/GetAprilTags.cpp.o -c /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/GetAprilTags.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sergio/sergiosrobotica/componentes/planificador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object src/CMakeFiles/planificador.dir/GetAprilTags.cpp.o"
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/planificador.dir/GetAprilTags.cpp.o -c /home/sergio/sergiosrobotica/componentes/planificador/src/GetAprilTags.cpp
 
 src/CMakeFiles/planificador.dir/GetAprilTags.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/planificador.dir/GetAprilTags.cpp.i"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/GetAprilTags.cpp > CMakeFiles/planificador.dir/GetAprilTags.cpp.i
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sergio/sergiosrobotica/componentes/planificador/src/GetAprilTags.cpp > CMakeFiles/planificador.dir/GetAprilTags.cpp.i
 
 src/CMakeFiles/planificador.dir/GetAprilTags.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/planificador.dir/GetAprilTags.cpp.s"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/GetAprilTags.cpp -o CMakeFiles/planificador.dir/GetAprilTags.cpp.s
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sergio/sergiosrobotica/componentes/planificador/src/GetAprilTags.cpp -o CMakeFiles/planificador.dir/GetAprilTags.cpp.s
 
 src/CMakeFiles/planificador.dir/GetAprilTags.cpp.o.requires:
 
@@ -375,16 +375,16 @@ src/CMakeFiles/planificador.dir/GetAprilTags.cpp.o.provides.build: src/CMakeFile
 
 src/CMakeFiles/planificador.dir/planificador_automoc.cpp.o: src/CMakeFiles/planificador.dir/flags.make
 src/CMakeFiles/planificador.dir/planificador_automoc.cpp.o: src/planificador_automoc.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object src/CMakeFiles/planificador.dir/planificador_automoc.cpp.o"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/planificador.dir/planificador_automoc.cpp.o -c /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/planificador_automoc.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sergio/sergiosrobotica/componentes/planificador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object src/CMakeFiles/planificador.dir/planificador_automoc.cpp.o"
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/planificador.dir/planificador_automoc.cpp.o -c /home/sergio/sergiosrobotica/componentes/planificador/src/planificador_automoc.cpp
 
 src/CMakeFiles/planificador.dir/planificador_automoc.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/planificador.dir/planificador_automoc.cpp.i"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/planificador_automoc.cpp > CMakeFiles/planificador.dir/planificador_automoc.cpp.i
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sergio/sergiosrobotica/componentes/planificador/src/planificador_automoc.cpp > CMakeFiles/planificador.dir/planificador_automoc.cpp.i
 
 src/CMakeFiles/planificador.dir/planificador_automoc.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/planificador.dir/planificador_automoc.cpp.s"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/planificador_automoc.cpp -o CMakeFiles/planificador.dir/planificador_automoc.cpp.s
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sergio/sergiosrobotica/componentes/planificador/src/planificador_automoc.cpp -o CMakeFiles/planificador.dir/planificador_automoc.cpp.s
 
 src/CMakeFiles/planificador.dir/planificador_automoc.cpp.o.requires:
 
@@ -401,8 +401,8 @@ src/CMakeFiles/planificador.dir/planificador_automoc.cpp.o.provides.build: src/C
 planificador_OBJECTS = \
 "CMakeFiles/planificador.dir/specificworker.cpp.o" \
 "CMakeFiles/planificador.dir/specificmonitor.cpp.o" \
-"CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o" \
-"CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.o" \
+"CMakeFiles/planificador.dir/home/sergio/robocomp/classes/rapplication/rapplication.cpp.o" \
+"CMakeFiles/planificador.dir/home/sergio/robocomp/classes/qlog/qlog.cpp.o" \
 "CMakeFiles/planificador.dir/main.cpp.o" \
 "CMakeFiles/planificador.dir/genericmonitor.cpp.o" \
 "CMakeFiles/planificador.dir/commonbehaviorI.cpp.o" \
@@ -418,8 +418,8 @@ planificador_EXTERNAL_OBJECTS =
 
 bin/planificador: src/CMakeFiles/planificador.dir/specificworker.cpp.o
 bin/planificador: src/CMakeFiles/planificador.dir/specificmonitor.cpp.o
-bin/planificador: src/CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o
-bin/planificador: src/CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.o
+bin/planificador: src/CMakeFiles/planificador.dir/home/sergio/robocomp/classes/rapplication/rapplication.cpp.o
+bin/planificador: src/CMakeFiles/planificador.dir/home/sergio/robocomp/classes/qlog/qlog.cpp.o
 bin/planificador: src/CMakeFiles/planificador.dir/main.cpp.o
 bin/planificador: src/CMakeFiles/planificador.dir/genericmonitor.cpp.o
 bin/planificador: src/CMakeFiles/planificador.dir/commonbehaviorI.cpp.o
@@ -439,8 +439,8 @@ bin/planificador: /usr/lib/x86_64-linux-gnu/libQtGui.so
 bin/planificador: /usr/lib/x86_64-linux-gnu/libQtXml.so
 bin/planificador: /usr/lib/x86_64-linux-gnu/libQtCore.so
 bin/planificador: src/CMakeFiles/planificador.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX executable ../bin/planificador"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/planificador.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sergio/sergiosrobotica/componentes/planificador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX executable ../bin/planificador"
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/planificador.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/CMakeFiles/planificador.dir/build: bin/planificador
@@ -449,8 +449,8 @@ src/CMakeFiles/planificador.dir/build: bin/planificador
 
 src/CMakeFiles/planificador.dir/requires: src/CMakeFiles/planificador.dir/specificworker.cpp.o.requires
 src/CMakeFiles/planificador.dir/requires: src/CMakeFiles/planificador.dir/specificmonitor.cpp.o.requires
-src/CMakeFiles/planificador.dir/requires: src/CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o.requires
-src/CMakeFiles/planificador.dir/requires: src/CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.o.requires
+src/CMakeFiles/planificador.dir/requires: src/CMakeFiles/planificador.dir/home/sergio/robocomp/classes/rapplication/rapplication.cpp.o.requires
+src/CMakeFiles/planificador.dir/requires: src/CMakeFiles/planificador.dir/home/sergio/robocomp/classes/qlog/qlog.cpp.o.requires
 src/CMakeFiles/planificador.dir/requires: src/CMakeFiles/planificador.dir/main.cpp.o.requires
 src/CMakeFiles/planificador.dir/requires: src/CMakeFiles/planificador.dir/genericmonitor.cpp.o.requires
 src/CMakeFiles/planificador.dir/requires: src/CMakeFiles/planificador.dir/commonbehaviorI.cpp.o.requires
@@ -464,7 +464,7 @@ src/CMakeFiles/planificador.dir/requires: src/CMakeFiles/planificador.dir/planif
 .PHONY : src/CMakeFiles/planificador.dir/requires
 
 src/CMakeFiles/planificador.dir/clean:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && $(CMAKE_COMMAND) -P CMakeFiles/planificador.dir/cmake_clean.cmake
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && $(CMAKE_COMMAND) -P CMakeFiles/planificador.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/planificador.dir/clean
 
 src/CMakeFiles/planificador.dir/depend: src/CommonBehavior.cpp
@@ -475,6 +475,6 @@ src/CMakeFiles/planificador.dir/depend: src/DifferentialRobot.cpp
 src/CMakeFiles/planificador.dir/depend: src/DifferentialRobot.h
 src/CMakeFiles/planificador.dir/depend: src/GetAprilTags.cpp
 src/CMakeFiles/planificador.dir/depend: src/GetAprilTags.h
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/CMakeFiles/planificador.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sergio/sergiosrobotica/componentes/planificador /home/sergio/sergiosrobotica/componentes/planificador/src /home/sergio/sergiosrobotica/componentes/planificador /home/sergio/sergiosrobotica/componentes/planificador/src /home/sergio/sergiosrobotica/componentes/planificador/src/CMakeFiles/planificador.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/CMakeFiles/planificador.dir/depend
 

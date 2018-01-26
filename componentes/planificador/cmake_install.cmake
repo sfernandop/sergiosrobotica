@@ -1,4 +1,4 @@
-# Install script for directory: /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador
+# Install script for directory: /home/sergio/sergiosrobotica/componentes/planificador
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -41,12 +41,12 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/opt/robocomp/etc-default" TYPE FILE RENAME "planificador.conf" FILES "/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/etc/config")
+file(INSTALL DESTINATION "/opt/robocomp/etc-default" TYPE FILE RENAME "planificador.conf" FILES "/home/sergio/sergiosrobotica/componentes/planificador/etc/config")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/cmake_install.cmake")
+  include("/home/sergio/sergiosrobotica/componentes/planificador/src/cmake_install.cmake")
 
 endif()
 
@@ -58,5 +58,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/sergio/sergiosrobotica/componentes/planificador/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

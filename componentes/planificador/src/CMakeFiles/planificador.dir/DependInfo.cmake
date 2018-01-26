@@ -4,19 +4,19 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/CommonBehavior.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/CMakeFiles/planificador.dir/CommonBehavior.cpp.o"
-  "/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/DifferentialRobot.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/CMakeFiles/planificador.dir/DifferentialRobot.cpp.o"
-  "/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/GetAprilTags.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/CMakeFiles/planificador.dir/GetAprilTags.cpp.o"
-  "/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/IrObjetivo.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/CMakeFiles/planificador.dir/IrObjetivo.cpp.o"
-  "/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/commonbehaviorI.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/CMakeFiles/planificador.dir/commonbehaviorI.cpp.o"
-  "/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/genericmonitor.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/CMakeFiles/planificador.dir/genericmonitor.cpp.o"
-  "/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/genericworker.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/CMakeFiles/planificador.dir/genericworker.cpp.o"
-  "/home/salabeta/robocomp/classes/qlog/qlog.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.o"
-  "/home/salabeta/robocomp/classes/rapplication/rapplication.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o"
-  "/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/main.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/CMakeFiles/planificador.dir/main.cpp.o"
-  "/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/planificador_automoc.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/CMakeFiles/planificador.dir/planificador_automoc.cpp.o"
-  "/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/specificmonitor.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/CMakeFiles/planificador.dir/specificmonitor.cpp.o"
-  "/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/specificworker.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/CMakeFiles/planificador.dir/specificworker.cpp.o"
+  "/home/sergio/sergiosrobotica/componentes/planificador/src/CommonBehavior.cpp" "/home/sergio/sergiosrobotica/componentes/planificador/src/CMakeFiles/planificador.dir/CommonBehavior.cpp.o"
+  "/home/sergio/sergiosrobotica/componentes/planificador/src/DifferentialRobot.cpp" "/home/sergio/sergiosrobotica/componentes/planificador/src/CMakeFiles/planificador.dir/DifferentialRobot.cpp.o"
+  "/home/sergio/sergiosrobotica/componentes/planificador/src/GetAprilTags.cpp" "/home/sergio/sergiosrobotica/componentes/planificador/src/CMakeFiles/planificador.dir/GetAprilTags.cpp.o"
+  "/home/sergio/sergiosrobotica/componentes/planificador/src/IrObjetivo.cpp" "/home/sergio/sergiosrobotica/componentes/planificador/src/CMakeFiles/planificador.dir/IrObjetivo.cpp.o"
+  "/home/sergio/sergiosrobotica/componentes/planificador/src/commonbehaviorI.cpp" "/home/sergio/sergiosrobotica/componentes/planificador/src/CMakeFiles/planificador.dir/commonbehaviorI.cpp.o"
+  "/home/sergio/sergiosrobotica/componentes/planificador/src/genericmonitor.cpp" "/home/sergio/sergiosrobotica/componentes/planificador/src/CMakeFiles/planificador.dir/genericmonitor.cpp.o"
+  "/home/sergio/sergiosrobotica/componentes/planificador/src/genericworker.cpp" "/home/sergio/sergiosrobotica/componentes/planificador/src/CMakeFiles/planificador.dir/genericworker.cpp.o"
+  "/home/sergio/robocomp/classes/qlog/qlog.cpp" "/home/sergio/sergiosrobotica/componentes/planificador/src/CMakeFiles/planificador.dir/home/sergio/robocomp/classes/qlog/qlog.cpp.o"
+  "/home/sergio/robocomp/classes/rapplication/rapplication.cpp" "/home/sergio/sergiosrobotica/componentes/planificador/src/CMakeFiles/planificador.dir/home/sergio/robocomp/classes/rapplication/rapplication.cpp.o"
+  "/home/sergio/sergiosrobotica/componentes/planificador/src/main.cpp" "/home/sergio/sergiosrobotica/componentes/planificador/src/CMakeFiles/planificador.dir/main.cpp.o"
+  "/home/sergio/sergiosrobotica/componentes/planificador/src/planificador_automoc.cpp" "/home/sergio/sergiosrobotica/componentes/planificador/src/CMakeFiles/planificador.dir/planificador_automoc.cpp.o"
+  "/home/sergio/sergiosrobotica/componentes/planificador/src/specificmonitor.cpp" "/home/sergio/sergiosrobotica/componentes/planificador/src/CMakeFiles/planificador.dir/specificmonitor.cpp.o"
+  "/home/sergio/sergiosrobotica/componentes/planificador/src/specificworker.cpp" "/home/sergio/sergiosrobotica/componentes/planificador/src/CMakeFiles/planificador.dir/specificworker.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -42,18 +42,18 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/opt/robocomp/include"
   "/classes"
   "."
-  "/home/salabeta/robocomp/classes"
-  "/home/salabeta/robocomp/libs"
-  "/home/salabeta/robocomp/interfaces"
+  "/home/sergio/robocomp/classes"
+  "/home/sergio/robocomp/libs"
+  "/home/sergio/robocomp/interfaces"
   "/include"
   )
 
 # Pairs of files generated by the same build rule.
 set(CMAKE_MULTIPLE_OUTPUT_PAIRS
-  "/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/CommonBehavior.h" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/CommonBehavior.cpp"
-  "/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/DifferentialRobot.h" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/DifferentialRobot.cpp"
-  "/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/GetAprilTags.h" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/GetAprilTags.cpp"
-  "/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/IrObjetivo.h" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/IrObjetivo.cpp"
+  "/home/sergio/sergiosrobotica/componentes/planificador/src/CommonBehavior.h" "/home/sergio/sergiosrobotica/componentes/planificador/src/CommonBehavior.cpp"
+  "/home/sergio/sergiosrobotica/componentes/planificador/src/DifferentialRobot.h" "/home/sergio/sergiosrobotica/componentes/planificador/src/DifferentialRobot.cpp"
+  "/home/sergio/sergiosrobotica/componentes/planificador/src/GetAprilTags.h" "/home/sergio/sergiosrobotica/componentes/planificador/src/GetAprilTags.cpp"
+  "/home/sergio/sergiosrobotica/componentes/planificador/src/IrObjetivo.h" "/home/sergio/sergiosrobotica/componentes/planificador/src/IrObjetivo.cpp"
   )
 
 

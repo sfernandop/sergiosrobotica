@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal
+CMAKE_SOURCE_DIR = /home/sergio/sergiosrobotica/componentes/choconFinal
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal
+CMAKE_BINARY_DIR = /home/sergio/sergiosrobotica/componentes/choconFinal
 
 # Utility rule file for choconFinal_automoc.
 
@@ -54,8 +54,8 @@ CMAKE_BINARY_DIR = /home/salabeta/robocomp/components/sergiosrobotica/componente
 include src/CMakeFiles/choconFinal_automoc.dir/progress.make
 
 src/CMakeFiles/choconFinal_automoc:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic moc for target choconFinal"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src && /usr/bin/cmake -E cmake_autogen /home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/CMakeFiles/choconFinal_automoc.dir/ ""
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sergio/sergiosrobotica/componentes/choconFinal/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic moc for target choconFinal"
+	cd /home/sergio/sergiosrobotica/componentes/choconFinal/src && /usr/bin/cmake -E cmake_autogen /home/sergio/sergiosrobotica/componentes/choconFinal/src/CMakeFiles/choconFinal_automoc.dir/ ""
 
 choconFinal_automoc: src/CMakeFiles/choconFinal_automoc
 choconFinal_automoc: src/CMakeFiles/choconFinal_automoc.dir/build.make
@@ -68,10 +68,10 @@ src/CMakeFiles/choconFinal_automoc.dir/build: choconFinal_automoc
 .PHONY : src/CMakeFiles/choconFinal_automoc.dir/build
 
 src/CMakeFiles/choconFinal_automoc.dir/clean:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src && $(CMAKE_COMMAND) -P CMakeFiles/choconFinal_automoc.dir/cmake_clean.cmake
+	cd /home/sergio/sergiosrobotica/componentes/choconFinal/src && $(CMAKE_COMMAND) -P CMakeFiles/choconFinal_automoc.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/choconFinal_automoc.dir/clean
 
 src/CMakeFiles/choconFinal_automoc.dir/depend:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal /home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src /home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal /home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src /home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/CMakeFiles/choconFinal_automoc.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/sergio/sergiosrobotica/componentes/choconFinal && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sergio/sergiosrobotica/componentes/choconFinal /home/sergio/sergiosrobotica/componentes/choconFinal/src /home/sergio/sergiosrobotica/componentes/choconFinal /home/sergio/sergiosrobotica/componentes/choconFinal/src /home/sergio/sergiosrobotica/componentes/choconFinal/src/CMakeFiles/choconFinal_automoc.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/CMakeFiles/choconFinal_automoc.dir/depend
 

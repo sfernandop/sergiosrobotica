@@ -70,7 +70,6 @@ void SpecificWorker::compute()
         if ( irobjetivo_proxy->getDistancia() < DIST_MIN)
         {
             qDebug() <<"He llegado";
-
             estado=2;
 
         }
@@ -78,13 +77,12 @@ void SpecificWorker::compute()
         break;
     case 2:
         irobjetivo_proxy->stop();
-	if (irobjetivo_proxy->esVisible(tag.getId())){
-	  //irobjetivo_proxy->cogerCaja();
-	  sleep ( 4 );
+	
+	  irobjetivo_proxy->cogerCaja();
+	  sleep ( 3 );
 	  estado=3;
 	  
-	}
-	else irobjetivo_proxy->turn ( 0.3 );
+	
 	
 
         break;
@@ -112,6 +110,7 @@ void SpecificWorker::compute()
 
     case 5://Dejar caja en esquina
         irobjetivo_proxy->stop();
+        irobjetivo_proxy->soltarCaja();
         sleep ( 4 );
         estado=6;
         break;

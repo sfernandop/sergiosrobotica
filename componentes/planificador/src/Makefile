@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador
+CMAKE_SOURCE_DIR = /home/sergio/sergiosrobotica/componentes/planificador
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador
+CMAKE_BINARY_DIR = /home/sergio/sergiosrobotica/componentes/planificador
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -124,14 +124,14 @@ install/local/fast: install/local
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(CMAKE_COMMAND) -E cmake_progress_start /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/CMakeFiles /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/CMakeFiles/progress.marks
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/CMakeFiles 0
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(CMAKE_COMMAND) -E cmake_progress_start /home/sergio/sergiosrobotica/componentes/planificador/CMakeFiles /home/sergio/sergiosrobotica/componentes/planificador/src/CMakeFiles/progress.marks
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sergio/sergiosrobotica/componentes/planificador/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f CMakeFiles/Makefile2 src/clean
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -141,22 +141,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/planificador.dir/rule:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/planificador.dir/rule
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/planificador.dir/rule
 .PHONY : src/CMakeFiles/planificador.dir/rule
 
 # Convenience name for target.
@@ -166,12 +166,12 @@ planificador: src/CMakeFiles/planificador.dir/rule
 
 # fast build rule for target.
 planificador/fast:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/build
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/build
 .PHONY : planificador/fast
 
 # Convenience name for target.
 src/CMakeFiles/planificador_automoc.dir/rule:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/planificador_automoc.dir/rule
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/planificador_automoc.dir/rule
 .PHONY : src/CMakeFiles/planificador_automoc.dir/rule
 
 # Convenience name for target.
@@ -181,7 +181,7 @@ planificador_automoc: src/CMakeFiles/planificador_automoc.dir/rule
 
 # fast build rule for target.
 planificador_automoc/fast:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador_automoc.dir/build.make src/CMakeFiles/planificador_automoc.dir/build
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador_automoc.dir/build.make src/CMakeFiles/planificador_automoc.dir/build
 .PHONY : planificador_automoc/fast
 
 CommonBehavior.o: CommonBehavior.cpp.o
@@ -190,7 +190,7 @@ CommonBehavior.o: CommonBehavior.cpp.o
 
 # target to build an object file
 CommonBehavior.cpp.o:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/CommonBehavior.cpp.o
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/CommonBehavior.cpp.o
 .PHONY : CommonBehavior.cpp.o
 
 CommonBehavior.i: CommonBehavior.cpp.i
@@ -199,7 +199,7 @@ CommonBehavior.i: CommonBehavior.cpp.i
 
 # target to preprocess a source file
 CommonBehavior.cpp.i:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/CommonBehavior.cpp.i
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/CommonBehavior.cpp.i
 .PHONY : CommonBehavior.cpp.i
 
 CommonBehavior.s: CommonBehavior.cpp.s
@@ -208,7 +208,7 @@ CommonBehavior.s: CommonBehavior.cpp.s
 
 # target to generate assembly for a file
 CommonBehavior.cpp.s:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/CommonBehavior.cpp.s
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/CommonBehavior.cpp.s
 .PHONY : CommonBehavior.cpp.s
 
 DifferentialRobot.o: DifferentialRobot.cpp.o
@@ -217,7 +217,7 @@ DifferentialRobot.o: DifferentialRobot.cpp.o
 
 # target to build an object file
 DifferentialRobot.cpp.o:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/DifferentialRobot.cpp.o
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/DifferentialRobot.cpp.o
 .PHONY : DifferentialRobot.cpp.o
 
 DifferentialRobot.i: DifferentialRobot.cpp.i
@@ -226,7 +226,7 @@ DifferentialRobot.i: DifferentialRobot.cpp.i
 
 # target to preprocess a source file
 DifferentialRobot.cpp.i:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/DifferentialRobot.cpp.i
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/DifferentialRobot.cpp.i
 .PHONY : DifferentialRobot.cpp.i
 
 DifferentialRobot.s: DifferentialRobot.cpp.s
@@ -235,7 +235,7 @@ DifferentialRobot.s: DifferentialRobot.cpp.s
 
 # target to generate assembly for a file
 DifferentialRobot.cpp.s:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/DifferentialRobot.cpp.s
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/DifferentialRobot.cpp.s
 .PHONY : DifferentialRobot.cpp.s
 
 GetAprilTags.o: GetAprilTags.cpp.o
@@ -244,7 +244,7 @@ GetAprilTags.o: GetAprilTags.cpp.o
 
 # target to build an object file
 GetAprilTags.cpp.o:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/GetAprilTags.cpp.o
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/GetAprilTags.cpp.o
 .PHONY : GetAprilTags.cpp.o
 
 GetAprilTags.i: GetAprilTags.cpp.i
@@ -253,7 +253,7 @@ GetAprilTags.i: GetAprilTags.cpp.i
 
 # target to preprocess a source file
 GetAprilTags.cpp.i:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/GetAprilTags.cpp.i
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/GetAprilTags.cpp.i
 .PHONY : GetAprilTags.cpp.i
 
 GetAprilTags.s: GetAprilTags.cpp.s
@@ -262,7 +262,7 @@ GetAprilTags.s: GetAprilTags.cpp.s
 
 # target to generate assembly for a file
 GetAprilTags.cpp.s:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/GetAprilTags.cpp.s
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/GetAprilTags.cpp.s
 .PHONY : GetAprilTags.cpp.s
 
 IrObjetivo.o: IrObjetivo.cpp.o
@@ -271,7 +271,7 @@ IrObjetivo.o: IrObjetivo.cpp.o
 
 # target to build an object file
 IrObjetivo.cpp.o:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/IrObjetivo.cpp.o
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/IrObjetivo.cpp.o
 .PHONY : IrObjetivo.cpp.o
 
 IrObjetivo.i: IrObjetivo.cpp.i
@@ -280,7 +280,7 @@ IrObjetivo.i: IrObjetivo.cpp.i
 
 # target to preprocess a source file
 IrObjetivo.cpp.i:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/IrObjetivo.cpp.i
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/IrObjetivo.cpp.i
 .PHONY : IrObjetivo.cpp.i
 
 IrObjetivo.s: IrObjetivo.cpp.s
@@ -289,7 +289,7 @@ IrObjetivo.s: IrObjetivo.cpp.s
 
 # target to generate assembly for a file
 IrObjetivo.cpp.s:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/IrObjetivo.cpp.s
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/IrObjetivo.cpp.s
 .PHONY : IrObjetivo.cpp.s
 
 commonbehaviorI.o: commonbehaviorI.cpp.o
@@ -298,7 +298,7 @@ commonbehaviorI.o: commonbehaviorI.cpp.o
 
 # target to build an object file
 commonbehaviorI.cpp.o:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/commonbehaviorI.cpp.o
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/commonbehaviorI.cpp.o
 .PHONY : commonbehaviorI.cpp.o
 
 commonbehaviorI.i: commonbehaviorI.cpp.i
@@ -307,7 +307,7 @@ commonbehaviorI.i: commonbehaviorI.cpp.i
 
 # target to preprocess a source file
 commonbehaviorI.cpp.i:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/commonbehaviorI.cpp.i
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/commonbehaviorI.cpp.i
 .PHONY : commonbehaviorI.cpp.i
 
 commonbehaviorI.s: commonbehaviorI.cpp.s
@@ -316,7 +316,7 @@ commonbehaviorI.s: commonbehaviorI.cpp.s
 
 # target to generate assembly for a file
 commonbehaviorI.cpp.s:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/commonbehaviorI.cpp.s
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/commonbehaviorI.cpp.s
 .PHONY : commonbehaviorI.cpp.s
 
 genericmonitor.o: genericmonitor.cpp.o
@@ -325,7 +325,7 @@ genericmonitor.o: genericmonitor.cpp.o
 
 # target to build an object file
 genericmonitor.cpp.o:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/genericmonitor.cpp.o
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/genericmonitor.cpp.o
 .PHONY : genericmonitor.cpp.o
 
 genericmonitor.i: genericmonitor.cpp.i
@@ -334,7 +334,7 @@ genericmonitor.i: genericmonitor.cpp.i
 
 # target to preprocess a source file
 genericmonitor.cpp.i:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/genericmonitor.cpp.i
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/genericmonitor.cpp.i
 .PHONY : genericmonitor.cpp.i
 
 genericmonitor.s: genericmonitor.cpp.s
@@ -343,7 +343,7 @@ genericmonitor.s: genericmonitor.cpp.s
 
 # target to generate assembly for a file
 genericmonitor.cpp.s:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/genericmonitor.cpp.s
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/genericmonitor.cpp.s
 .PHONY : genericmonitor.cpp.s
 
 genericworker.o: genericworker.cpp.o
@@ -352,7 +352,7 @@ genericworker.o: genericworker.cpp.o
 
 # target to build an object file
 genericworker.cpp.o:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/genericworker.cpp.o
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/genericworker.cpp.o
 .PHONY : genericworker.cpp.o
 
 genericworker.i: genericworker.cpp.i
@@ -361,7 +361,7 @@ genericworker.i: genericworker.cpp.i
 
 # target to preprocess a source file
 genericworker.cpp.i:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/genericworker.cpp.i
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/genericworker.cpp.i
 .PHONY : genericworker.cpp.i
 
 genericworker.s: genericworker.cpp.s
@@ -370,62 +370,62 @@ genericworker.s: genericworker.cpp.s
 
 # target to generate assembly for a file
 genericworker.cpp.s:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/genericworker.cpp.s
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/genericworker.cpp.s
 .PHONY : genericworker.cpp.s
 
-home/salabeta/robocomp/classes/qlog/qlog.o: home/salabeta/robocomp/classes/qlog/qlog.cpp.o
+home/sergio/robocomp/classes/qlog/qlog.o: home/sergio/robocomp/classes/qlog/qlog.cpp.o
 
-.PHONY : home/salabeta/robocomp/classes/qlog/qlog.o
-
-# target to build an object file
-home/salabeta/robocomp/classes/qlog/qlog.cpp.o:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.o
-.PHONY : home/salabeta/robocomp/classes/qlog/qlog.cpp.o
-
-home/salabeta/robocomp/classes/qlog/qlog.i: home/salabeta/robocomp/classes/qlog/qlog.cpp.i
-
-.PHONY : home/salabeta/robocomp/classes/qlog/qlog.i
-
-# target to preprocess a source file
-home/salabeta/robocomp/classes/qlog/qlog.cpp.i:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.i
-.PHONY : home/salabeta/robocomp/classes/qlog/qlog.cpp.i
-
-home/salabeta/robocomp/classes/qlog/qlog.s: home/salabeta/robocomp/classes/qlog/qlog.cpp.s
-
-.PHONY : home/salabeta/robocomp/classes/qlog/qlog.s
-
-# target to generate assembly for a file
-home/salabeta/robocomp/classes/qlog/qlog.cpp.s:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.s
-.PHONY : home/salabeta/robocomp/classes/qlog/qlog.cpp.s
-
-home/salabeta/robocomp/classes/rapplication/rapplication.o: home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o
-
-.PHONY : home/salabeta/robocomp/classes/rapplication/rapplication.o
+.PHONY : home/sergio/robocomp/classes/qlog/qlog.o
 
 # target to build an object file
-home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o
-.PHONY : home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o
+home/sergio/robocomp/classes/qlog/qlog.cpp.o:
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/home/sergio/robocomp/classes/qlog/qlog.cpp.o
+.PHONY : home/sergio/robocomp/classes/qlog/qlog.cpp.o
 
-home/salabeta/robocomp/classes/rapplication/rapplication.i: home/salabeta/robocomp/classes/rapplication/rapplication.cpp.i
+home/sergio/robocomp/classes/qlog/qlog.i: home/sergio/robocomp/classes/qlog/qlog.cpp.i
 
-.PHONY : home/salabeta/robocomp/classes/rapplication/rapplication.i
+.PHONY : home/sergio/robocomp/classes/qlog/qlog.i
 
 # target to preprocess a source file
-home/salabeta/robocomp/classes/rapplication/rapplication.cpp.i:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.i
-.PHONY : home/salabeta/robocomp/classes/rapplication/rapplication.cpp.i
+home/sergio/robocomp/classes/qlog/qlog.cpp.i:
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/home/sergio/robocomp/classes/qlog/qlog.cpp.i
+.PHONY : home/sergio/robocomp/classes/qlog/qlog.cpp.i
 
-home/salabeta/robocomp/classes/rapplication/rapplication.s: home/salabeta/robocomp/classes/rapplication/rapplication.cpp.s
+home/sergio/robocomp/classes/qlog/qlog.s: home/sergio/robocomp/classes/qlog/qlog.cpp.s
 
-.PHONY : home/salabeta/robocomp/classes/rapplication/rapplication.s
+.PHONY : home/sergio/robocomp/classes/qlog/qlog.s
 
 # target to generate assembly for a file
-home/salabeta/robocomp/classes/rapplication/rapplication.cpp.s:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.s
-.PHONY : home/salabeta/robocomp/classes/rapplication/rapplication.cpp.s
+home/sergio/robocomp/classes/qlog/qlog.cpp.s:
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/home/sergio/robocomp/classes/qlog/qlog.cpp.s
+.PHONY : home/sergio/robocomp/classes/qlog/qlog.cpp.s
+
+home/sergio/robocomp/classes/rapplication/rapplication.o: home/sergio/robocomp/classes/rapplication/rapplication.cpp.o
+
+.PHONY : home/sergio/robocomp/classes/rapplication/rapplication.o
+
+# target to build an object file
+home/sergio/robocomp/classes/rapplication/rapplication.cpp.o:
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/home/sergio/robocomp/classes/rapplication/rapplication.cpp.o
+.PHONY : home/sergio/robocomp/classes/rapplication/rapplication.cpp.o
+
+home/sergio/robocomp/classes/rapplication/rapplication.i: home/sergio/robocomp/classes/rapplication/rapplication.cpp.i
+
+.PHONY : home/sergio/robocomp/classes/rapplication/rapplication.i
+
+# target to preprocess a source file
+home/sergio/robocomp/classes/rapplication/rapplication.cpp.i:
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/home/sergio/robocomp/classes/rapplication/rapplication.cpp.i
+.PHONY : home/sergio/robocomp/classes/rapplication/rapplication.cpp.i
+
+home/sergio/robocomp/classes/rapplication/rapplication.s: home/sergio/robocomp/classes/rapplication/rapplication.cpp.s
+
+.PHONY : home/sergio/robocomp/classes/rapplication/rapplication.s
+
+# target to generate assembly for a file
+home/sergio/robocomp/classes/rapplication/rapplication.cpp.s:
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/home/sergio/robocomp/classes/rapplication/rapplication.cpp.s
+.PHONY : home/sergio/robocomp/classes/rapplication/rapplication.cpp.s
 
 main.o: main.cpp.o
 
@@ -433,7 +433,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/main.cpp.o
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -442,7 +442,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/main.cpp.i
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -451,7 +451,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/main.cpp.s
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 planificador_automoc.o: planificador_automoc.cpp.o
@@ -460,7 +460,7 @@ planificador_automoc.o: planificador_automoc.cpp.o
 
 # target to build an object file
 planificador_automoc.cpp.o:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/planificador_automoc.cpp.o
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/planificador_automoc.cpp.o
 .PHONY : planificador_automoc.cpp.o
 
 planificador_automoc.i: planificador_automoc.cpp.i
@@ -469,7 +469,7 @@ planificador_automoc.i: planificador_automoc.cpp.i
 
 # target to preprocess a source file
 planificador_automoc.cpp.i:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/planificador_automoc.cpp.i
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/planificador_automoc.cpp.i
 .PHONY : planificador_automoc.cpp.i
 
 planificador_automoc.s: planificador_automoc.cpp.s
@@ -478,7 +478,7 @@ planificador_automoc.s: planificador_automoc.cpp.s
 
 # target to generate assembly for a file
 planificador_automoc.cpp.s:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/planificador_automoc.cpp.s
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/planificador_automoc.cpp.s
 .PHONY : planificador_automoc.cpp.s
 
 specificmonitor.o: specificmonitor.cpp.o
@@ -487,7 +487,7 @@ specificmonitor.o: specificmonitor.cpp.o
 
 # target to build an object file
 specificmonitor.cpp.o:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/specificmonitor.cpp.o
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/specificmonitor.cpp.o
 .PHONY : specificmonitor.cpp.o
 
 specificmonitor.i: specificmonitor.cpp.i
@@ -496,7 +496,7 @@ specificmonitor.i: specificmonitor.cpp.i
 
 # target to preprocess a source file
 specificmonitor.cpp.i:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/specificmonitor.cpp.i
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/specificmonitor.cpp.i
 .PHONY : specificmonitor.cpp.i
 
 specificmonitor.s: specificmonitor.cpp.s
@@ -505,7 +505,7 @@ specificmonitor.s: specificmonitor.cpp.s
 
 # target to generate assembly for a file
 specificmonitor.cpp.s:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/specificmonitor.cpp.s
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/specificmonitor.cpp.s
 .PHONY : specificmonitor.cpp.s
 
 specificworker.o: specificworker.cpp.o
@@ -514,7 +514,7 @@ specificworker.o: specificworker.cpp.o
 
 # target to build an object file
 specificworker.cpp.o:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/specificworker.cpp.o
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/specificworker.cpp.o
 .PHONY : specificworker.cpp.o
 
 specificworker.i: specificworker.cpp.i
@@ -523,7 +523,7 @@ specificworker.i: specificworker.cpp.i
 
 # target to preprocess a source file
 specificworker.cpp.i:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/specificworker.cpp.i
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/specificworker.cpp.i
 .PHONY : specificworker.cpp.i
 
 specificworker.s: specificworker.cpp.s
@@ -532,7 +532,7 @@ specificworker.s: specificworker.cpp.s
 
 # target to generate assembly for a file
 specificworker.cpp.s:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/specificworker.cpp.s
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(MAKE) -f src/CMakeFiles/planificador.dir/build.make src/CMakeFiles/planificador.dir/specificworker.cpp.s
 .PHONY : specificworker.cpp.s
 
 # Help Target
@@ -570,12 +570,12 @@ help:
 	@echo "... genericworker.o"
 	@echo "... genericworker.i"
 	@echo "... genericworker.s"
-	@echo "... home/salabeta/robocomp/classes/qlog/qlog.o"
-	@echo "... home/salabeta/robocomp/classes/qlog/qlog.i"
-	@echo "... home/salabeta/robocomp/classes/qlog/qlog.s"
-	@echo "... home/salabeta/robocomp/classes/rapplication/rapplication.o"
-	@echo "... home/salabeta/robocomp/classes/rapplication/rapplication.i"
-	@echo "... home/salabeta/robocomp/classes/rapplication/rapplication.s"
+	@echo "... home/sergio/robocomp/classes/qlog/qlog.o"
+	@echo "... home/sergio/robocomp/classes/qlog/qlog.i"
+	@echo "... home/sergio/robocomp/classes/qlog/qlog.s"
+	@echo "... home/sergio/robocomp/classes/rapplication/rapplication.o"
+	@echo "... home/sergio/robocomp/classes/rapplication/rapplication.i"
+	@echo "... home/sergio/robocomp/classes/rapplication/rapplication.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -599,6 +599,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

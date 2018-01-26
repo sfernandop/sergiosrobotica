@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador
+CMAKE_SOURCE_DIR = /home/sergio/sergiosrobotica/componentes/planificador
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador
+CMAKE_BINARY_DIR = /home/sergio/sergiosrobotica/componentes/planificador
 
 # Utility rule file for planificador_automoc.
 
@@ -54,8 +54,8 @@ CMAKE_BINARY_DIR = /home/salabeta/robocomp/components/sergiosrobotica/componente
 include src/CMakeFiles/planificador_automoc.dir/progress.make
 
 src/CMakeFiles/planificador_automoc:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic moc for target planificador"
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && /usr/bin/cmake -E cmake_autogen /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/CMakeFiles/planificador_automoc.dir/ ""
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sergio/sergiosrobotica/componentes/planificador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic moc for target planificador"
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && /usr/bin/cmake -E cmake_autogen /home/sergio/sergiosrobotica/componentes/planificador/src/CMakeFiles/planificador_automoc.dir/ ""
 
 planificador_automoc: src/CMakeFiles/planificador_automoc
 planificador_automoc: src/CMakeFiles/planificador_automoc.dir/build.make
@@ -68,10 +68,10 @@ src/CMakeFiles/planificador_automoc.dir/build: planificador_automoc
 .PHONY : src/CMakeFiles/planificador_automoc.dir/build
 
 src/CMakeFiles/planificador_automoc.dir/clean:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src && $(CMAKE_COMMAND) -P CMakeFiles/planificador_automoc.dir/cmake_clean.cmake
+	cd /home/sergio/sergiosrobotica/componentes/planificador/src && $(CMAKE_COMMAND) -P CMakeFiles/planificador_automoc.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/planificador_automoc.dir/clean
 
 src/CMakeFiles/planificador_automoc.dir/depend:
-	cd /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src /home/salabeta/robocomp/components/sergiosrobotica/componentes/planificador/src/CMakeFiles/planificador_automoc.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/sergio/sergiosrobotica/componentes/planificador && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sergio/sergiosrobotica/componentes/planificador /home/sergio/sergiosrobotica/componentes/planificador/src /home/sergio/sergiosrobotica/componentes/planificador /home/sergio/sergiosrobotica/componentes/planificador/src /home/sergio/sergiosrobotica/componentes/planificador/src/CMakeFiles/planificador_automoc.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/CMakeFiles/planificador_automoc.dir/depend
 

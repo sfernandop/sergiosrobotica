@@ -1,0 +1,7 @@
+# Hashes of file build rules.
+fc09ecaca47963fb0de75499af5c29a3 src/CMakeFiles/planificador_automoc
+7e922aa9f1eb421198e5f65dd643de5b src/CommonBehavior.cpp
+0fe10ea7ec2bc906fd39672ca8906f70 src/DifferentialRobot.cpp
+c4431060f25436d7e96ce575b93057e0 src/GetAprilTags.cpp
+b8609c7115440310affef658b24f3965 src/IrObjetivo.cpp
+36397a087be5657d52e302fdbc159f87 src/ui_mainUI.h

@@ -38,7 +38,7 @@
 #include <mutex>
 #include <list>
 #define TIEMPO_MAX 100
-#define DIST_MIN 535
+#define DIST_MIN 540
 
 class SpecificWorker : public GenericWorker
 {

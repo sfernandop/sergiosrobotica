@@ -4,24 +4,24 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/CommonBehavior.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/CMakeFiles/choconFinal.dir/CommonBehavior.cpp.o"
-  "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/DifferentialRobot.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/CMakeFiles/choconFinal.dir/DifferentialRobot.cpp.o"
-  "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/GetAprilTags.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/CMakeFiles/choconFinal.dir/GetAprilTags.cpp.o"
-  "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/IrObjetivo.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/CMakeFiles/choconFinal.dir/IrObjetivo.cpp.o"
-  "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/JointMotor.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/CMakeFiles/choconFinal.dir/JointMotor.cpp.o"
-  "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/Laser.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/CMakeFiles/choconFinal.dir/Laser.cpp.o"
-  "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/RCISMousePicker.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/CMakeFiles/choconFinal.dir/RCISMousePicker.cpp.o"
-  "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/choconFinal_automoc.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/CMakeFiles/choconFinal.dir/choconFinal_automoc.cpp.o"
-  "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/commonbehaviorI.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/CMakeFiles/choconFinal.dir/commonbehaviorI.cpp.o"
-  "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/genericmonitor.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/CMakeFiles/choconFinal.dir/genericmonitor.cpp.o"
-  "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/genericworker.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/CMakeFiles/choconFinal.dir/genericworker.cpp.o"
-  "/home/salabeta/robocomp/classes/qlog/qlog.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/CMakeFiles/choconFinal.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.o"
-  "/home/salabeta/robocomp/classes/rapplication/rapplication.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/CMakeFiles/choconFinal.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o"
-  "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/irobjetivoI.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/CMakeFiles/choconFinal.dir/irobjetivoI.cpp.o"
-  "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/main.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/CMakeFiles/choconFinal.dir/main.cpp.o"
-  "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/rcismousepickerI.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/CMakeFiles/choconFinal.dir/rcismousepickerI.cpp.o"
-  "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/specificmonitor.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/CMakeFiles/choconFinal.dir/specificmonitor.cpp.o"
-  "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/specificworker.cpp" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/CMakeFiles/choconFinal.dir/specificworker.cpp.o"
+  "/home/sergio/sergiosrobotica/componentes/choconFinal/src/CommonBehavior.cpp" "/home/sergio/sergiosrobotica/componentes/choconFinal/src/CMakeFiles/choconFinal.dir/CommonBehavior.cpp.o"
+  "/home/sergio/sergiosrobotica/componentes/choconFinal/src/DifferentialRobot.cpp" "/home/sergio/sergiosrobotica/componentes/choconFinal/src/CMakeFiles/choconFinal.dir/DifferentialRobot.cpp.o"
+  "/home/sergio/sergiosrobotica/componentes/choconFinal/src/GetAprilTags.cpp" "/home/sergio/sergiosrobotica/componentes/choconFinal/src/CMakeFiles/choconFinal.dir/GetAprilTags.cpp.o"
+  "/home/sergio/sergiosrobotica/componentes/choconFinal/src/IrObjetivo.cpp" "/home/sergio/sergiosrobotica/componentes/choconFinal/src/CMakeFiles/choconFinal.dir/IrObjetivo.cpp.o"
+  "/home/sergio/sergiosrobotica/componentes/choconFinal/src/JointMotor.cpp" "/home/sergio/sergiosrobotica/componentes/choconFinal/src/CMakeFiles/choconFinal.dir/JointMotor.cpp.o"
+  "/home/sergio/sergiosrobotica/componentes/choconFinal/src/Laser.cpp" "/home/sergio/sergiosrobotica/componentes/choconFinal/src/CMakeFiles/choconFinal.dir/Laser.cpp.o"
+  "/home/sergio/sergiosrobotica/componentes/choconFinal/src/RCISMousePicker.cpp" "/home/sergio/sergiosrobotica/componentes/choconFinal/src/CMakeFiles/choconFinal.dir/RCISMousePicker.cpp.o"
+  "/home/sergio/sergiosrobotica/componentes/choconFinal/src/choconFinal_automoc.cpp" "/home/sergio/sergiosrobotica/componentes/choconFinal/src/CMakeFiles/choconFinal.dir/choconFinal_automoc.cpp.o"
+  "/home/sergio/sergiosrobotica/componentes/choconFinal/src/commonbehaviorI.cpp" "/home/sergio/sergiosrobotica/componentes/choconFinal/src/CMakeFiles/choconFinal.dir/commonbehaviorI.cpp.o"
+  "/home/sergio/sergiosrobotica/componentes/choconFinal/src/genericmonitor.cpp" "/home/sergio/sergiosrobotica/componentes/choconFinal/src/CMakeFiles/choconFinal.dir/genericmonitor.cpp.o"
+  "/home/sergio/sergiosrobotica/componentes/choconFinal/src/genericworker.cpp" "/home/sergio/sergiosrobotica/componentes/choconFinal/src/CMakeFiles/choconFinal.dir/genericworker.cpp.o"
+  "/home/sergio/robocomp/classes/qlog/qlog.cpp" "/home/sergio/sergiosrobotica/componentes/choconFinal/src/CMakeFiles/choconFinal.dir/home/sergio/robocomp/classes/qlog/qlog.cpp.o"
+  "/home/sergio/robocomp/classes/rapplication/rapplication.cpp" "/home/sergio/sergiosrobotica/componentes/choconFinal/src/CMakeFiles/choconFinal.dir/home/sergio/robocomp/classes/rapplication/rapplication.cpp.o"
+  "/home/sergio/sergiosrobotica/componentes/choconFinal/src/irobjetivoI.cpp" "/home/sergio/sergiosrobotica/componentes/choconFinal/src/CMakeFiles/choconFinal.dir/irobjetivoI.cpp.o"
+  "/home/sergio/sergiosrobotica/componentes/choconFinal/src/main.cpp" "/home/sergio/sergiosrobotica/componentes/choconFinal/src/CMakeFiles/choconFinal.dir/main.cpp.o"
+  "/home/sergio/sergiosrobotica/componentes/choconFinal/src/rcismousepickerI.cpp" "/home/sergio/sergiosrobotica/componentes/choconFinal/src/CMakeFiles/choconFinal.dir/rcismousepickerI.cpp.o"
+  "/home/sergio/sergiosrobotica/componentes/choconFinal/src/specificmonitor.cpp" "/home/sergio/sergiosrobotica/componentes/choconFinal/src/CMakeFiles/choconFinal.dir/specificmonitor.cpp.o"
+  "/home/sergio/sergiosrobotica/componentes/choconFinal/src/specificworker.cpp" "/home/sergio/sergiosrobotica/componentes/choconFinal/src/CMakeFiles/choconFinal.dir/specificworker.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -47,21 +47,21 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/opt/robocomp/include"
   "/classes"
   "."
-  "/home/salabeta/robocomp/classes"
-  "/home/salabeta/robocomp/libs"
-  "/home/salabeta/robocomp/interfaces"
+  "/home/sergio/robocomp/classes"
+  "/home/sergio/robocomp/libs"
+  "/home/sergio/robocomp/interfaces"
   "/include"
   )
 
 # Pairs of files generated by the same build rule.
 set(CMAKE_MULTIPLE_OUTPUT_PAIRS
-  "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/CommonBehavior.h" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/CommonBehavior.cpp"
-  "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/DifferentialRobot.h" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/DifferentialRobot.cpp"
-  "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/GetAprilTags.h" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/GetAprilTags.cpp"
-  "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/IrObjetivo.h" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/IrObjetivo.cpp"
-  "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/JointMotor.h" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/JointMotor.cpp"
-  "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/Laser.h" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/Laser.cpp"
-  "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/RCISMousePicker.h" "/home/salabeta/robocomp/components/sergiosrobotica/componentes/choconFinal/src/RCISMousePicker.cpp"
+  "/home/sergio/sergiosrobotica/componentes/choconFinal/src/CommonBehavior.h" "/home/sergio/sergiosrobotica/componentes/choconFinal/src/CommonBehavior.cpp"
+  "/home/sergio/sergiosrobotica/componentes/choconFinal/src/DifferentialRobot.h" "/home/sergio/sergiosrobotica/componentes/choconFinal/src/DifferentialRobot.cpp"
+  "/home/sergio/sergiosrobotica/componentes/choconFinal/src/GetAprilTags.h" "/home/sergio/sergiosrobotica/componentes/choconFinal/src/GetAprilTags.cpp"
+  "/home/sergio/sergiosrobotica/componentes/choconFinal/src/IrObjetivo.h" "/home/sergio/sergiosrobotica/componentes/choconFinal/src/IrObjetivo.cpp"
+  "/home/sergio/sergiosrobotica/componentes/choconFinal/src/JointMotor.h" "/home/sergio/sergiosrobotica/componentes/choconFinal/src/JointMotor.cpp"
+  "/home/sergio/sergiosrobotica/componentes/choconFinal/src/Laser.h" "/home/sergio/sergiosrobotica/componentes/choconFinal/src/Laser.cpp"
+  "/home/sergio/sergiosrobotica/componentes/choconFinal/src/RCISMousePicker.h" "/home/sergio/sergiosrobotica/componentes/choconFinal/src/RCISMousePicker.cpp"
   )
 
 

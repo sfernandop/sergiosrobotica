@@ -36,19 +36,29 @@ SpecificWorker::~SpecificWorker()
 
 bool SpecificWorker::setParams(RoboCompCommonBehavior::ParameterList params)
 {
-    inner = new InnerModel ( "/home/salabeta/robocomp/files/innermodel/betaWorldArm.xml" );
+    inner = new InnerModel ( "/home/robocomp/robocomp/files/innermodel/betaWorldArm.xml" );
     timer.start ( Period );
-    target.empty = true;
-    bajarBrazo(); 
-    subirBrazo(0);
+    target.empty = true; 
+    //subirBrazo(0);
+    /**Jacobian**/
+    goHome();
+    sleep(1);
+    try { 
+      mList = jointmotor_proxy->getAllMotorParams();}
+    catch(const Ice::Exception &e){ std::cout << e << std::endl;}
+    joints << "shoulder_right_1"<<"shoulder_right_2"<<"shoulder_right_3"<<"elbow_right" << "wrist_right_1" << "wrist_right_2";
+    // Check that these names are in mList
+    motores = QVec::zeros(joints.size());
+    timer.start(100);
+    subirBrazo(0.40);
     return true;
 }
 
 void SpecificWorker::compute()
 {
-RoboCompDifferentialRobot::TBaseState bState;
+
     differentialrobot_proxy->getBaseState ( bState );
-    RoboCompLaser::TLaserData datosLaser;
+    
     datosLaser= laser_proxy->getLaserData();//Obtenemos datos del Laser
     inner->updateTransformValues ( "robot",bState.x,0,bState.z,0,bState.alpha,0 );
     // datosLaser= laser_proxy->getLaserData();//Obtenemos datos del Laser
@@ -58,8 +68,7 @@ RoboCompDifferentialRobot::TBaseState bState;
     } ); //Ordenamos las distancias del frente
     tR = inner->transform ( "robot" ,QVec::vec3 ( parxz.first, 0, parxz.second ),"world" );
     d = tR.norm2(); // distancia del robot al punto marcado
-    float vRot = atan2 ( tR.x(),tR.z() ); //devuelve radianes del angulo q forma donde apunta el robot con el punto destino.
-
+    vRot = atan2 ( tR.x(),tR.z() ); //devuelve radianes del angulo q forma donde apunta el robot con el punto destino.
     //Refresca el estado
      if ( target.isEmpty() == false && target.haCambiado())
         {
@@ -72,126 +81,40 @@ RoboCompDifferentialRobot::TBaseState bState;
             target.setCambiado(false);
 
         }
-    
+
     
     switch ( estado )
     {
     case Estado::PARADO:
         qDebug() << "PARADO";
-	     if ( target.isEmpty() == false)
-        {
-            //Calcular punto inicial,punto final,y trayectoria entre ellos
-            // parIni = //Falta el punto inicial
-            parxz = target.get();//Punto final
-            tR = inner->transform ( "robot" ,QVec::vec3 ( parxz.first, 0, parxz.second ),"world" );
-            d = tR.norm2(); // distancia del robot al punto marcado
-            estado= Estado::AVANZANDO;
-            target.setCambiado(false);
-
-        }
-       
+	parado();
         break;
 
     case Estado::AVANZANDO:
          qDebug() << "AVANZANDO";
-
-        if ( datosLaser[20].dist < UMBRAL ) //Si hay obstaculo
-        {
-            //Pasa a estado de Giro
-            estado = Estado::GIRANDO;
-            break ;
-
-        }
-
-        if ( d > DIST_MIN )
-        {
-
-            //Si no ha llegado
-            float velAvance = d;// version antigua
-            if ( vRot > MAX_ROT )
-            {
-                vRot = MAX_ROT;
-            }
-
-            velAvance=MAX_ADV*sigmoide ( d ) *gauss ( vRot,0.3,0.5 );
-
-
-            differentialrobot_proxy->setSpeedBase ( velAvance,vRot );
-        }
-        else
-        {
-            //Si ha llegado al sitio
-            estado = Estado::LLEGADO;
-        }
-
+	avanzando();
 
         break;
 
 
     case Estado::GIRANDO:
 	 qDebug() << "GIRANDO";
-
-        if ( datosLaser[20].dist>UMBRAL )
-        {
-            estado=Estado::BORDEANDO;
-        }
-        else
-        {
-            //float d= rand()%1000000+100000;
-            differentialrobot_proxy->setSpeedBase ( 0,0.75 );
-            //usleep(d);
-        }
-
-
+	 girando();
 
         break;
 
     case Estado::BORDEANDO:
         qDebug() << "BORDEANDO";
-        if ( datosLaser[20].dist>UMBRAL && ( vRot<ANGULO_VISION && vRot > -(ANGULO_VISION) )) //Que no haya obstaculos en el frente y vaya hacia el objetivo
-        {
-            estado=Estado::AVANZANDO;
-        }
-        if ( datosLaser[20].dist<UMBRAL ) //Si hay dos obstaculos en L, debe volver a girar para no tener obstaculo en frente
-        {
-            estado=Estado::GIRANDO;
-        }
-        if ( d < 580 )
-        {
-            estado=Estado::LLEGADO;
-        }
-        //Condicion 2 para llegar al objetivo
-        //if (
-        //Ordenar los 20 primeros
-        std::sort ( datosLaser.end()-19, datosLaser.end()-10,[] ( auto a, auto b )
-        {
-            return a.dist< b.dist;
-        } ); //Valores de la izda
-
-        //Evaluamos distancia izda
-        //qDebug() <<  "Distancia:" <<datosLaser[81].dist;
-        if ( datosLaser[81].dist < 400 ) //Que la distancia izda sea esa
-        {
-            //Avanzar
-            differentialrobot_proxy->setSpeedBase ( 100,0 );
-        }
-        else
-        {
-            differentialrobot_proxy->setSpeedBase ( 0,-0.75 );
-
-        }
-        break;
+	bordeando();
+	break;
 
     case Estado::LLEGADO:
          qDebug() << "LLEGADO";
-
-        differentialrobot_proxy->setSpeedBase ( 0,0 );
-        target.setEmpty();
-        estado=Estado::PARADO;
-
+	llegado();
         break;
 
     }
+    
 }
 
 
@@ -199,7 +122,7 @@ RoboCompDifferentialRobot::TBaseState bState;
 
 void SpecificWorker::soltarCaja()
 {
-
+  bajarBrazo();
 }
 
 
@@ -233,23 +156,107 @@ void SpecificWorker::go ( const float x, const float z )
 }
 
 
+/*void SpecificWorker::cogerCaja()
+{
+	bajarMano();
+	RoboCompJointMotor::MotorStateMap mMap;
+	float difTX  = 0 ,difTY = 0, difTZ = 0;
+	obtenerTags();
+	
+ 	try
+	{
+		jointmotor_proxy->getAllMotorState(mMap);
+		for(auto m: mMap)
+		{
+			inner->updateJointValue(QString::fromStdString(m.first),m.second.pos);
+			//std::cout << m.first << "		" << m.second.pos << std::endl;
+		}
+		std::cout << "--------------------------" << std::endl;
+	}
+	catch(const Ice::Exception &e)
+	{	std::cout << "JoinMotor -- "<<e.what() << std::endl;}
+	
+	//Compute Jacobian for the chain of joints and using as tip "cameraHand" 
+
+	QMat jacobian = inner->jacobian(joints, motores, "rgbdHand");
+	qDebug() << "3";
+	RoboCompJointMotor::MotorGoalVelocityList vl;
+	error = QVec::vec6(0,0,0,0,0,0);
+	if (!tagsRecibidas.empty()){
+		qDebug() << "ENTRANDO A COGER CAJA--------------";
+		try
+		{
+		  
+		  
+			  difTX = tagsRecibidas.front().tx; //objetivo final 
+			  difTY = tagsRecibidas.front().ty;
+			  difTZ = tagsRecibidas.front().tz;
+			  qDebug() << "difTX: "<< difTX << " difTY: " << difTY << "DifTZ: " << difTZ;
+			  // ESTO ES CORRECTO
+			  if (difTX > INCREMENT){
+			    rightSlot();
+			  }
+			  if (difTX < -INCREMENT){
+			    leftSlot();
+			  }
+			  if (difTY > INCREMENT){
+			    frontSlot();
+			  }
+			  if (difTY < -INCREMENT){
+			    backSlot();
+			  }
+			  if (difTZ > INCREMENT){
+			    downSlot();
+			  }
+			  if (difTZ < -INCREMENT){
+			    upSlot();
+			  }
+			  
+			
+			QVec incs = jacobian.invert() * error;	
+			int i=0;
+			for(auto m: joints)
+			{
+				//RoboCompJointMotor::MotorGoalPosition mg = {mMap.find(m.toStdString())->second.pos + incs[i], 1.0, m.toStdString()};
+				RoboCompJointMotor::MotorGoalVelocity vg{FACTOR*incs[i], 1.0, m.toStdString()};
+				//ml.push_back(mg);
+				vl.push_back(vg);
+				i++;
+			}	//Aplicar cambios al brazo
+				try
+				  { 
+					  qDebug()<<"Moviendo Brazo...";
+					  jointmotor_proxy->setSyncVelocity(vl);
+				  }
+				  catch(const Ice::Exception &e)
+				  {	std::cout << "SetSyncVelocity "<<e.what() << std::endl;}
+				  qDebug() << "Cerrando la mano...";
+				  cerrarMano();
+				 
+		  
+		}catch(const QString &e)
+		{ qDebug() << e << "Error inverting matrix";}
+	  }
+	  
+}*/
 void SpecificWorker::cogerCaja()
 {
-  
- stop();
-  
+bajarMano();
+cerrarMano();
 }
+
 
 bool SpecificWorker::esVisible(int tag_caja)
 {
+  bajarMano();
+  
   if(obtenerTags())
   {
   qDebug()<<"Tag que esta viendo: "<<tag.getId();
   if (tag.getId() == tag_caja)
     return true;
   }
-  else 
-    subirBrazo(0.10);
+
   return false;
 }
 
@@ -316,17 +323,246 @@ bool SpecificWorker::obtenerTags(){
    return true;
 }
 void SpecificWorker::bajarBrazo(){
-    mg.name="wrist_right_2";
-    mg.position=1.30;
-    mg.maxSpeed=0;
-    jointmotor_proxy->setPosition(mg);
+   differentialrobot_proxy->setSpeedBase(0 , 0);
+
+    RoboCompJointMotor::MotorGoalPosition shoulder_right_2;
+    shoulder_right_2.name = "shoulder_right_2";
+    shoulder_right_2.position = -0.35;
+    shoulder_right_2.maxSpeed = 0.5;
+    jointmotor_proxy->setPosition(shoulder_right_2);
+    sleep(3);
+  
+    goHome();
+   
   
 }
-
+void SpecificWorker::bajarMano(){
+    mg.name="wrist_right_2";
+    mg.position=1.30;
+    mg.maxSpeed=0.3;
+    jointmotor_proxy->setPosition(mg);
+    sleep(1);
+}
+void SpecificWorker::bajarMano(float grados){
+    mg.name="wrist_right_2";
+    mg.position=mg.position - grados;
+    mg.maxSpeed=0;
+    jointmotor_proxy->setPosition(mg);
+   // sleep(1);
+}
 void SpecificWorker::subirBrazo(float grados)
 {
     mg.name="shoulder_right_2";
-    mg.position=-0.80 - grados;
+    mg.position=-mg.position - grados;
     mg.maxSpeed=0;
     jointmotor_proxy->setPosition(mg);
+}
+
+ void SpecificWorker::parado(){
+        if ( target.isEmpty() == false)
+        {
+            //Calcular punto inicial,punto final,y trayectoria entre ellos
+            // parIni = //Falta el punto inicial
+            parxz = target.get();//Punto final
+            tR = inner->transform ( "robot" ,QVec::vec3 ( parxz.first, 0, parxz.second ),"world" );
+            d = tR.norm2(); // distancia del robot al punto marcado
+            estado= Estado::AVANZANDO;
+            target.setCambiado(false);
+
+        }
+ }
+ void SpecificWorker::avanzando(){
+   
+        if ( datosLaser[20].dist < UMBRAL ) //Si hay obstaculo
+        {
+            //Pasa a estado de Giro
+            estado = Estado::GIRANDO;
+            return ;
+
+        }
+
+        if ( d > DIST_MIN )
+        {
+
+            //Si no ha llegado
+            float velAvance = d;// version antigua
+            if ( vRot > MAX_ROT )
+            {
+                vRot = MAX_ROT;
+            }
+
+            velAvance=MAX_ADV*sigmoide ( d ) *gauss ( vRot,0.3,0.5 );
+
+
+            differentialrobot_proxy->setSpeedBase ( velAvance,vRot );
+        }
+        else
+        {
+            //Si ha llegado al sitio
+            estado = Estado::LLEGADO;
+        }
+
+}
+ void SpecificWorker::bordeando(){
+      if ( datosLaser[20].dist>UMBRAL && ( vRot<ANGULO_VISION && vRot > -(ANGULO_VISION) )) //Que no haya obstaculos en el frente y vaya hacia el objetivo
+        {
+            estado=Estado::AVANZANDO;
+        }
+        if ( datosLaser[20].dist<UMBRAL ) //Si hay dos obstaculos en L, debe volver a girar para no tener obstaculo en frente
+        {
+            estado=Estado::GIRANDO;
+        }
+        if ( d < 580 )
+        {
+            estado=Estado::LLEGADO;
+        }
+        //Condicion 2 para llegar al objetivo
+        //if (
+        //Ordenar los 20 primeros
+        std::sort ( datosLaser.end()-19, datosLaser.end()-10,[] ( auto a, auto b )
+        {
+            return a.dist< b.dist;
+        } ); //Valores de la izda
+
+        //Evaluamos distancia izda
+        //qDebug() <<  "Distancia:" <<datosLaser[81].dist;
+        if ( datosLaser[81].dist < 400 ) //Que la distancia izda sea esa
+        {
+            //Avanzar
+            differentialrobot_proxy->setSpeedBase ( 100,0 );
+        }
+        else
+        {
+            differentialrobot_proxy->setSpeedBase ( 0,-0.75 );
+
+        }
+}
+ void SpecificWorker::girando(){
+   
+        if ( datosLaser[20].dist>UMBRAL )
+        {
+            estado=Estado::BORDEANDO;
+        }
+        else
+        {
+            //float d= rand()%1000000+100000;
+            differentialrobot_proxy->setSpeedBase ( 0,0.75 );
+            //usleep(d);
+        }
+
+}
+ void SpecificWorker::llegado(){
+        differentialrobot_proxy->setSpeedBase ( 0,0 );
+        target.setEmpty();
+        estado=Estado::PARADO;
+}
+
+/**Funciones Jacobian**/
+void SpecificWorker::goHome()
+{
+	RoboCompJointMotor::MotorStateMap mMap;
+	try
+	{
+		jointmotor_proxy->getAllMotorState(mMap);
+		for(auto m: mMap)
+		{
+			RoboCompJointMotor::MotorGoalPosition mg = { inner->getJoint(m.first)->home, 1.0, m.first };
+			jointmotor_proxy->setPosition(mg);
+		}
+		sleep(1);
+	}
+	catch(const Ice::Exception &e)
+	{	std::cout << e.what() << std::endl;}	
+}
+
+
+
+//////////////////
+/// SLOTS
+/////////////////
+
+void SpecificWorker::leftSlot()
+{
+	error = QVec::vec6(INCREMENT,0,0,0,0,0);
+}
+
+void SpecificWorker::rightSlot()
+{
+	error = QVec::vec6(-INCREMENT,0,0,0,0,0);
+}
+
+void SpecificWorker::frontSlot()
+{
+	error = QVec::vec6(0,-INCREMENT,0,0,0,0);
+}
+
+void SpecificWorker::backSlot()
+{
+	error = QVec::vec6(0,INCREMENT,0,0,0,0);
+}
+
+void SpecificWorker::upSlot()
+{
+	error = QVec::vec6(0,0,INCREMENT,0,0,0);
+}
+
+void SpecificWorker::downSlot()
+{
+	error = QVec::vec6(0,0,-INCREMENT,0,0,0);
+}
+
+void SpecificWorker::changeSpeed(int s)
+{
+	FACTOR = s;
+}
+
+void SpecificWorker::moveArm()
+{/*
+
+	  
+	  
+	  else { 
+	    closeHand();
+	    sleep(3);	
+	    //EJECUTAR LA VERRUGA
+	    //CERRAR DEDOS Y BAJAR  _--> CREAR METODO PARA CERRAR  -> PARA ABRIR= GOHOME
+	    
+	    //msleep(500);
+	    
+	    qDebug()<< "Caja Cogida";
+		for(auto m: joints)
+		{
+			RoboCompJointMotor::MotorGoalVelocity vg{0.0, 1.0, m.toStdString()};
+			vl.push_back(vg);
+		}
+	
+	qDebug() << "Brazo Parado";
+	qDebug() << "Llamar a coger caja";
+ 	goHome();
+	
+	  }
+
+	//Do the thing
+	try
+	{ 
+	  qDebug() << "7";
+		jointmotor_proxy->setSyncVelocity(vl);
+	}
+	catch(const Ice::Exception &e)
+	{	std::cout << "SetSyncVelocity "<<e.what() << std::endl;}
+	 */
+}
+void SpecificWorker::cerrarMano(){
+  	RoboCompJointMotor::MotorGoalPosition finger_right_1, finger_right_2;
+	
+	finger_right_1.name = "finger_right_1";
+	finger_right_1.position = -0.6;
+	finger_right_1.maxSpeed = 1;
+	
+	finger_right_2.name = "finger_right_2";
+	finger_right_2.position = 0.6;
+	finger_right_2.maxSpeed = 1;
+	
+	jointmotor_proxy->setPosition(finger_right_1);
+	jointmotor_proxy->setPosition(finger_right_2);
 }
